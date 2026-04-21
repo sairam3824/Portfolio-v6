@@ -1,9 +1,30 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { writeFileSync } from "fs";
+import { buildRootSitemapXml, buildRootRobotsTxt } from "./shared-data/seoArtifacts";
+
+function seoGeneratorPlugin() {
+  const generate = () => {
+    writeFileSync("shared-public/sitemap.xml", buildRootSitemapXml());
+    writeFileSync("shared-public/robots.txt", buildRootRobotsTxt());
+  };
+  return {
+    name: "portfolio-seo-generator",
+    buildStart: generate,
+    configureServer(server: { watcher: { on: (event: string, cb: (f: string) => void) => void } }) {
+      generate();
+      server.watcher.on("change", (file) => {
+        if (file.includes("blogData") || file.includes("seoArtifacts") || file.includes("siteMetadata")) {
+          generate();
+        }
+      });
+    },
+  };
+}
 
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react(), tsconfigPaths(), seoGeneratorPlugin()],
   publicDir: "shared-public",
   server: {
     port: 3000,

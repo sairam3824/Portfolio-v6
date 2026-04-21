@@ -1531,12 +1531,19 @@ function ResumeRedirectPage() {
     }, []);
 
     return (
-        <main className="rd-page rd-page-pad">
-            <PageHeader label="Resume" title="Opening Resume" description="If the PDF does not open automatically, use the link below." />
-            <a className="rd-button rd-button-secondary" href={profileDetails.resumeHref} target="_blank" rel="noreferrer">
-                Open Resume <ArrowUpRight size={16} />
-            </a>
-        </main>
+        <>
+            <Seo
+                title={`Resume | ${profileDetails.name}`}
+                description="Download or view the résumé of MARURI SAI RAMA LINGA REDDY — GenAI Engineer & Full Stack Developer."
+                robots="noindex, follow"
+            />
+            <main className="rd-page rd-page-pad">
+                <PageHeader label="Resume" title="Opening Resume" description="If the PDF does not open automatically, use the link below." />
+                <a className="rd-button rd-button-secondary" href={profileDetails.resumeHref} target="_blank" rel="noreferrer">
+                    Open Resume <ArrowUpRight size={16} />
+                </a>
+            </main>
+        </>
     );
 }
 

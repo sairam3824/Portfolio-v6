@@ -15,42 +15,20 @@ export interface ProjectData {
 export const projectsData: ProjectData[] = [
 
     // ═══════════════════════════════════════════════════════════════════════════
-    // LIVE & SHIPPED — Production AI products with real users
+    // LIVE & DEPLOYED — Production projects with live URLs
     // ═══════════════════════════════════════════════════════════════════════════
 
     {
-        title: "A2A Startup Builder",
+        title: "Portfolio V6 (Current)",
         description:
-            "Autonomous multi-agent system that takes a single startup idea and produces a complete startup blueprint — market research, competitor analysis, PRD, system architecture, MVP code, go-to-market strategy, and investor pitch deck. Built on Google's A2A protocol with 8 specialized agents (Perplexity, Claude, GPT-4.1, Gemini) and real-time SSE streaming.",
-        tech: ["Python", "FastAPI", "A2A Protocol", "OpenRouter", "Claude", "GPT-4.1", "Gemini", "Perplexity", "SQLite", "SSE"],
-        github: "https://github.com/sairam3824/A2A-startup-builder",
-        category: "AI Agent",
-        iconName: "Rocket",
+            "The 6th iteration of my personal portfolio, featuring a premium redesign focused on a modern aesthetic with a high-performance technical foundation. Includes an AI-powered chat widget, serverless backend, and advanced SEO optimization.",
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Supabase", "OpenAI", "Vercel"],
+        github: "https://github.com/sairam3824/Portfolio-v6",
+        link: "https://saiii.in",
+        category: "Web Development",
+        iconName: "Globe",
         featured: true,
-        tagline: "8-Agent A2A Pipeline • Startup Blueprint in Minutes",
-    },
-    {
-        title: "Voice AI Agent",
-        description:
-            "A Next.js 14 starter kit for building conversational voice agents in the browser. Features voice input with Web Speech API, live waveform visualization, streaming LLM responses for low latency, and optional ElevenLabs TTS integration. Supports function calling tools (weather, web search, math) and persists conversation memory across sessions.",
-        tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Web Speech API", "Web Audio API", "Vercel AI SDK", "OpenAI", "Anthropic"],
-        github: "https://github.com/sairam3824/Voice-Ai-Agent",
-        category: "AI Agent",
-        iconName: "Mic",
-        featured: true,
-        tagline: "Conversational Voice Interface • Low-Latency Streaming • Function Calling",
-    },
-
-    {
-        title: "Prompt Injection Detector (Prompt Shield)",
-        description:
-            "A robust detection engine safeguarding LLM applications against prompt injections, jailbreaks, and system prompt leaks. Features rule-based heuristics, statistical analysis, and LLM-powered classification, complete with an interactive Next.js dashboard.",
-        tech: ["Python", "Next.js", "OpenAI", "React", "pytest", "Tailwind CSS"],
-        github: "https://github.com/sairam3824/Prompt-Injection-Detector",
-        category: "AI Security",
-        iconName: "Shield",
-        featured: true,
-        tagline: "LLM Security Engine • Rule-based + LLM Detection",
+        tagline: "Premium Design • AI Chat • High-Performance Framework",
     },
     {
         title: "AI Research Platform (Orravyn)",
@@ -137,40 +115,88 @@ export const projectsData: ProjectData[] = [
         tagline: "Multi-Tenant Sports SaaS • Real-time Scoring & Leaderboards",
     },
     {
+        title: "AI Competitive Analysis Agent",
+        description:
+            "Autonomous multi-agent system that researches and analyzes competitive landscapes in real time. Agents crawl company data, news, and market signals to generate structured competitor profiles, SWOT analyses, positioning maps, and strategic recommendations — delivered as interactive reports.",
+        tech: ["Python", "LangGraph", "OpenAI", "FastAPI", "Next.js", "Tavily", "Docker"],
+        github: "https://github.com/sairam3824/AI-Competitive-Analysis-Agent",
+        link: "https://analysisagent.saiii.in",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Autonomous Competitive Intelligence • SWOT & Positioning Analysis",
+    },
+    {
+        title: "APIProbe: AI Key Guard",
+        description:
+            "Professional dashboard for validating and stress-testing API keys across 9 AI providers (OpenAI, Anthropic, Gemini, Groq, Mistral, Perplexity, OpenRouter, DeepSeek, Together AI). All validation runs server-side via Next.js Server Actions — keys never leave the browser. Features model stress testing with latency benchmarks, searchable audit logs, JSON export, and 15-second timeout protection.",
+        tech: ["Next.js 15", "React 19", "TypeScript", "Framer Motion", "Server Actions"],
+        github: "https://github.com/sairam3824/APIProbe",
+        link: "https://apitester.saiii.in/",
+        category: "Infrastructure",
+        iconName: "Key",
+        featured: true,
+        tagline: "9-Provider API Key Validator • Server-Side Security • Stress Testing",
+    },
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // FEATURED — High-priority projects (source available, not live-hosted)
+    // ═══════════════════════════════════════════════════════════════════════════
+
+    {
+        title: "Autonomous AI DevOps Agent Platform",
+        description:
+            "A comprehensive multi-agent system for autonomous infrastructure management, log analysis, and CI/CD optimization. Features specialized agents for remediation, orchestrating complex workflows with zero cloud dependencies using local LLMs.",
+        tech: ["Next.js 15", "FastAPI", "Python", "TypeScript", "Ollama", "FAISS", "Docker", "Kubernetes", "Redis"],
+        github: "https://github.com/sairam3824/Autonomous-AI-DevOps-Agent-Platform",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Autonomous Infrastructure • Multi-Agent Orchestration • Self-Healing CI/CD",
+    },
+    {
+        title: "A2A Startup Builder",
+        description:
+            "Autonomous multi-agent system that takes a single startup idea and produces a complete startup blueprint — market research, competitor analysis, PRD, system architecture, MVP code, go-to-market strategy, and investor pitch deck. Built on Google's A2A protocol with 8 specialized agents (Perplexity, Claude, GPT-4.1, Gemini) and real-time SSE streaming.",
+        tech: ["Python", "FastAPI", "A2A Protocol", "OpenRouter", "Claude", "GPT-4.1", "Gemini", "Perplexity", "SQLite", "SSE"],
+        github: "https://github.com/sairam3824/A2A-startup-builder",
+        category: "AI Agent",
+        iconName: "Rocket",
+        featured: true,
+        tagline: "8-Agent A2A Pipeline • Startup Blueprint in Minutes",
+    },
+    {
+        title: "Voice AI Agent",
+        description:
+            "A Next.js 14 starter kit for building conversational voice agents in the browser. Features voice input with Web Speech API, live waveform visualization, streaming LLM responses for low latency, and optional ElevenLabs TTS integration. Supports function calling tools (weather, web search, math) and persists conversation memory across sessions.",
+        tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Web Speech API", "Web Audio API", "Vercel AI SDK", "OpenAI", "Anthropic"],
+        github: "https://github.com/sairam3824/Voice-Ai-Agent",
+        category: "AI Agent",
+        iconName: "Mic",
+        featured: true,
+        tagline: "Conversational Voice Interface • Low-Latency Streaming • Function Calling",
+    },
+    {
+        title: "Prompt Injection Detector (Prompt Shield)",
+        description:
+            "A robust detection engine safeguarding LLM applications against prompt injections, jailbreaks, and system prompt leaks. Features rule-based heuristics, statistical analysis, and LLM-powered classification, complete with an interactive Next.js dashboard.",
+        tech: ["Python", "Next.js", "OpenAI", "React", "pytest", "Tailwind CSS"],
+        github: "https://github.com/sairam3824/Prompt-Injection-Detector",
+        category: "AI Security",
+        iconName: "Shield",
+        featured: true,
+        tagline: "LLM Security Engine • Rule-based + LLM Detection",
+    },
+    {
         title: "AI-Powered Portfolio",
         description:
             "Next-generation AI portfolio featuring intelligent chat assistance. Built with agentic search and dynamic AI-driven interactions for personalized user experiences.",
         tech: ["React", "TypeScript", "Tailwind CSS", "n8n", "AI APIs"],
         github: "https://github.com/sairam3824/Ai-Portfolio",
-        link: "https://saiii.in",
         category: "Web Development",
         iconName: "Rocket",
         featured: true,
         tagline: "AI-Native Interaction",
-    },
-    {
-        title: "Minimalist Portfolio V3",
-        description:
-            "A modern, minimalist portfolio website emphasizing performance and clean design. Features route-based code splitting, lazy loading, glass morphism aesthetics, WCAG-compliant accessibility, and SEO optimization — achieving 95+ Lighthouse scores with a ~200KB gzipped bundle.",
-        tech: ["React 18", "TypeScript", "Vite 5", "Tailwind CSS", "React Router DOM"],
-        github: "https://github.com/sairam3824/portfolio-version3",
-        link: "https://saiii.in",
-        category: "Web Development",
-        iconName: "Globe",
-        featured: true,
-        tagline: "Minimalist Design • 95+ Lighthouse • ~200KB Bundle",
-    },
-    {
-        title: "Classic Personal Portfolio",
-        description:
-            "Clean, responsive personal portfolio built with vanilla web technologies. Features smooth Swiper.js animations, dark/light theme toggling, and optimized SEO structure.",
-        tech: ["HTML5", "CSS3", "JavaScript", "MixItUp", "Swiper.js"],
-        github: "https://github.com/sairam3824/Portfolio",
-        link: "https://oldportfolio.saiii.in",
-        category: "Web Development",
-        iconName: "Globe",
-        featured: false,
-        tagline: "Responsive Vanilla Stack • Theme Switching",
     },
     {
         title: "DevOps Agent Platform",
@@ -182,18 +208,6 @@ export const projectsData: ProjectData[] = [
         iconName: "Zap",
         featured: true,
         tagline: "4 Autonomous Agents • Self-Hosted DevOps • Zero Cloud Dependencies",
-    },
-    {
-        title: "AI Competitive Analysis Agent",
-        description:
-            "Autonomous multi-agent system that researches and analyzes competitive landscapes in real time. Agents crawl company data, news, and market signals to generate structured competitor profiles, SWOT analyses, positioning maps, and strategic recommendations — delivered as interactive reports.",
-        tech: ["Python", "LangGraph", "OpenAI", "FastAPI", "Next.js", "Tavily", "Docker"],
-        github: "https://github.com/sairam3824/AI-Competitive-Analysis-Agent",
-        link: "https://analysisagent.saiii.in",
-        category: "AI Agent",
-        iconName: "Zap",
-        featured: true,
-        tagline: "Autonomous Competitive Intelligence • SWOT & Positioning Analysis",
     },
     {
         title: "A2A Task Marketplace",
@@ -260,28 +274,6 @@ export const projectsData: ProjectData[] = [
         iconName: "Zap",
         featured: true,
         tagline: "Semantic Career Matching • Skill Gap Analysis",
-    },
-    {
-        title: "LangChain AI Agents",
-        description:
-            "Agentic AI application powered by Gemini-1.5-Flash and Wikipedia tools. Demonstrates intelligent chain architecture, tool selection, and complex reasoning workflows.",
-        tech: ["LangChain", "Google Gemini", "Python", "Prompt Engineering"],
-        github: "https://github.com/sairam3824/Langchain-LLM-PET-app",
-        category: "AI Agent",
-        iconName: "Brain",
-        featured: false,
-        tagline: "Agentic Reasoning Framework • Gemini 1.5 Flash",
-    },
-    {
-        title: "Integrated AI Text Assistant",
-        description:
-            "Intelligent NLP assistant leveraging T5 and OpenAI for text generation, translation, and analysis. Features a robust FastAPI backend with Redis caching for performance.",
-        tech: ["FastAPI", "T5", "OpenAI", "Redis", "Docker"],
-        github: "https://github.com/sairam3824/Integrated-AI-Text-Assistant",
-        category: "AI Agent",
-        iconName: "Zap",
-        featured: false,
-        tagline: "T5-Powered NLP Engine • Generation & Analysis",
     },
     {
         title: "Agentic RAG Engine",
@@ -416,6 +408,50 @@ export const projectsData: ProjectData[] = [
         tagline: "Multi-Source Ingestion • Anki Export • GPT-4o-mini",
     },
     {
+        title: "Context Engineering Playground",
+        description:
+            "A browser-based devtool for building, reordering, and compressing LLM context windows visually. Features drag-and-drop context blocks, real-time token counts, and automated optimization.",
+        tech: ["Next.js 14", "Tailwind CSS", "TypeScript", "GPT-Tokenizer", "Recharts", "Framer Motion"],
+        github: "https://github.com/sairam3824/Context-Engineering-Playground",
+        category: "AI Platform",
+        iconName: "Brain",
+        featured: true,
+        tagline: "LLM Context Visualizer • Drag-and-Drop Building • Token Optimization",
+    },
+    {
+        title: "Synthetic Data Factory",
+        description:
+            "A modular framework for generating high-quality synthetic datasets using Large Language Models (LLMs) via OpenRouter. Includes automated quality evaluation, customizable generation templates, and a Streamlit monitoring dashboard for data curation.",
+        tech: ["Python", "OpenRouter", "LLMs", "Docker", "Streamlit", "Pandas"],
+        github: "https://github.com/sairam3824/Synthetic-Data-Factory",
+        category: "AI Platform",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "LLM-Powered Data Generation • Quality Assurance • Streamlit Dashboard",
+    },
+    {
+        title: "AI Data Pipeline Builder",
+        description:
+            "A full-stack monorepo for architecting and managing AI data pipelines. Features a robust Next.js web interface, Prisma ORM for lineage tracking, and Python-based worker services for scalable data ingestion and processing.",
+        tech: ["Next.js", "Prisma", "Tailwind CSS", "Python", "Docker", "TypeScript", "FastAPI"],
+        github: "https://github.com/sairam3824/AI-Data-Pipeline-Builder",
+        category: "AI Platform",
+        iconName: "Terminal",
+        featured: true,
+        tagline: "Scalable Data Engineering • Full-Stack Monorepo • Next.js + Python",
+    },
+    {
+        title: "Advanced Orravyn Research Platform",
+        description:
+            "A comprehensive research ecosystem featuring a LangGraph-powered RAG chatbot, multi-agent research orchestration, and real-time collaborative tools. Includes AI-driven paper recommendations, peer review workflows, and automated citation management.",
+        tech: ["Django", "LangGraph", "Python", "Redis", "ChromaDB", "OpenAI", "Celery", "Bootstrap"],
+        github: "https://github.com/sairam3824/advanced-orravyn-research-platform",
+        category: "AI Research Platform",
+        iconName: "Brain",
+        featured: true,
+        tagline: "AI-Powered Research Hub • LangGraph Chatbot • Multi-Agent Workflows",
+    },
+    {
         title: "RecForge Recommendation Engine",
         description:
             "Production-grade recommendation platform demonstrating end-to-end personalization with collaborative filtering, content retrieval, hybrid ranking, explainable recommendations, deterministic A/B/C experimentation, and admin analytics for model operations.",
@@ -427,15 +463,48 @@ export const projectsData: ProjectData[] = [
         tagline: "Hybrid Recommender • FAISS + SVD • A/B Experimentation",
     },
     {
-        title: "APIProbe: AI Key Guard",
+        title: "K-AgriRisk",
         description:
-            "Professional dashboard for validating and stress-testing API keys across 9 AI providers (OpenAI, Anthropic, Gemini, Groq, Mistral, Perplexity, OpenRouter, DeepSeek, Together AI). All validation runs server-side via Next.js Server Actions — keys never leave the browser. Features model stress testing with latency benchmarks, searchable audit logs, JSON export, and 15-second timeout protection.",
-        tech: ["Next.js 15", "React 19", "TypeScript", "Framer Motion", "Server Actions"],
-        github: "https://github.com/sairam3824/APIProbe",
-        category: "Infrastructure",
-        iconName: "Key",
+            "Interpretable multimodal crop risk prediction platform using Kolmogorov-Arnold Networks (KAN) — telling farmers not just what will happen, but why and what they can do about it. Features native spline-based explainability, constrained algorithmic recourse over mutable features (NPK, soil pH, area), multi-dataset validation across Indian and UK agricultural datasets, and a FastAPI + React dashboard with SHAP, KAN spline charts, and model comparison across XGBoost, CatBoost, RF, MLP, and KAN.",
+        tech: ["Python", "FastAPI", "KAN", "XGBoost", "CatBoost", "SHAP", "React", "Vite", "Tailwind CSS", "Pydantic", "scikit-learn"],
+        github: "https://github.com/sairam3824/K-AgriRisk",
+        category: "Machine Learning",
+        iconName: "Leaf",
         featured: true,
-        tagline: "9-Provider API Key Validator • Server-Side Security • Stress Testing",
+        tagline: "KAN-Powered Crop Risk • Algorithmic Recourse • Interpretable AI",
+    },
+    {
+        title: "RL Arena",
+        description:
+            "A local-first reinforcement learning playground for training and comparing RL agents. Supports multi-algorithm training (PPO, DQN, A2C), classic control environments, and custom GridWorlds with real-time WebSocket-based monitoring and visualization.",
+        tech: ["Python", "Stable-Baselines3", "WebSockets", "Next.js", "Docker", "TypeScript", "Gymnasium"],
+        github: "https://github.com/sairam3824/RL-Arena",
+        category: "Machine Learning",
+        iconName: "Rocket",
+        featured: true,
+        tagline: "Local RL Playground • Multi-Algorithm Support • Real-time Monitoring",
+    },
+    {
+        title: "NeuroLens: Brain Tumor Classifier",
+        description:
+            "Research-grade web app for explainable brain tumor classification from MRI scans. Fuses Topological Data Analysis (TDA), Tucker/Tensor Train decomposition, and classical ML — achieving 92.45% accuracy (SVM-RBF) with GradCAM++ heatmaps, TDA-derived ROI masks via persistent homology, and quantitative IoU/Dice explainability metrics across 4 tumor classes.",
+        tech: ["Python", "PyTorch", "Flask", "scikit-learn", "TensorLy", "ripser", "XGBoost", "LightGBM", "OpenCV"],
+        github: "https://github.com/sairam3824/NeuroLens",
+        category: "Computer Vision",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "TDA + Tensor Fusion • 92.45% Accuracy • GradCAM++ Explainability",
+    },
+    {
+        title: "Multimodal Disaster Intelligence",
+        description:
+            "A comprehensive disaster management platform that integrates IoT sensor data, social media analytics, and satellite imagery (xBD dataset) for real-time intelligence and AI-driven resource allocation. Features DeepLabV3+ for damage assessment and real-time social media processing.",
+        tech: ["Python", "PyTorch", "IoT", "Deep Learning", "NLP", "Flask"],
+        github: "https://github.com/sairam3824/Multimodal-diaster-management",
+        category: "Deep Learning",
+        iconName: "Activity",
+        featured: true,
+        tagline: "Multimodal AI • IoT Integration • Disaster Response",
     },
     {
         title: "LLM Token Debugger",
@@ -447,6 +516,88 @@ export const projectsData: ProjectData[] = [
         iconName: "Terminal",
         featured: true,
         tagline: "Interactive Tokenizer Visualizer • 50 Models • 8 Providers",
+    },
+    {
+        title: "ShopInsight: Shopify Analytics",
+        description:
+            "Multi-tenant analytics dashboard for Shopify merchants. Features secure OAuth integration, real-time webhook processing, and interactive revenue/product insights.",
+        tech: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "Shopify API"],
+        github: "https://github.com/sairam3824/ShopInsight",
+        category: "Enterprise Software",
+        iconName: "Activity",
+        featured: true,
+        tagline: "Multi-Tenant Analytics • Real-time Data Sync",
+    },
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // SUPPORTING WORK — Tools, experiments, and earlier projects
+    // ═══════════════════════════════════════════════════════════════════════════
+
+    {
+        title: "Portfolio V3",
+        description:
+            "The 3rd iteration focusing on extreme performance and minimalism. Achieved 95+ Lighthouse scores with a tiny bundle size, featuring route-based code splitting and sleek glassmorphism aesthetics.",
+        tech: ["React 18", "TypeScript", "Vite 5", "Tailwind CSS", "React Router"],
+        github: "https://github.com/sairam3824/Portfolio-v3",
+        category: "Web Development",
+        iconName: "Globe",
+        featured: false,
+        tagline: "Minimalist Performance-First Portfolio • 95+ Lighthouse",
+    },
+    {
+        title: "Portfolio V4",
+        description:
+            "The 4th iteration — a recruiter-first 'control room' UI that surfaces projects, skills, writing, proof metrics, and contact actions in a fast-scanning dashboard layout. Standalone build with proof-heavy cards, multi-page React Router experience, PWA support, compressed production builds, and a local chat widget for portfolio Q&A.",
+        tech: ["React 18", "TypeScript", "Vite 5", "Tailwind CSS", "React Router", "React Helmet Async", "Lucide React"],
+        github: "https://github.com/sairam3824/Portfolio-v4",
+        category: "Web Development",
+        iconName: "Globe",
+        featured: false,
+        tagline: "Recruiter-First Control Room • Built with Google Antigravity",
+    },
+    {
+        title: "Portfolio V5",
+        description:
+            "The 5th iteration — a premium 'candidate briefing' UI surfacing project proof, coding depth, certifications, and contact shortcuts in a fast-scanning layout. Features standalone dummy data, multi-page React Router experience, PWA support, compressed production builds, and a local recruiter helper chat widget.",
+        tech: ["React 18", "TypeScript", "Vite 5", "Tailwind CSS", "React Router", "React Helmet Async", "Lucide React"],
+        github: "https://github.com/sairam3824/Portfolio-v5",
+        category: "Web Development",
+        iconName: "Globe",
+        featured: false,
+        tagline: "Candidate Briefing UI • Built with OpenAI Codex",
+    },
+    {
+        title: "Classic Personal Portfolio",
+        description:
+            "Clean, responsive personal portfolio built with vanilla web technologies. Features smooth Swiper.js animations, dark/light theme toggling, and optimized SEO structure.",
+        tech: ["HTML5", "CSS3", "JavaScript", "MixItUp", "Swiper.js"],
+        github: "https://github.com/sairam3824/Portfolio",
+        category: "Web Development",
+        iconName: "Globe",
+        featured: false,
+        tagline: "Responsive Vanilla Stack • Theme Switching",
+    },
+    {
+        title: "LangChain AI Agents",
+        description:
+            "Agentic AI application powered by Gemini-1.5-Flash and Wikipedia tools. Demonstrates intelligent chain architecture, tool selection, and complex reasoning workflows.",
+        tech: ["LangChain", "Google Gemini", "Python", "Prompt Engineering"],
+        github: "https://github.com/sairam3824/Langchain-LLM-PET-app",
+        category: "AI Agent",
+        iconName: "Brain",
+        featured: false,
+        tagline: "Agentic Reasoning Framework • Gemini 1.5 Flash",
+    },
+    {
+        title: "Integrated AI Text Assistant",
+        description:
+            "Intelligent NLP assistant leveraging T5 and OpenAI for text generation, translation, and analysis. Features a robust FastAPI backend with Redis caching for performance.",
+        tech: ["FastAPI", "T5", "OpenAI", "Redis", "Docker"],
+        github: "https://github.com/sairam3824/Integrated-AI-Text-Assistant",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: false,
+        tagline: "T5-Powered NLP Engine • Generation & Analysis",
     },
     {
         title: "LLM Eval Bench",
@@ -581,6 +732,17 @@ export const projectsData: ProjectData[] = [
         tagline: "Standardized AI Tool Protocols • Multi-Server Routing",
     },
     {
+        title: "BadClaude",
+        description:
+            "A hardened Electron tray app that sends Claude Code an interrupt (Ctrl-C) and a randomized motivational message whenever it's going too slow. Security-hardened fork with Electron sandbox, strict CSP, IPC sender validation, AppleScript-via-stdin injection prevention, and 18 CVE fixes — on top of a reliable macro delivery pipeline for macOS.",
+        tech: ["Electron", "JavaScript", "Node.js", "macOS", "AppleScript"],
+        github: "https://github.com/sairam3824/badclaude",
+        category: "Infrastructure",
+        iconName: "Code2",
+        featured: false,
+        tagline: "Whip Claude Code Into Shape • Electron Tray • Security-Hardened",
+    },
+    {
         title: "Algorithm Solutions",
         description:
             "Optimized solutions for Codeforces and competitive programming challenges. Features advanced data structures and algorithms for high-performance problem solving.",
@@ -669,17 +831,6 @@ export const projectsData: ProjectData[] = [
         tagline: "91% Prediction Accuracy • Aerospace Analytics",
     },
     {
-        title: "ShopInsight: Shopify Analytics",
-        description:
-            "Multi-tenant analytics dashboard for Shopify merchants. Features secure OAuth integration, real-time webhook processing, and interactive revenue/product insights.",
-        tech: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "Shopify API"],
-        github: "https://github.com/sairam3824/ShopInsight",
-        category: "Enterprise Software",
-        iconName: "Activity",
-        featured: true,
-        tagline: "Multi-Tenant Analytics • Real-time Data Sync",
-    },
-    {
         title: "Interactive Quiz Platform",
         description:
             "Full-stack quiz engine featuring real-time scoring, timers, and category randomization. Developed with a focus on responsive UI and performance optimization.",
@@ -700,104 +851,5 @@ export const projectsData: ProjectData[] = [
         iconName: "Globe",
         featured: false,
         tagline: "Academic ERP • MySQL Backend",
-    },
-    {
-        title: "BadClaude",
-        description:
-            "A hardened Electron tray app that sends Claude Code an interrupt (Ctrl-C) and a randomized motivational message whenever it's going too slow. Security-hardened fork with Electron sandbox, strict CSP, IPC sender validation, AppleScript-via-stdin injection prevention, and 18 CVE fixes — on top of a reliable macro delivery pipeline for macOS.",
-        tech: ["Electron", "JavaScript", "Node.js", "macOS", "AppleScript"],
-        github: "https://github.com/sairam3824/badclaude",
-        category: "Infrastructure",
-        iconName: "Code2",
-        featured: false,
-        tagline: "Whip Claude Code Into Shape • Electron Tray • Security-Hardened",
-    },
-    {
-        title: "NeuroLens: Brain Tumor Classifier",
-        description:
-            "Research-grade web app for explainable brain tumor classification from MRI scans. Fuses Topological Data Analysis (TDA), Tucker/Tensor Train decomposition, and classical ML — achieving 92.45% accuracy (SVM-RBF) with GradCAM++ heatmaps, TDA-derived ROI masks via persistent homology, and quantitative IoU/Dice explainability metrics across 4 tumor classes.",
-        tech: ["Python", "PyTorch", "Flask", "scikit-learn", "TensorLy", "ripser", "XGBoost", "LightGBM", "OpenCV"],
-        github: "https://github.com/sairam3824/NeuroLens",
-        category: "Computer Vision",
-        iconName: "Cpu",
-        featured: true,
-        tagline: "TDA + Tensor Fusion • 92.45% Accuracy • GradCAM++ Explainability",
-    },
-    {
-        title: "K-AgriRisk",
-        description:
-            "Interpretable multimodal crop risk prediction platform using Kolmogorov-Arnold Networks (KAN) — telling farmers not just what will happen, but why and what they can do about it. Features native spline-based explainability, constrained algorithmic recourse over mutable features (NPK, soil pH, area), multi-dataset validation across Indian and UK agricultural datasets, and a FastAPI + React dashboard with SHAP, KAN spline charts, and model comparison across XGBoost, CatBoost, RF, MLP, and KAN.",
-        tech: ["Python", "FastAPI", "KAN", "XGBoost", "CatBoost", "SHAP", "React", "Vite", "Tailwind CSS", "Pydantic", "scikit-learn"],
-        github: "https://github.com/sairam3824/K-AgriRisk",
-        category: "Machine Learning",
-        iconName: "Leaf",
-        featured: true,
-        tagline: "KAN-Powered Crop Risk • Algorithmic Recourse • Interpretable AI",
-    },
-    {
-        title: "Multimodal Disaster Intelligence",
-        description:
-            "A comprehensive disaster management platform that integrates IoT sensor data, social media analytics, and satellite imagery (xBD dataset) for real-time intelligence and AI-driven resource allocation. Features DeepLabV3+ for damage assessment and real-time social media processing.",
-        tech: ["Python", "PyTorch", "IoT", "Deep Learning", "NLP", "Flask"],
-        github: "https://github.com/sairam3824/Multimodal-diaster-management",
-        category: "Deep Learning",
-        iconName: "Activity",
-        featured: true,
-        tagline: "Multimodal AI • IoT Integration • Disaster Response",
-    },
-    {
-        title: "Synthetic Data Factory",
-        description:
-            "A modular framework for generating high-quality synthetic datasets using Large Language Models (LLMs) via OpenRouter. Includes automated quality evaluation, customizable generation templates, and a Streamlit monitoring dashboard for data curation.",
-        tech: ["Python", "OpenRouter", "LLMs", "Docker", "Streamlit", "Pandas"],
-        github: "https://github.com/sairam3824/Synthetic-Data-Factory",
-        category: "AI Platform",
-        iconName: "Cpu",
-        featured: true,
-        tagline: "LLM-Powered Data Generation • Quality Assurance • Streamlit Dashboard",
-    },
-    {
-        title: "AI Data Pipeline Builder",
-        description:
-            "A full-stack monorepo for architecting and managing AI data pipelines. Features a robust Next.js web interface, Prisma ORM for lineage tracking, and Python-based worker services for scalable data ingestion and processing.",
-        tech: ["Next.js", "Prisma", "Tailwind CSS", "Python", "Docker", "TypeScript", "FastAPI"],
-        github: "https://github.com/sairam3824/AI-Data-Pipeline-Builder",
-        category: "AI Platform",
-        iconName: "Terminal",
-        featured: true,
-        tagline: "Scalable Data Engineering • Full-Stack Monorepo • Next.js + Python",
-    },
-    {
-        title: "RL Arena",
-        description:
-            "A local-first reinforcement learning playground for training and comparing RL agents. Supports multi-algorithm training (PPO, DQN, A2C), classic control environments, and custom GridWorlds with real-time WebSocket-based monitoring and visualization.",
-        tech: ["Python", "Stable-Baselines3", "WebSockets", "Next.js", "Docker", "TypeScript", "Gymnasium"],
-        github: "https://github.com/sairam3824/RL-Arena",
-        category: "Machine Learning",
-        iconName: "Rocket",
-        featured: true,
-        tagline: "Local RL Playground • Multi-Algorithm Support • Real-time Monitoring",
-    },
-    {
-        title: "Context Engineering Playground",
-        description:
-            "A browser-based devtool for building, reordering, and compressing LLM context windows visually. Features drag-and-drop context blocks, real-time token counts, and automated optimization.",
-        tech: ["Next.js 14", "Tailwind CSS", "TypeScript", "GPT-Tokenizer", "Recharts", "Framer Motion"],
-        github: "https://github.com/sairam3824/Context-Engineering-Playground",
-        category: "AI Platform",
-        iconName: "Brain",
-        featured: true,
-        tagline: "LLM Context Visualizer • Drag-and-Drop Building • Token Optimization",
-    },
-    {
-        title: "Advanced Orravyn Research Platform",
-        description:
-            "A comprehensive research ecosystem featuring a LangGraph-powered RAG chatbot, multi-agent research orchestration, and real-time collaborative tools. Includes AI-driven paper recommendations, peer review workflows, and automated citation management.",
-        tech: ["Django", "LangGraph", "Python", "Redis", "ChromaDB", "OpenAI", "Celery", "Bootstrap"],
-        github: "https://github.com/sairam3824/advanced-orravyn-research-platform",
-        category: "AI Research Platform",
-        iconName: "Brain",
-        featured: true,
-        tagline: "AI-Powered Research Hub • LangGraph Chatbot • Multi-Agent Workflows",
     },
 ];
