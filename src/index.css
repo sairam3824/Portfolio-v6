@@ -1041,8 +1041,8 @@ textarea {
 }
 
 .rd-project-action-primary {
-    background: linear-gradient(180deg, rgba(237, 233, 255, 0.96) 0%, rgba(227, 220, 255, 0.96) 100%);
-    border-color: rgba(160, 148, 255, 0.26);
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(13, 13, 11, 0.14);
     color: var(--rd-ink);
 }
 

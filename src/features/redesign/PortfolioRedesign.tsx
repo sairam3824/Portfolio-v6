@@ -488,15 +488,31 @@ function HomePage() {
                     </div>
                     <div className="rd-card-grid">
                         {featuredProjects.slice(0, 4).map((project) => (
-                            <Link key={project.title} to={ROUTE_PATHS.projects} className="rd-card">
-                                <div className="rd-card-meta">
-                                    <span className="rd-chip">{project.category}</span>
-                                    <span className="rd-meta-text">{project.tech.slice(0, 3).join(" · ")}</span>
+                            <div key={project.title} className="rd-card" style={{ display: "flex", flexDirection: "column" }}>
+                                <Link to={ROUTE_PATHS.projects} style={{ textDecoration: "none", color: "inherit", flexGrow: 1 }}>
+                                    <div className="rd-card-meta">
+                                        <span className="rd-chip">{project.category}</span>
+                                        <span className="rd-meta-text">{project.tech.slice(0, 3).join(" · ")}</span>
+                                    </div>
+                                    <h3>{project.title}</h3>
+                                    <p>{project.tagline || project.description}</p>
+                                </Link>
+                                <div style={{ display: "flex", gap: "16px", marginTop: "16px", alignItems: "center" }}>
+                                    <Link to={ROUTE_PATHS.projects} className="rd-card-arrow" style={{ textDecoration: "none" }}>↗</Link>
+                                    <div style={{ display: "flex", gap: "16px", marginLeft: "auto" }}>
+                                        {project.github && (
+                                            <a href={project.github} target="_blank" rel="noreferrer" className="rd-inline-link" style={{ fontSize: "0.8rem" }}>
+                                                <Github size={14} style={{ marginRight: "4px" }} /> GitHub
+                                            </a>
+                                        )}
+                                        {project.link && (
+                                            <a href={project.link} target="_blank" rel="noreferrer" className="rd-inline-link" style={{ fontSize: "0.8rem" }}>
+                                                <Globe size={14} style={{ marginRight: "4px" }} /> Live
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
-                                <h3>{project.title}</h3>
-                                <p>{project.tagline || project.description}</p>
-                                <span className="rd-card-arrow">↗</span>
-                            </Link>
+                            </div>
                         ))}
                     </div>
                 </section>
@@ -561,6 +577,34 @@ function HomePage() {
                                 ))}
                             </div>
                             <p className="rd-surface-copy">Topics that consistently shape the projects, essays, and systems thinking across the portfolio.</p>
+
+                            {/* Published paper */}
+                            <div style={{ marginTop: "12px", padding: "9px 10px", background: "rgba(255,255,255,0.03)", borderRadius: "8px", border: "1px solid rgba(255,255,255,0.07)" }}>
+                                <div style={{ display: "flex", alignItems: "center", gap: "5px", marginBottom: "4px" }}>
+                                    <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "currentColor", opacity: 0.6, flexShrink: 0, display: "inline-block" }} />
+                                    <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", opacity: 0.5 }}>Published · ICISML 2026</span>
+                                </div>
+                                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px" }}>
+                                    <p style={{ fontSize: "0.78rem", fontWeight: 600, lineHeight: 1.3, margin: 0 }}>Orravyn: LLM-Powered Research Platform</p>
+                                    <a href="https://github.com/sairam3824/Orravyn-Research-Platform-with-LLM" target="_blank" rel="noreferrer" className="rd-inline-link" style={{ fontSize: "0.7rem", whiteSpace: "nowrap", flexShrink: 0 }}>
+                                        <Github size={11} style={{ marginRight: "3px" }} /> GitHub <ArrowUpRight size={10} />
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Journal target paper */}
+                            <div style={{ marginTop: "6px", padding: "9px 10px", background: "rgba(255,255,255,0.03)", borderRadius: "8px", border: "1px solid rgba(255,255,255,0.07)" }}>
+                                <div style={{ display: "flex", alignItems: "center", gap: "5px", marginBottom: "4px" }}>
+                                    <span style={{ width: "5px", height: "5px", borderRadius: "50%", border: "1.5px solid currentColor", opacity: 0.45, flexShrink: 0, display: "inline-block" }} />
+                                    <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", opacity: 0.4 }}>Targeting Journal</span>
+                                </div>
+                                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px" }}>
+                                    <p style={{ fontSize: "0.78rem", fontWeight: 600, lineHeight: 1.3, margin: 0 }}>Multi-Modal RAG Engine</p>
+                                    <a href="https://github.com/sairam3824/multi-modal-engine" target="_blank" rel="noreferrer" className="rd-inline-link" style={{ fontSize: "0.7rem", whiteSpace: "nowrap", flexShrink: 0 }}>
+                                        <Github size={11} style={{ marginRight: "3px" }} /> GitHub <ArrowUpRight size={10} />
+                                    </a>
+                                </div>
+                            </div>
                         </article>
 
                         <article className="rd-surface-card">

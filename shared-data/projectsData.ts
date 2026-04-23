@@ -33,14 +33,14 @@ export const projectsData: ProjectData[] = [
     {
         title: "AI Research Platform (Orravyn)",
         description:
-            "Enterprise-grade collaborative platform for AI deployment. Enables scalable LLM experimentation and model fine-tuning within a production-ready environment.",
-        tech: ["Node.js", "Python", "AWS", "n8n", "Docker", "LLMs"],
+            "Enterprise-grade collaborative research platform with LLM orchestration, multi-agent workflows, real-time collaboration, and AI-driven paper recommendations. Research paper on this platform was submitted to and accepted at ICISML 2026 (International Conference on Intelligent Systems, Machine Learning) — conference completed.",
+        tech: ["Django", "Python", "LangGraph", "Redis", "ChromaDB", "OpenAI", "Celery", "AWS", "Docker"],
         github: "https://github.com/sairam3824/Orravyn-Research-Platform-with-LLM",
         link: "https://orravyn.cloud",
-        category: "AI Platform",
+        category: "AI Research Platform",
         iconName: "Brain",
         featured: true,
-        tagline: "Enterprise-Grade LLM Orchestration Platform",
+        tagline: "ICISML 2026 Published · Enterprise LLM Research Orchestration Platform",
     },
     {
         title: "VidyAI: AI Test Generator",
@@ -142,6 +142,29 @@ export const projectsData: ProjectData[] = [
     // ═══════════════════════════════════════════════════════════════════════════
     // FEATURED — High-priority projects (source available, not live-hosted)
     // ═══════════════════════════════════════════════════════════════════════════
+
+    {
+        title: "Vectorless RAG Studio",
+        description:
+            "A production-style Retrieval-Augmented Generation (RAG) application that answers questions over uploaded documents WITHOUT using a vector database. Implements lexical search (BM25 + TF-IDF) with page-aware and section-aware retrieval, hybrid fusion ranking, and grounded citations for verifiable answers.",
+        tech: ["FastAPI", "Python", "Next.js 15", "TypeScript", "SQLite", "BM25", "TF-IDF", "OpenAI"],
+        github: "https://github.com/sairam3824/Vectorless-RAG-Studio",
+        category: "AI Search & RAG",
+        iconName: "Search",
+        featured: true,
+        tagline: "Lexical RAG (No Vector Store) • BM25 + TF-IDF Fusion • Grounded Citations",
+    },
+    {
+        title: "AI SQL Copilot",
+        description:
+            "A full-stack AI database assistant for natural-language analytics. Connects to PostgreSQL, SQLite, and DuckDB to provide schema-aware SQL generation, query plan explanation, and index optimization suggestions with read-only safety guardrails.",
+        tech: ["Next.js 15", "FastAPI", "TypeScript", "PostgreSQL", "SQLite", "DuckDB", "OpenRouter", "SQLAlchemy"],
+        github: "https://github.com/sairam3824/Ai-SQL",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Natural Language to SQL • Multi-DB Support • Query Optimization",
+    },
 
     {
         title: "Autonomous AI DevOps Agent Platform",
