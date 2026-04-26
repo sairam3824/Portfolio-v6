@@ -19,6 +19,18 @@ export const projectsData: ProjectData[] = [
     // ═══════════════════════════════════════════════════════════════════════════
 
     {
+        title: "DevDNA",
+        description:
+            "AI-powered analysis that scans your GitHub repositories, languages, and contribution patterns to reveal your unique developer identity — visualized as an interactive 3D DNA helix.",
+        tech: ["Next.js", "TypeScript", "Three.js", "Tailwind CSS", "React Three Fiber"],
+        github: "https://github.com/sairam3824/DevDNA",
+        link: "https://devdna.vercel.app",
+        category: "AI Platform",
+        iconName: "Activity",
+        featured: true,
+        tagline: "Decode your Developer DNA from your GitHub profile",
+    },
+    {
         title: "Portfolio V6 (Current)",
         description:
             "The 6th iteration of my personal portfolio, featuring a premium redesign focused on a modern aesthetic with a high-performance technical foundation. Includes an AI-powered chat widget, serverless backend, and advanced SEO optimization.",
@@ -143,6 +155,40 @@ export const projectsData: ProjectData[] = [
     // FEATURED — High-priority projects (source available, not live-hosted)
     // ═══════════════════════════════════════════════════════════════════════════
 
+    {
+        title: "Multi-LLM Debate Arena",
+        description:
+            "A production-ready Next.js app for running adversarial debates between two LLMs, scoring each round with a judge model, saving debate history, and exporting full transcripts. Features live streamed debates, third-model judge scoring, and a CLI evaluation mode for batch experiments.",
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "SQLite", "OpenAI SDK", "Anthropic SDK", "OpenRouter SDK"],
+        github: "https://github.com/sairam3824/Multi-LLM-Debate-Arena",
+        category: "AI Platform",
+        iconName: "Activity",
+        featured: true,
+        tagline: "Adversarial LLM Debates • Round-by-Round Scoring • Batch Evaluation CLI",
+    },
+    {
+        title: "Personal Email Triage Agent",
+        description:
+            "AI-powered Gmail inbox triage system that classifies messages, drafts replies, archives low-priority mail, and automates unsubscribe flows. Features local preference learning through a rules engine, Playwright-based automation, and a SQLite audit log for decision tracking.",
+        tech: ["Python", "OpenAI", "Gmail API", "SQLite", "Playwright", "CLI"],
+        github: "https://github.com/sairam3824/Personal-Email-Triage-Agent",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Autonomous Gmail Triage • Local Preference Learning • Automated Unsubscribe",
+    },
+
+    {
+        title: "Red Team Simulator",
+        description:
+            "A full-stack AI red team platform for testing LLM applications against prompt injection, jailbreaks, data exfiltration, and tool misuse. Features a plugin-based attack engine and async execution pipeline.",
+        tech: ["FastAPI", "Next.js", "PostgreSQL", "Docker", "Tailwind CSS", "OpenRouter"],
+        github: "https://github.com/sairam3824/Red-Team-Simulator",
+        category: "AI Security",
+        iconName: "Shield",
+        featured: true,
+        tagline: "Full-Stack AI Red Team Platform",
+    },
     {
         title: "Vectorless RAG Studio",
         description:
