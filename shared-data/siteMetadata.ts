@@ -40,7 +40,7 @@ export const profileDetails = {
 } as const;
 
 export const siteMetadata = {
-    siteUrl: "https://saiii.in",
+    siteUrl: "https://www.saiii.in",
     applicationName: "Sai Ram Maruri Portfolio",
     defaultTitle: `${profileDetails.name} | ${profileDetails.shortRole}`,
     defaultDescription:
