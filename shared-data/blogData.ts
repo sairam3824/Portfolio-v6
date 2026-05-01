@@ -14,6 +14,17 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        id: "tech-monthly-digest-apr-2026",
+        title: "Tech Monthly Digest: April 2026 - Agents Become the Enterprise Operating Layer",
+        excerpt:
+            "April 2026 was the month agents stopped being a developer-side experiment and became enterprise infrastructure. OpenAI pushed Codex across apps, teams, and AWS. Anthropic shipped Opus 4.7, Claude Design, and two massive compute expansions. Google Cloud Next turned agent platforms into the main cloud story. Here's what actually mattered for builders.",
+        date: "May 1, 2026",
+        readTime: "18 min read",
+        tags: ["AI/ML", "Agents", "Monthly Digest", "Codex", "Claude", "Cloud AI", "Developer Tools", "Enterprise AI"],
+        icon: "Globe",
+        iconColor: "purple",
+    },
+    {
         id: "ai-analytics-multiplier",
         title: "AI × Analytics: Why 20% of Companies Are Capturing 75% of AI's Economic Value",
         excerpt:
