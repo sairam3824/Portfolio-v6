@@ -38,7 +38,6 @@ export default defineConfig({
           "vendor-react": ["react", "react-dom", "react-router-dom"],
           "vendor-ui": ["lucide-react", "react-helmet-async"],
           "vendor-supabase": ["@supabase/supabase-js"],
-          "vendor-analytics": ["web-vitals"],
         },
       },
     },

@@ -7,6 +7,7 @@ export const ROUTE_PATHS = {
     resume: "/resume",
     codingProfiles: "/coding-profiles",
     writing: "/writing",
+    writings: "/writings",
     legacyWriting: "/blogs",
     certifications: "/certifications",
     contact: "/contact",
@@ -21,3 +22,6 @@ export const getWritingPath = (slug?: string) =>
 
 export const getLegacyWritingPath = (slug?: string) =>
     slug ? `${ROUTE_PATHS.legacyWriting}/${slug}` : ROUTE_PATHS.legacyWriting;
+
+export const getPluralWritingPath = (slug?: string) =>
+    slug ? `${ROUTE_PATHS.writings}/${slug}` : ROUTE_PATHS.writings;

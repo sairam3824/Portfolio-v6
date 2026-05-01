@@ -43,7 +43,7 @@ import Seo from "@/shared/Seo";
 const ChatWidget = lazy(() => import("@/features/chat/ChatWidget"));
 import { educationData } from "@/data/educationData";
 import { profileDetails, siteMetadata } from "@/data/siteMetadata";
-import { ROUTE_PATHS, getWritingPath } from "@/data/siteRoutes";
+import { ROUTE_PATHS, getPluralWritingPath, getWritingPath } from "@/data/siteRoutes";
 import { blogPosts } from "@/features/blog/blogData";
 import { getBlogContent } from "@/features/blog/blogContent";
 import { certifications } from "@/features/certifications/certificationsData";
@@ -268,6 +268,33 @@ function PageHeader({ label, title, description }: { label: string; title: strin
     );
 }
 
+function DeferredChatWidget() {
+    const [shouldLoad, setShouldLoad] = useState(false);
+
+    useEffect(() => {
+        const idleWindow = window as Window & {
+            requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
+            cancelIdleCallback?: (handle: number) => void;
+        };
+
+        if (idleWindow.requestIdleCallback) {
+            const idleId = idleWindow.requestIdleCallback(() => setShouldLoad(true), { timeout: 4500 });
+            return () => idleWindow.cancelIdleCallback?.(idleId);
+        }
+
+        const timeoutId = window.setTimeout(() => setShouldLoad(true), 3500);
+        return () => window.clearTimeout(timeoutId);
+    }, []);
+
+    if (!shouldLoad) return null;
+
+    return (
+        <Suspense fallback={null}>
+            <ChatWidget />
+        </Suspense>
+    );
+}
+
 function PortfolioLayout() {
     const [menuOpen, setMenuOpen] = useState(false);
     const location = useLocation();
@@ -408,9 +435,7 @@ function PortfolioLayout() {
                     <p className="rd-footer-location">India &nbsp;·&nbsp; Open to Remote</p>
                 </div>
             </footer>
-            <Suspense fallback={null}>
-                <ChatWidget />
-            </Suspense>
+            <DeferredChatWidget />
         </div>
     );
 }
@@ -1578,6 +1603,11 @@ function LegacyWritingPostRedirect() {
     return <Navigate to={getWritingPath(id)} replace />;
 }
 
+function PluralWritingPostRedirect() {
+    const { id } = useParams<{ id: string }>();
+    return <Navigate to={getWritingPath(id)} replace />;
+}
+
 function NotFoundPage() {
     return (
         <>
@@ -1646,6 +1676,8 @@ function PortfolioRedesign() {
                     <Route path={ROUTE_PATHS.resume} element={<ResumeRedirectPage />} />
                     <Route path={ROUTE_PATHS.legacyWriting} element={<Navigate to={ROUTE_PATHS.writing} replace />} />
                     <Route path={`${ROUTE_PATHS.legacyWriting}/:id`} element={<LegacyWritingPostRedirect />} />
+                    <Route path={getPluralWritingPath()} element={<Navigate to={ROUTE_PATHS.writing} replace />} />
+                    <Route path={`${getPluralWritingPath()}/:id`} element={<PluralWritingPostRedirect />} />
                 </Routes>
             </Router>
         </HelmetProvider>

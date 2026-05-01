@@ -17,8 +17,8 @@
     --rd-shadow-strong: 0 24px 80px rgba(13, 13, 11, 0.1);
     --rd-radius: 18px;
     --rd-radius-large: 28px;
-    --rd-font-display: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
-    --rd-font-mono: "JetBrains Mono", "SFMono-Regular", "Menlo", monospace;
+    --rd-font-display: "Avenir Next", "Segoe UI", "Inter", system-ui, sans-serif;
+    --rd-font-mono: "SFMono-Regular", "Menlo", "Consolas", monospace;
 }
 
 *,

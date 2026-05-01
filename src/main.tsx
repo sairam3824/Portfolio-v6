@@ -2,7 +2,6 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import reportWebVitals, { sendToAnalytics } from "./shared/reportWebVitals";
 import { AppErrorBoundary } from "./shared/AppErrorBoundary";
 
 const rootElement = document.getElementById("root");
@@ -76,18 +75,3 @@ root.render(
         </AppErrorBoundary>
     </StrictMode>,
 );
-
-if (typeof window !== "undefined") {
-    const startWebVitals = () => {
-        reportWebVitals(sendToAnalytics);
-    };
-    const idleWindow = window as Window & {
-        requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
-    };
-
-    if (idleWindow.requestIdleCallback) {
-        idleWindow.requestIdleCallback(startWebVitals, { timeout: 3000 });
-    } else {
-        window.setTimeout(startWebVitals, 1500);
-    }
-}
