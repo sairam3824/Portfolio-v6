@@ -345,24 +345,6 @@ function PortfolioLayout() {
                     <div className="rd-footer-brand-col">
                         <div className="rd-footer-brand-name">{profileDetails.brand}</div>
                         <p className="rd-footer-tagline">{profileDetails.role}</p>
-                        <div className="rd-footer-avail">
-                            <span className="rd-status-dot" />
-                            {profileDetails.availability}
-                        </div>
-                        <div className="rd-footer-socials">
-                            <a href={profileDetails.socials.github} target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
-                                <Github size={15} />
-                            </a>
-                            <a href={profileDetails.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
-                                <Linkedin size={15} />
-                            </a>
-                            <a href={`mailto:${profileDetails.email}`} aria-label="Email" title="Email">
-                                <Mail size={15} />
-                            </a>
-                            <a href={`tel:${profileDetails.phone.replace(/\s+/g, "")}`} aria-label="Phone" title="Phone">
-                                <Phone size={15} />
-                            </a>
-                        </div>
                     </div>
 
                     {/* Navigation column */}
