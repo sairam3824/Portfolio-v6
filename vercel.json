@@ -9,7 +9,7 @@
     { "source": "/blogs/:slug", "destination": "/writing/:slug", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/" }
   ],
   "headers": [
     {
