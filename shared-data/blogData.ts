@@ -14,6 +14,17 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        id: "gitstory-replit-buildathon",
+        title: "GitStory: Turning Any GitHub Profile Into an AI-Generated Career Narrative",
+        excerpt:
+            "GitStory is a full-stack Replit Buildathon project that transforms a public GitHub profile into a cinematic, AI-generated developer story. It pulls live profile data, uses GPT-5.4 for narrative generation, caches stories in PostgreSQL, and makes each story instantly shareable.",
+        date: "May 3, 2026",
+        readTime: "6 min read",
+        tags: ["Replit", "Buildathon", "GPT-5.4", "GitHub", "Full-Stack", "AI Apps", "Developer Tools"],
+        icon: "GitBranch",
+        iconColor: "orange",
+    },
+    {
         id: "tech-monthly-digest-apr-2026",
         title: "Tech Monthly Digest: April 2026 - Agents Become the Enterprise Operating Layer",
         excerpt:
