@@ -12,6 +12,21 @@ const SITE_NAME = profileDetails.name;
 const AUTHOR_NAME = profileDetails.name;
 const DEFAULT_ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 
+/**
+ * Convert a human-readable date string (e.g. "May 3, 2026") or partial ISO
+ * date (e.g. "2026-04-21") into a full ISO 8601 datetime string.
+ * Returns the original value if parsing fails.
+ */
+const toIsoDate = (value: string): string => {
+    // Already a full ISO 8601 datetime (contains "T")
+    if (value.includes("T")) return value;
+
+    const parsed = new Date(value);
+    if (isNaN(parsed.getTime())) return value;
+
+    return parsed.toISOString();
+};
+
 const getImageMimeType = (imageUrl: string) => {
     if (imageUrl.endsWith(".png")) return "image/png";
     if (imageUrl.endsWith(".webp")) return "image/webp";
@@ -120,8 +135,8 @@ const Seo = ({
                 "url": SITE_URL,
             },
         } : {}),
-        ...(publishedTime && { "datePublished": publishedTime }),
-        ...(modifiedTime && { "dateModified": modifiedTime }),
+        ...(publishedTime && { "datePublished": toIsoDate(publishedTime) }),
+        ...(modifiedTime && { "dateModified": toIsoDate(modifiedTime) }),
     };
 
     return (
@@ -151,7 +166,7 @@ const Seo = ({
             <meta property="og:image:type" content={imageType} />
             <meta property="og:site_name" content={SITE_NAME} />
             <meta property="og:locale" content="en_US" />
-            {modifiedTime && <meta property="og:updated_time" content={modifiedTime} />}
+            {modifiedTime && <meta property="og:updated_time" content={toIsoDate(modifiedTime)} />}
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:url" content={url} />
@@ -169,10 +184,10 @@ const Seo = ({
                         <meta key={keyword} property="article:tag" content={keyword} />
                     ))}
                     {publishedTime && (
-                        <meta property="article:published_time" content={publishedTime} />
+                        <meta property="article:published_time" content={toIsoDate(publishedTime)} />
                     )}
                     {modifiedTime && (
-                        <meta property="article:modified_time" content={modifiedTime} />
+                        <meta property="article:modified_time" content={toIsoDate(modifiedTime)} />
                     )}
                 </>
             )}
