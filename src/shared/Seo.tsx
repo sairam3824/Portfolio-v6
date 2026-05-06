@@ -117,6 +117,14 @@ const Seo = ({
             "@id": `${SITE_URL}/#person`
         },
         "inLanguage": "en-US",
+        // ProfilePage requires mainEntity referencing the Person
+        ...(pageType === "ProfilePage" ? {
+            "mainEntity": {
+                "@id": `${SITE_URL}/#person`
+            },
+            "dateCreated": "2024-01-01T00:00:00+05:30",
+            "dateModified": new Date().toISOString(),
+        } : {}),
         ...(type === "article" ? {
             "mainEntityOfPage": {
                 "@type": "WebPage",
