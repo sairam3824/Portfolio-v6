@@ -3,6 +3,7 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "redirects": [
+    { "source": "/:path(.*)", "has": [{ "type": "host", "value": "saiii.in" }], "destination": "https://www.saiii.in/:path", "permanent": true },
     { "source": "/writings", "destination": "/writing", "permanent": true },
     { "source": "/writings/:slug", "destination": "/writing/:slug", "permanent": true },
     { "source": "/blogs", "destination": "/writing", "permanent": true },

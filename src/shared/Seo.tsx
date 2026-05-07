@@ -37,7 +37,15 @@ const getImageMimeType = (imageUrl: string) => {
 
 const toCanonicalUrl = (path: string) => {
     if (path.startsWith("http://") || path.startsWith("https://")) {
-        return path;
+        // Ensure absolute URLs end consistently — root gets trailing slash
+        const url = new URL(path);
+        if (url.pathname === "" || url.pathname === "/") {
+            url.pathname = "/";
+        } else {
+            // Remove trailing slash from non-root paths
+            url.pathname = url.pathname.replace(/\/+$/, "");
+        }
+        return url.toString();
     }
 
     const normalizedPath = path.startsWith("/") ? path : `/${path}`;
@@ -45,7 +53,11 @@ const toCanonicalUrl = (path: string) => {
         ? normalizedPath
         : `${SITE_PATH_PREFIX}${normalizedPath === "/" ? "" : normalizedPath}`;
 
-    return `${SITE_URL}${withBasePath === SITE_PATH_PREFIX ? `${SITE_PATH_PREFIX}/` : withBasePath}`;
+    // Root path → trailing slash; sub-paths → no trailing slash
+    if (withBasePath === SITE_PATH_PREFIX || withBasePath === "" || withBasePath === "/") {
+        return `${SITE_URL}/`;
+    }
+    return `${SITE_URL}${withBasePath.replace(/\/+$/, "")}`;
 };
 
 type BreadcrumbItem = {
