@@ -113,10 +113,13 @@ const Seo = ({
 
     const schemaType = type === "article" ? "Article" : pageType;
 
+    // ProfilePage uses a dedicated #profilepage fragment; other pages use their canonical URL
+    const schemaId = pageType === "ProfilePage" ? `${SITE_URL}/#profilepage` : url;
+
     const webPageSchema = {
         "@context": "https://schema.org",
         "@type": schemaType,
-        "@id": url,
+        "@id": schemaId,
         "name": title,
         ...(type === "article" ? { "headline": title } : {}),
         "description": description,
@@ -146,13 +149,13 @@ const Seo = ({
                 "@type": "Person",
                 "@id": `${SITE_URL}/#person`,
                 "name": AUTHOR_NAME,
-                "url": SITE_URL,
+                "url": `${SITE_URL}/`,
             },
             "publisher": {
                 "@type": "Person",
                 "@id": `${SITE_URL}/#person`,
                 "name": AUTHOR_NAME,
-                "url": SITE_URL,
+                "url": `${SITE_URL}/`,
             },
         } : {}),
         ...(publishedTime && { "datePublished": toIsoDate(publishedTime) }),
