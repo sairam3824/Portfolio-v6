@@ -115,6 +115,17 @@ export const projectsData: ProjectData[] = [
         tagline: "Premium Design • AI Chat • High-Performance Framework",
     },
     {
+        title: "GitStory",
+        description:
+            "A full-stack app that turns any public GitHub profile into a beautiful, shareable developer story page. Users enter a GitHub username, the Express backend fetches public profile data, OpenAI GPT-4o generates a narrative, and the React frontend renders an interactive career story at a unique shareable URL — with Replit DB caching, Open Graph meta tags, and a dark UI with explore page.",
+        tech: ["React", "Vite", "Tailwind CSS", "Express", "Node.js", "OpenAI", "Replit DB"],
+        github: "https://github.com/sairam3824/GitStory",
+        category: "Web Development",
+        iconName: "Globe",
+        featured: true,
+        tagline: "GitHub Profile → AI Story Page • GPT-4o Narrative • Shareable URLs",
+    },
+    {
         title: "APIProbe: AI Key Guard",
         description:
             "Professional dashboard for validating and stress-testing API keys across 9 AI providers (OpenAI, Anthropic, Gemini, Groq, Mistral, Perplexity, OpenRouter, DeepSeek, Together AI). All validation runs server-side via Next.js Server Actions — keys never leave the browser. Features model stress testing with latency benchmarks, searchable audit logs, JSON export, and 15-second timeout protection.",
@@ -163,6 +174,17 @@ export const projectsData: ProjectData[] = [
     },
 
 
+    {
+        title: "Stocks AI Platform",
+        description:
+            "A local-first, SaaS-style stock analytics platform with AI-powered forecasting, live streaming, sentiment analysis, and paper-trading workflows. Features auto-selection of ML models (LSTM, TFT, Stat) and a robust Python/Flask backend.",
+        tech: ["Python", "Flask", "Redis", "Kafka", "Docker", "Plotly", "Ollama"],
+        github: "https://github.com/sairam3824/Stocks-AI-Platform",
+        category: "AI Platform",
+        iconName: "Activity",
+        featured: true,
+        tagline: "AI-Powered Stock Forecasting • Live Streaming • Paper Trading",
+    },
     {
         title: "Voice AI Agent",
         description:
@@ -614,6 +636,39 @@ export const projectsData: ProjectData[] = [
         iconName: "Brain",
         featured: true,
         tagline: "Multimodal Alzheimer's Screening • Speech Biomarkers • MRI Inference",
+    },
+    {
+        title: "macOS Agent Platform",
+        description:
+            "A local-first macOS desktop agent that runs AI entirely on your machine via Ollama (Gemma 3, Llama, Mistral) with optional cloud fallback (OpenAI, Anthropic). Features macOS automation via AppleScript — opening apps, reading files, inspecting Finder, drafting emails — plus screenshot capture with Tesseract OCR, a risk-leveled permission system, global Cmd+Shift+Space shortcut for instant text analysis, dry-run mode, and a full React dashboard served at localhost:8000 with chat console, action logs, and settings.",
+        tech: ["Python", "FastAPI", "React", "TypeScript", "Ollama", "AppleScript", "Tesseract OCR", "SQLite", "Zustand"],
+        github: "https://github.com/sairam3824/macOS-Agent-Platform",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Local-First macOS Agent • Ollama + AppleScript Automation • Privacy-First",
+    },
+    {
+        title: "LLM Ops Monitor",
+        description:
+            "Production-grade observability platform for LLM-powered applications. Monitor throughput, latency, cost, quality, prompt drift, and hallucination signals across your entire AI estate from a single dashboard. Features a live KPI dashboard backed by ClickHouse rollups, a trace explorer for drilling into individual LLM requests, a threshold-based alert engine with webhook delivery, prompt governance with drift scoring, a hybrid hallucination detection evaluator pipeline (lexical heuristics + LLM judge via OpenRouter), a Python SDK with sync/async instrumentation, real-time SSE updates via Redis pub/sub, and pre-provisioned Grafana dashboards.",
+        tech: ["Next.js 15", "TypeScript", "FastAPI", "Python", "ClickHouse", "PostgreSQL", "Redis", "Docker", "Grafana", "OpenRouter"],
+        github: "https://github.com/sairam3824/LLM-Ops-Monitor",
+        category: "Infrastructure",
+        iconName: "Activity",
+        featured: true,
+        tagline: "LLM Observability Platform • ClickHouse Analytics • Hallucination Detection",
+    },
+    {
+        title: "Vibe Coder",
+        description:
+            "Local-first autonomous AI coding agent platform that transforms natural-language tasks into production-ready code. It features a sophisticated multi-agent workflow orchestrated by LangGraph, isolated execution via Git worktrees, and a secure Docker-based validation sandbox. The system handles the entire development lifecycle: repository scanning, symbol extraction with Tree-sitter, automated planning, multi-file editing with self-healing repair loops, and live progress streaming via SSE—complete with diff approvals and commit artifacts.",
+        tech: ["FastAPI", "React", "LangGraph", "Docker", "OpenRouter", "Tree-sitter", "SQLite", "Vite", "Pydantic"],
+        github: "https://github.com/sairam3824/Vibe-Coder",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Autonomous AI Coding Agent • Docker-Based Validation • Self-Healing Repair Loops",
     },
 
 
