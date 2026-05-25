@@ -7,6 +7,7 @@ type BlogContentModule = {
 } & Record<string, unknown>;
 
 const contentLoaders: Record<string, () => Promise<BlogContentModule>> = {
+    "google-io-2026": () => import('./blog/posts/google-io-2026'),
     "gitstory-replit-buildathon": () => import('./blog/posts/gitstory-replit-buildathon'),
     "anthropic-q1-2026": () => import('./blog/posts/anthropic-q1-2026'),
     "a2a-agent-protocol": () => import('./blog/posts/a2a-agent-protocol'),

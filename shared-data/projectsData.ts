@@ -672,6 +672,29 @@ export const projectsData: ProjectData[] = [
     },
 
 
+    {
+        title: "EdgeAI: Browser ML Playground",
+        description:
+            "Production-grade, browser-based machine learning inference playground that runs text generation, image classification, and text embeddings 100% client-side using WebGPU and Web Workers. Zero backend, zero API keys — your data never leaves your device. Features streaming token output with log probabilities, drag-and-drop image classification with webcam capture, NxN cosine similarity heatmaps with 2D PCA scatter plots, and a configurable benchmark suite with JSON/Markdown export.",
+        tech: ["Next.js", "TypeScript", "WebGPU", "Web Workers", "Transformers.js", "Tailwind CSS", "Zustand", "Recharts"],
+        github: "https://github.com/sairam3824/edgeai",
+        category: "AI Platform",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "100% Client-Side ML • WebGPU Accelerated • Zero Server Calls",
+    },
+    {
+        title: "JARVIS: Local AI Assistant",
+        description:
+            "A local-first AI assistant with a FastAPI backend, React + Vite frontend, WebSocket streaming, SQLite-backed memory, and a modular tool system. Features intent classification, tool planning with safety policies, workspace modules for analytics, vision, planning, QR workflows, and smart-home status. Includes a cinematic chat HUD with Three.js, voice chat via OpenRouter, and confirm-required desktop actions with scoped filesystem access.",
+        tech: ["FastAPI", "React", "TypeScript", "Vite", "Three.js", "OpenRouter", "SQLite", "WebSocket", "Docker", "Zustand"],
+        github: "https://github.com/sairam3824/JARVIS",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Local-First AI Assistant • Tool Orchestration • Cinematic Three.js HUD",
+    },
+
     // ═══════════════════════════════════════════════════════════════════════════
     // SUPPORTING WORK — Tools, experiments, and earlier projects
     // ═══════════════════════════════════════════════════════════════════════════

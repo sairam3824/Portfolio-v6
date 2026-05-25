@@ -14,6 +14,17 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        id: "google-io-2026",
+        title: "Google I/O 2026: The Agentic Gemini Era - Antigravity 2.0, Gemini 3.5 Flash, and the Full Agent Stack",
+        excerpt:
+            "Google I/O 2026 was not a model launch. It was Google revealing a complete agent stack: Gemini 3.5 Flash beating last quarter's flagship, Antigravity 2.0 with a real CLI and SDK, Managed Agents as an API primitive, Gemini Spark as a 24/7 personal agent, WebMCP turning the open web into an agent surface, and an Android CLI that lets agents drive Android Studio. Here's what actually shipped and why it changes how you build.",
+        date: "May 24, 2026",
+        readTime: "17 min read",
+        tags: ["AI/ML", "Google I/O", "Gemini", "Antigravity", "AI Agents", "Developer Tools", "WebMCP", "Agentic AI"],
+        icon: "Sparkles",
+        iconColor: "blue",
+    },
+    {
         id: "gitstory-replit-buildathon",
         title: "GitStory: Turning Any GitHub Profile Into an AI-Generated Career Narrative",
         excerpt:
