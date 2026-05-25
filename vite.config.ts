@@ -32,12 +32,14 @@ export default defineConfig({
   build: {
     target: "es2020",
     sourcemap: false,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
+    modulePreload: { polyfill: false },
     rollupOptions: {
       output: {
         manualChunks: {
           "vendor-react": ["react", "react-dom", "react-router-dom"],
           "vendor-ui": ["lucide-react", "react-helmet-async"],
-          "vendor-supabase": ["@supabase/supabase-js"],
         },
       },
     },
