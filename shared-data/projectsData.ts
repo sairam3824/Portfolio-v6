@@ -241,6 +241,28 @@ export const projectsData: ProjectData[] = [
         tagline: "Agentic Retrieve → Evaluate → Refine Loop • Multi-Source RAG",
     },
     {
+        title: "Nexus RAG",
+        description:
+            "Multimodal RAG application for uploading documents and images into knowledge bases and chatting with grounded, citation-backed answers. Features knowledge-base organization, OCR and semantic extraction for image uploads, Celery-based async ingestion, pgvector semantic search, persistent conversation history, and a Next.js dashboard with authentication and upload workflows — all packaged as a Docker-based local stack.",
+        tech: ["Next.js 15", "FastAPI", "TypeScript", "Python", "PostgreSQL", "pgvector", "Celery", "Redis", "OpenAI", "Docker"],
+        github: "https://github.com/sairam3824/Nexus-RAG",
+        category: "AI Search & RAG",
+        iconName: "Search",
+        featured: true,
+        tagline: "Multimodal RAG • Knowledge Bases • Citation-Backed Chat",
+    },
+    {
+        title: "RAG Quality Studio",
+        description:
+            "Local-first full-stack debugging workspace for retrieval-augmented generation systems. Runs queries against a bundled corpus, compares BM25 and vector retrieval side-by-side, builds extractive grounded answers with sentence-level attribution back to supporting chunks, assigns a hallucination-risk heuristic based on sentence support, and tracks every run in SQLite — visualized as a debugging dashboard with retriever panels, hallucination signals, and an experiment history stream. No external LLM API key required.",
+        tech: ["FastAPI", "Next.js 14", "React 18", "TypeScript", "LangChain", "Chroma", "BM25", "SQLite"],
+        github: "https://github.com/sairam3824/RAG-Quality-Studio",
+        category: "AI Search & RAG",
+        iconName: "Search",
+        featured: true,
+        tagline: "RAG Debugging Workspace • BM25 vs Vector • Sentence-Level Attribution",
+    },
+    {
         title: "Multi-Modal RAG Engine",
         description:
             "Production-ready RAG pipeline processing PDFs with text, images, tables, and charts. Uses GPT-4o Vision for visual understanding, generates semantic descriptions for indexing, and provides unified hybrid retrieval across all content modalities with page-level source attribution.",
