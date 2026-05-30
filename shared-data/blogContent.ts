@@ -43,6 +43,7 @@ const contentLoaders: Record<string, () => Promise<BlogContentModule>> = {
     "tech-monthly-digest-feb-2026": () => import('./blog/posts/tech-monthly-digest-feb-2026'),
     "tech-monthly-digest-mar-2026": () => import('./blog/posts/tech-monthly-digest-mar-2026'),
     "tech-monthly-digest-apr-2026": () => import('./blog/posts/tech-monthly-digest-apr-2026'),
+    "tech-monthly-digest-may-2026": () => import('./blog/posts/tech-monthly-digest-may-2026'),
     "context-engineering": () => import('./blog/posts/context-engineering'),
     "ai-analytics-multiplier": () => import('./blog/posts/ai-analytics-multiplier'),
 };

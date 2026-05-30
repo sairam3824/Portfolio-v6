@@ -716,6 +716,28 @@ export const projectsData: ProjectData[] = [
         featured: true,
         tagline: "Local-First AI Assistant • Tool Orchestration • Cinematic Three.js HUD",
     },
+    {
+        title: "TruthAgent",
+        description:
+            "Multi-model verification platform that fans a question out to a configurable set of LLMs via OpenRouter, extracts atomic claims from each response, clusters agreements and conflicts across models, and returns a verdict with a full audit trail. Optional deep verification adds Socratic follow-ups, semantic entropy sampling, and Tavily-backed web evidence. Tracks benchmark runs against a seeded hallucination corpus across multiple risk domains, with a Next.js dashboard and FastAPI backend streaming progress over NDJSON.",
+        tech: ["FastAPI", "Next.js 14", "Python", "TypeScript", "OpenRouter", "Tavily", "Docker"],
+        github: "https://github.com/sairam3824/TruthAgent",
+        category: "AI Agent",
+        iconName: "Shield",
+        featured: true,
+        tagline: "Multi-Model Hallucination Verification • Semantic Entropy • Benchmark Leaderboard",
+    },
+    {
+        title: "RecForge",
+        description:
+            "Production-grade recommendation platform demonstrating end-to-end personalization on an Item-generic backend (movies today, products/articles tomorrow). Combines collaborative filtering (Surprise SVD), content-based retrieval (TF-IDF + FAISS ANN), a PyTorch weighted linear hybrid ranker, optional LLM reranking via OpenRouter, explainable recommendations, deterministic A/B/C experimentation, and an admin analytics surface for model operations.",
+        tech: ["FastAPI", "Next.js", "PostgreSQL", "Redis", "PyTorch", "FAISS", "Surprise SVD", "OpenRouter", "Docker"],
+        github: "https://github.com/sairam3824/RecForge",
+        category: "Machine Learning",
+        iconName: "Activity",
+        featured: true,
+        tagline: "End-to-End Personalization • Hybrid Ranker • LLM Reranking & A/B/C Experiments",
+    },
 
     // ═══════════════════════════════════════════════════════════════════════════
     // SUPPORTING WORK — Tools, experiments, and earlier projects
