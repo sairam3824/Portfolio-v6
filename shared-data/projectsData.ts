@@ -739,6 +739,62 @@ export const projectsData: ProjectData[] = [
         tagline: "End-to-End Personalization • Hybrid Ranker • LLM Reranking & A/B/C Experiments",
     },
 
+    {
+        title: "Paraphrase Detective",
+        description:
+            "Local-first plagiarism and paraphrase detection system that identifies copied passages, heavy paraphrasing, and cross-lingual content reuse by comparing documents against a known corpus. Features multilingual E5 embeddings for translation-laundered content, stylometric burst analysis to surface sudden writing-style shifts, multiple vector search backends (FAISS, hnswlib, scikit-learn), and dual CLI + Streamlit interfaces with HTML/PDF reports and side-by-side passage alignment across PDF, DOCX, TXT, Markdown, and HTML formats.",
+        tech: ["Python", "Sentence-Transformers", "FAISS", "hnswlib", "spaCy", "Streamlit", "scikit-learn"],
+        github: "https://github.com/sairam3824/Paraphrase-Detective",
+        category: "Machine Learning",
+        iconName: "Search",
+        featured: true,
+        tagline: "Local-First Plagiarism Detection • Multilingual E5 Embeddings • Stylometric Analysis",
+    },
+    {
+        title: "RedTeam Rig",
+        description:
+            "Adversarial testing framework that runs deterministic prompt-attack suites against LLM applications and grades responses against a YAML behavior contract with explicit must/must-not clauses. Ships 12 attack families (jailbreaks, prompt injection, data extraction, refusal bypass, tool misuse, confabulation probes), pluggable endpoint adapters (HTTP, Anthropic, OpenAI, OpenRouter, custom Python callables), an Anthropic-based judge for clause-by-clause evaluation, rich console/JSON/HTML reports, and a pytest plugin with CI-friendly severity-based exit codes.",
+        tech: ["Python", "Anthropic", "OpenAI", "OpenRouter", "Pydantic", "pytest", "YAML"],
+        github: "https://github.com/sairam3824/redteam-rig",
+        category: "AI Security",
+        iconName: "Shield",
+        featured: true,
+        tagline: "Contract-Based LLM Red Teaming • 12 Attack Families • pytest + CI Integration",
+    },
+    {
+        title: "Constitutional AI Self-Critique Loop",
+        description:
+            "Python library and CLI that wraps any LLM call in a configurable critique-and-revise loop inspired by Constitutional AI. Users define YAML constitutions of principles (with severity levels and examples); the system generates an answer, runs all principle critiques in parallel, and triggers automatic revision rounds on high or repeated medium-severity violations. Features multi-provider support (OpenAI, Anthropic, OpenRouter), full audit trails with token usage and cost accounting, and batch evaluation over JSONL datasets — built for rapid policy iteration before reaching for fine-tuning.",
+        tech: ["Python", "asyncio", "Anthropic", "OpenAI", "OpenRouter", "pytest", "YAML"],
+        github: "https://github.com/sairam3824/Constitutional-AI-Self-Critique-Loop",
+        category: "AI Security",
+        iconName: "Shield",
+        featured: true,
+        tagline: "Constitutional AI Critique-and-Revise Loop • Parallel Principle Checks • Audit Trails",
+    },
+    {
+        title: "TempBench: Temporal Reasoning Benchmark",
+        description:
+            "Reproducible evaluation framework measuring how well LLMs handle temporal reasoning. Ships a 500-question dataset (plus a curated 120-question core set) across eight categories — relative time arithmetic, event ordering, duration calculation, timezone conversion, calendar reasoning, counterfactual history, temporal quantifier disambiguation, and tense implication. Features a multi-provider CLI evaluation harness (OpenAI, Anthropic, OpenRouter), judge-model grading with reproducible results, manual override templates for human review, dataset validation with inter-rater agreement analysis, and an interactive Streamlit leaderboard.",
+        tech: ["Python", "Streamlit", "OpenAI", "Anthropic", "OpenRouter", "pytest"],
+        github: "https://github.com/sairam3824/Temporal-Reasoning-Benchmark-for-LLMs",
+        category: "AI Platform",
+        iconName: "Activity",
+        featured: true,
+        tagline: "LLM Temporal Reasoning Benchmark • 8 Categories • Judge-Model Grading & Leaderboard",
+    },
+    {
+        title: "Multi-Agent Code Review Crew",
+        description:
+            "Automated code review system that deploys specialized AI reviewer agents in parallel — each focused on security, performance, readability, test coverage, API design, accessibility, or commit hygiene — with a lead reviewer pass that deduplicates and ranks findings into a single Markdown report. Features a dual interface (CLI for local repos and a FastAPI webhook service for GitHub App PR automation), constrained safe tools for file listing, diff lookup, and code search, plus pre-execution token and cost budgeting to prevent overspend.",
+        tech: ["Python", "FastAPI", "Anthropic", "asyncio", "GitHub API"],
+        github: "https://github.com/sairam3824/Multi-Agent-Code-Review-Crew",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Parallel Multi-Agent PR Review • GitHub App Integration • Cost-Budgeted Orchestration",
+    },
+
     // ═══════════════════════════════════════════════════════════════════════════
     // SUPPORTING WORK — Tools, experiments, and earlier projects
     // ═══════════════════════════════════════════════════════════════════════════

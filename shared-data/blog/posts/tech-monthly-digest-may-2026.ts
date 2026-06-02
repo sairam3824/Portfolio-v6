@@ -3,7 +3,7 @@ export const techMonthlyDigestMay2026 = {
   title: "Tech Monthly Digest: May 2026 - Opus 4.8, GPT-5.5 Instant, and the Agent Stack Goes Mainstream",
   excerpt:
     "May 2026 was the month frontier AI stopped feeling like a release schedule and started feeling like an operating system. Anthropic shipped Opus 4.8 just 41 days after 4.7 with Dynamic Workflows orchestrating up to 1,000 subagents. OpenAI made GPT-5.5 Instant the default for every ChatGPT user. Google I/O turned the agent stack into a developer platform with Gemini 3.5 Flash, Antigravity 2.0, and WebMCP. Microsoft Agent 365 went GA. Here's what actually mattered for builders.",
-  date: "June 1, 2026",
+  date: "May 31, 2026",
   readTime: "18 min read",
   tags: ["AI/ML", "Agents", "Monthly Digest", "Claude Opus 4.8", "GPT-5.5", "Gemini 3.5", "Antigravity", "WebMCP", "Enterprise AI"],
   icon: "Globe",
@@ -177,6 +177,9 @@ The pattern across every announcement is the same: the model is no longer the pr
     <p class="text-gray-700 text-base leading-relaxed">
       May's question for builders is sharper than April's: where in your workflows are you still treating agents as single-loop assistants when the rest of the industry has already moved to planner-plus-sandboxed-subagents? Whichever frontier model you favor — Opus 4.8, GPT-5.5, Gemini 3.5 Flash, or Grok 4.3 — the leverage is now in the workflow shape and the governance plane, not the model swap.
     </p>
+    <p class="text-gray-700 text-base leading-relaxed">
+      Have thoughts or want to discuss further? Connect with me on <a href="https://www.linkedin.com/in/sairam-maruri/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">LinkedIn</a> or explore more on my <a href="https://saiii.in" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">portfolio</a>.
+    </p>
     <div class="space-y-2">
       <p class="text-gray-700">Until next time,</p>
       <p class="text-gray-900 font-medium italic">Sairam Maruri</p>
@@ -185,7 +188,7 @@ The pattern across every announcement is the same: the model is no longer the pr
 </div>
 
 <div class="mt-6 text-sm text-gray-500">
-  <p>Note: This article includes AI-assisted writing and manual expert curation. Use at your own risk.</p>
+  <p>Note: This article includes AI-assisted writing and manual curation. Use at your own risk.</p>
 </div>
 `,
 };

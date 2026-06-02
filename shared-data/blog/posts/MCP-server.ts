@@ -94,7 +94,10 @@ The surge in AI-powered applications has created a pressing demand for infrastru
   <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mt-8">
   <div class="space-y-4">
     <p class="text-gray-700 text-base leading-relaxed">
-      Have you fine-tuned an LLM before? What challenges or successes did you encounter? Share your experiences and questions to help others navigate this exciting field.
+      Have you built or integrated an MCP server yet? What tools and data sources are you connecting your models to? Share your experiences and questions to keep the conversation going.
+    </p>
+    <p class="text-gray-700 text-base leading-relaxed">
+      Have thoughts or want to discuss further? Connect with me on <a href="https://www.linkedin.com/in/sairam-maruri/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">LinkedIn</a> or explore more on my <a href="https://saiii.in" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">portfolio</a>.
     </p>
     <div class="space-y-2">
       <p class="text-gray-700">Until next time,</p>

@@ -292,7 +292,7 @@ Context engineering is not a trend — it is the natural evolution of how we bui
 </div>
 
 <div class="mt-6 text-sm text-gray-500">
-  <p>Note: This article includes AI-assisted writing and manual curation. All sources are linked above. Use at your own risk.</p>
+  <p>Note: This article includes AI-assisted writing and manual curation. Use at your own risk.</p>
 </div>
 `,
 };

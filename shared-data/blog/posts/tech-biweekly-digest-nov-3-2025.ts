@@ -86,14 +86,17 @@ export const techBiweeklyDigestNov2025 = {
       <p class="text-gray-800 mb-4">
         <strong>Which agent frameworks, AI models, or dev topics do you want to see covered in-depth next? Reply and shape the next edition!</strong>
       </p>
-      <p class="text-gray-800">
-        Until next time,<br />
-        <em class="font-semibold">Sairam Maruri</em>
+      <p class="text-gray-700 text-base leading-relaxed">
+        Have thoughts or want to discuss further? Connect with me on <a href="https://www.linkedin.com/in/sairam-maruri/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">LinkedIn</a> or explore more on my <a href="https://saiii.in" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">portfolio</a>.
       </p>
+      <div class="space-y-2">
+        <p class="text-gray-700">Until next time,</p>
+        <p class="text-gray-900 font-medium italic">Sairam Maruri</p>
+      </div>
     </div>
 
-    <p class="text-xs text-gray-500 mt-6">
-      Note: This post is AI-assisted and curated for accuracy. Use at your discretion.
-    </p>
+    <div class="mt-6 text-sm text-gray-500">
+      <p>Note: This article includes AI-assisted writing and manual curation. Use at your own risk.</p>
+    </div>
   `
 };

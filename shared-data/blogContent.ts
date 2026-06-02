@@ -46,6 +46,7 @@ const contentLoaders: Record<string, () => Promise<BlogContentModule>> = {
     "tech-monthly-digest-may-2026": () => import('./blog/posts/tech-monthly-digest-may-2026'),
     "context-engineering": () => import('./blog/posts/context-engineering'),
     "ai-analytics-multiplier": () => import('./blog/posts/ai-analytics-multiplier'),
+    "ai-evals-llm-evaluation": () => import('./blog/posts/ai-evals-llm-evaluation'),
 };
 
 export async function getBlogContent(id: string): Promise<string | null> {

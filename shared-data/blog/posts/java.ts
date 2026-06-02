@@ -117,8 +117,11 @@ export const java = {
       <p class="text-gray-700 text-base leading-relaxed">
         What projects are you building with Java, or what challenges have you faced with the latest Java releases? Share your learnings or questions and join the conversation on mastering the art of Java programming!
       </p>
+      <p class="text-gray-700 text-base leading-relaxed">
+        Have thoughts or want to discuss further? Connect with me on <a href="https://www.linkedin.com/in/sairam-maruri/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">LinkedIn</a> or explore more on my <a href="https://saiii.in" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">portfolio</a>.
+      </p>
       <div class="space-y-2">
-        <p class="text-gray-700">Regards,</p>
+        <p class="text-gray-700">Until next time,</p>
         <p class="text-gray-900 font-medium italic">Sairam Maruri</p>
       </div>
     </div>

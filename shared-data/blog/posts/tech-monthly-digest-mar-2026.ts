@@ -197,6 +197,9 @@ But March wasn't just about velocity. It was about consequences. Sora died. Astr
     <p class="text-gray-700 text-base leading-relaxed">
       March was a lot to absorb — which development shifted your thinking the most? Was it the model avalanche proving perpetual release mode is real, Sora's death signaling the limits of expensive generative media, open-source models like Mistral Small 4 and Llama 4 finally matching frontier performance, or the agentic infrastructure (AgentCore, ADK, LangGraph) maturing to production grade? I'd love to hear what you're actually building and how March changed your stack.
     </p>
+    <p class="text-gray-700 text-base leading-relaxed">
+      Have thoughts or want to discuss further? Connect with me on <a href="https://www.linkedin.com/in/sairam-maruri/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">LinkedIn</a> or explore more on my <a href="https://saiii.in" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">portfolio</a>.
+    </p>
     <div class="space-y-2">
       <p class="text-gray-700">Until next time,</p>
       <p class="text-gray-900 font-medium italic">Sairam Maruri</p>
@@ -205,7 +208,7 @@ But March wasn't just about velocity. It was about consequences. Sora died. Astr
 </div>
 
 <div class="mt-6 text-sm text-gray-500">
-  <p>Note: This article includes AI-assisted writing and manual expert curation. Use at your own risk.</p>
+  <p>Note: This article includes AI-assisted writing and manual curation. Use at your own risk.</p>
 </div>
 `,
 };

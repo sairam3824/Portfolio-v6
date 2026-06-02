@@ -79,7 +79,10 @@ export const AivsGenAi = {
   <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mt-8">
   <div class="space-y-4">
     <p class="text-gray-700 text-base leading-relaxed">
-      Have you fine-tuned an LLM before? What challenges or successes did you encounter? Share your experiences and questions to help others navigate this exciting field.
+      How do you draw the line between traditional AI and generative AI in your own work? Has understanding the distinction changed how you choose tools or frame problems? Share your experiences and questions to keep the conversation going.
+    </p>
+    <p class="text-gray-700 text-base leading-relaxed">
+      Have thoughts or want to discuss further? Connect with me on <a href="https://www.linkedin.com/in/sairam-maruri/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">LinkedIn</a> or explore more on my <a href="https://saiii.in" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">portfolio</a>.
     </p>
     <div class="space-y-2">
       <p class="text-gray-700">Until next time,</p>
@@ -89,7 +92,7 @@ export const AivsGenAi = {
   </div>
   
   <div class="mt-6 text-sm text-gray-500">
-    <p>Note: This article includes AI-assisted writing and manual expert curation. Use at your own risk.</p>
+    <p>Note: This article includes AI-assisted writing and manual curation. Use at your own risk.</p>
   </div>
   `
   };

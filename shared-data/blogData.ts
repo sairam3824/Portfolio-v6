@@ -14,11 +14,23 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        id: "ai-evals-llm-evaluation",
+        title:
+            "AI Evals: How to Actually Measure LLM and Agent Quality in Production (2026 Guide)",
+        excerpt:
+            "Anyone can ship an LLM demo. Shipping one you can trust is an evaluation problem. This is the practical 2026 guide to AI evals — what to measure, how to build offline and online eval pipelines, when LLM-as-judge works (and when it lies), and how to turn 'it feels better' into numbers you can defend.",
+        date: "June 1, 2026",
+        readTime: "17 min read",
+        tags: ["AI/ML", "AI Evals", "LLM Evaluation", "LLM-as-Judge", "Production AI", "AI Agents", "Observability"],
+        icon: "TrendingUp",
+        iconColor: "blue",
+    },
+    {
         id: "tech-monthly-digest-may-2026",
         title: "Tech Monthly Digest: May 2026 - Opus 4.8, GPT-5.5 Instant, and the Agent Stack Goes Mainstream",
         excerpt:
             "May 2026 was the month frontier AI stopped feeling like a release schedule and started feeling like an operating system. Anthropic shipped Opus 4.8 just 41 days after 4.7 with Dynamic Workflows orchestrating up to 1,000 subagents. OpenAI made GPT-5.5 Instant the default for every ChatGPT user. Google I/O turned the agent stack into a developer platform with Gemini 3.5 Flash, Antigravity 2.0, and WebMCP. Microsoft Agent 365 went GA. Here's what actually mattered for builders.",
-        date: "June 1, 2026",
+        date: "May 31, 2026",
         readTime: "18 min read",
         tags: ["AI/ML", "Agents", "Monthly Digest", "Claude Opus 4.8", "GPT-5.5", "Gemini 3.5", "Antigravity", "WebMCP", "Enterprise AI"],
         icon: "Globe",

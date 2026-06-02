@@ -237,6 +237,9 @@ export const dlAlgorithms = {
         <p class="text-gray-700 text-base leading-relaxed">
           Which deep learning models have you used most? Want hands-on code for one of these or project tips? Ask anytime!
         </p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Have thoughts or want to discuss further? Connect with me on <a href="https://www.linkedin.com/in/sairam-maruri/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">LinkedIn</a> or explore more on my <a href="https://saiii.in" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">portfolio</a>.
+        </p>
         <div class="space-y-2">
           <p class="text-gray-700">Until next time,</p>
           <p class="text-gray-900 font-medium italic">Sairam Maruri</p>

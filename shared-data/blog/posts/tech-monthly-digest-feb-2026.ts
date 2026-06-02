@@ -143,6 +143,9 @@ This digest focuses on what actually shifted in February — the moves that will
     <p class="text-gray-700 text-base leading-relaxed">
       Which February development shifted your thinking the most — A2A's promise of a universal agent standard, Context Engineering going mainstream, or the steady march of open-source models closing the gap with frontier models? I'd love to hear what you're actually building with these technologies and what's changed in your stack this month.
     </p>
+    <p class="text-gray-700 text-base leading-relaxed">
+      Have thoughts or want to discuss further? Connect with me on <a href="https://www.linkedin.com/in/sairam-maruri/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">LinkedIn</a> or explore more on my <a href="https://saiii.in" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">portfolio</a>.
+    </p>
     <div class="space-y-2">
       <p class="text-gray-700">Until next time,</p>
       <p class="text-gray-900 font-medium italic">Sairam Maruri</p>
@@ -151,7 +154,7 @@ This digest focuses on what actually shifted in February — the moves that will
 </div>
 
 <div class="mt-6 text-sm text-gray-500">
-  <p>Note: This article includes AI-assisted writing and manual expert curation. Use at your own risk.</p>
+  <p>Note: This article includes AI-assisted writing and manual curation. Use at your own risk.</p>
 </div>
 `,
 };

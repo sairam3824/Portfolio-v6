@@ -311,5 +311,25 @@ server.run(host="0.0.0.0", port=8080)</code></pre>
     <p class="mb-4 text-gray-700">
       The agentic era isn't coming — it's here. And the agents that will matter most in the next two years won't be the ones that work hardest in isolation. They'll be the ones that collaborate best. A2A is how that collaboration happens.
     </p>
+
+    <!-- Engagement Box -->
+    <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mt-8">
+      <div class="space-y-4">
+        <p class="text-gray-700 text-base leading-relaxed">
+          A2A is still young, but it is shaping up to be foundational infrastructure for the multi-agent era. If you are building agents in 2026, it is worth understanding now rather than catching up later.
+        </p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Have thoughts or want to discuss further? Connect with me on <a href="https://www.linkedin.com/in/sairam-maruri/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">LinkedIn</a> or explore more on my <a href="https://saiii.in" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">portfolio</a>.
+        </p>
+        <div class="space-y-2">
+          <p class="text-gray-700">Until next time,</p>
+          <p class="text-gray-900 font-medium italic">Sairam Maruri</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 text-sm text-gray-500">
+      <p>Note: This article includes AI-assisted writing and manual curation. Use at your own risk.</p>
+    </div>
   `,
 };
