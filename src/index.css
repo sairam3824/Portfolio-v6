@@ -804,6 +804,11 @@ textarea {
     gap: 12px;
 }
 
+/* Give the section label room above its cards, matching the left column */
+.rd-surface-label + .rd-surface-stack {
+    margin-top: 14px;
+}
+
 .rd-status-value,
 .rd-entry-title {
     margin: 2px 0 0;
@@ -1315,6 +1320,23 @@ textarea {
 
 .rd-entry-copy {
     color: var(--rd-ink-3);
+}
+
+/* Even vertical rhythm inside the education cards */
+.rd-surface-card .rd-entry-meta {
+    margin: 0 0 12px;
+}
+
+.rd-surface-card .rd-entry-title {
+    margin-top: 4px;
+}
+
+.rd-surface-card .rd-entry-copy {
+    margin-top: 6px;
+}
+
+.rd-surface-card .rd-entry-title + .rd-entry-copy {
+    margin-top: 16px;
 }
 
 .rd-entry-grade {

@@ -794,11 +794,99 @@ export const projectsData: ProjectData[] = [
         featured: true,
         tagline: "Parallel Multi-Agent PR Review • GitHub App Integration • Cost-Budgeted Orchestration",
     },
+    {
+        title: "Tiny GPT on the Indian Constitution",
+        description:
+            "Educational MLX project that trains a small GPT-style decoder from scratch on Indian constitutional text and landmark Supreme Court judgments. Builds a configurable legal corpus, trains an 8,192-token byte-level BPE tokenizer, and implements a decoder-only transformer (6 layers, 6 heads, 384 hidden width, rotary embeddings) directly with mlx.core and mlx.nn. Features resumable checkpoints, ROUGE-L evaluation against a QA set, comparison against TinyLlama-1.1B, and a Streamlit app with live token streaming and final-layer attention heatmaps.",
+        tech: ["Python", "Apple MLX", "BPE Tokenizer", "Transformers", "Streamlit", "ROUGE"],
+        github: "https://github.com/sairam3824/Tiny-GPT-Trained-on-the-Indian-Constitution",
+        category: "Deep Learning",
+        iconName: "Brain",
+        featured: true,
+        tagline: "GPT From Scratch in MLX • Legal Corpus • Attention Heatmaps",
+    },
+    {
+        title: "Streaming Speech-to-Intent Router",
+        description:
+            "Local, low-latency macOS voice command router that turns microphone audio into structured intents and runs Python action handlers — a privacy-first 'personal Siri' pipeline for Apple Silicon where audio never leaves the device. Captures 16 kHz mono audio with WebRTC VAD for speech boundary detection, transcribes utterances via local whisper.cpp (pywhispercpp) with partial-transcript callbacks, and routes commands into 12 built-in intents using local embeddings plus a scikit-learn LogisticRegression classifier with a keyword fallback. Ships both a CLI listener and a macOS menu bar app, optional Anthropic-generated training data, ONNX export, and latency metric logging.",
+        tech: ["Python", "whisper.cpp", "WebRTC VAD", "scikit-learn", "ONNX", "Anthropic", "macOS"],
+        github: "https://github.com/sairam3824/Streaming-Speech-to-Intent-Router",
+        category: "AI Agent",
+        iconName: "Mic",
+        featured: true,
+        tagline: "Local Voice-to-Intent Router • whisper.cpp + VAD • Privacy-First macOS",
+    },
+    {
+        title: "Speculative Decoding Playground",
+        description:
+            "Interactive Streamlit playground for exploring speculative decoding with MLX-LM on Apple Silicon. Loads a small draft model and a larger target model, streams token-level accept/correct/extend decisions, and plots rolling acceptance-rate and tokens-per-second charts. Features draft/target model selection, a comparison mode for draft-only, target-only, and speculative generation, conservative memory estimates for a 14 GB budget, JSON run history, and a companion walkthrough notebook.",
+        tech: ["Python", "Apple MLX", "MLX-LM", "Streamlit", "Jupyter", "Hugging Face"],
+        github: "https://github.com/sairam3824/Speculative-Decoding-Playground",
+        category: "Deep Learning",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "Speculative Decoding Visualizer • Draft + Target Models • Apple Silicon MLX",
+    },
+    {
+        title: "Personal Finance Forecaster",
+        description:
+            "Local-first Python toolkit for importing bank statements, categorizing personal transactions, forecasting monthly spend, and reviewing model backtests. Imports CSV statements into SQLite with auto-detected bank schemas, categorizes transactions via configurable regex rules, forecasts category-level monthly spend with inverse-MAPE ensemble weighting and robust baseline fallbacks, runs walk-forward backtests, and explores scenarios, savings goals, and manual overrides in a Streamlit dashboard — with CSV and PDF report export.",
+        tech: ["Python", "Prophet", "LightGBM", "PyTorch Forecasting", "pandas", "SQLite", "Streamlit"],
+        github: "https://github.com/sairam3824/Personal-Finance-Forecaster",
+        category: "Machine Learning",
+        iconName: "Activity",
+        featured: true,
+        tagline: "Local-First Finance Forecasting • Ensemble Models • Walk-Forward Backtests",
+    },
+    {
+        title: "MLX-Native Vision Transformer From Scratch",
+        description:
+            "Compact Vision Transformer for Apple Silicon, written around MLX and trained from scratch on CIFAR-10 with optional custom image classes. Implements patch embeddings, multi-head self-attention, and MLP blocks as a ViT-Tiny (12 layers, 192-dim embeddings, 3 heads) trained with AdamW, cosine warmup, mixed precision, label smoothing, mixup, and cutmix. Features top-1/top-5 and per-class evaluation, attention rollout visualization for interpretability, a Core ML export pipeline, and a SwiftUI macOS app with drag-and-drop inference.",
+        tech: ["Python", "Apple MLX", "Swift", "SwiftUI", "Core ML", "coremltools", "PyTorch", "TensorBoard"],
+        github: "https://github.com/sairam3824/MLX-Native-Vision-Transformer-From-Scratch",
+        category: "Computer Vision",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "ViT From Scratch in MLX • CIFAR-10 • Attention Rollout & Core ML Export",
+    },
+    {
+        title: "Personal Browser History RAG",
+        description:
+            "Local-first browser memory system pairing a Chrome MV3 extension with a FastAPI server so pages you read are indexed, searched, summarized, and cited entirely from your own machine. Captures full-page text after 10+ seconds of viewing, chunks and embeds it locally via ChromaDB, and answers queries with citations using hybrid retrieval (BM25 lexical + semantic with reranking). Features optional encrypted-at-rest storage with SQLCipher, passphrase-protected endpoints, a weekly timeline/topic view, incognito exclusion and site blocklists, plus local (Ollama Phi-3) or cloud (Anthropic) answer generation.",
+        tech: ["FastAPI", "Python", "React", "Vite", "Chrome MV3", "ChromaDB", "SQLCipher", "BM25", "Ollama", "Anthropic"],
+        github: "https://github.com/sairam3824/Personal-Browser-History-RAG",
+        category: "AI Search & RAG",
+        iconName: "Search",
+        featured: true,
+        tagline: "Local-First Browser Memory • Hybrid Retrieval • Cited Answers",
+    },
 
     // ═══════════════════════════════════════════════════════════════════════════
     // SUPPORTING WORK — Tools, experiments, and earlier projects
     // ═══════════════════════════════════════════════════════════════════════════
 
+    {
+        title: "LoRA Adapter Marketplace",
+        description:
+            "A self-hosted marketplace for PEFT-format LoRA adapters. Upload adapter bundles, browse searchable metadata, queue reproducible evaluation runs against a fixed prompt suite, compare leaderboard results by base model and task, and generate local merge/download artifacts — backed by a FastAPI service with local artifact storage and SQLite-persisted eval results.",
+        tech: ["FastAPI", "Next.js", "Python", "SQLite", "Hugging Face PEFT", "Docker"],
+        github: "https://github.com/sairam3824/LoRA-Adapter-Marketplace",
+        category: "Infrastructure",
+        iconName: "Code2",
+        featured: false,
+        tagline: "Self-Hosted LoRA Marketplace • PEFT Adapters • Eval Leaderboard",
+    },
+    {
+        title: "Semantic Diff for Codebases",
+        description:
+            "A Python CLI (semdiff) that compares two Git refs at the function and class level instead of raw line ranges. It extracts code units with Tree-sitter, embeds them locally with sentence-transformers to detect semantic similarity, matches likely renames and moves, and classifies each unit as unchanged, renamed, refactored, behavior-changing, rewritten, added, or removed. Outputs terminal tables, JSON, or HTML reports, with --fail-on for CI and optional Anthropic-powered behavior-change summaries.",
+        tech: ["Python", "Tree-sitter", "Sentence Transformers", "Anthropic", "CLI"],
+        github: "https://github.com/sairam3824/Semantic-Diff-for-Codebases",
+        category: "Infrastructure",
+        iconName: "Code2",
+        featured: false,
+        tagline: "Function-Level Semantic Diff • Tree-sitter • Rename Detection",
+    },
     {
         title: "MCP Orchestrator",
         description:
