@@ -362,6 +362,28 @@ export const projectsData: ProjectData[] = [
         tagline: "Natural Language to SQL • Multi-DB Support • Query Optimization",
     },
     {
+        title: "LLM-Powered SQL Query Optimizer",
+        description:
+            "A closed-loop SQL optimization assistant for PostgreSQL and DuckDB. Profiles a read-only query, asks an LLM for a safer rewrite and index ideas, reruns the candidate, verifies practical result equivalence via row counts and bounded samples, and reports measured timing differences. Advisory by design — it never applies indexes automatically and refuses non-read-only SQL.",
+        tech: ["Python", "FastAPI", "PostgreSQL", "DuckDB", "psycopg", "OpenAI"],
+        github: "https://github.com/sairam3824/LLM-Powered-SQL-Query-Optimizer",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Closed-Loop Query Rewrites • Equivalence Checks • Read-Only Safe",
+    },
+    {
+        title: "PDF Knowledge Graph Builder",
+        description:
+            "Builds an evidence-backed Neo4j knowledge graph from a folder of PDFs, then lets you query it via natural language or hand-written Cypher in the browser. Extracts text with PyMuPDF, asks Claude for structured entities and relations with evidence quotes, resolves duplicate mentions with local embeddings, and serves a FastAPI + vis-network graph explorer.",
+        tech: ["Python", "FastAPI", "Neo4j", "Anthropic Claude", "PyMuPDF", "Sentence-Transformers", "HDBSCAN", "Docker"],
+        github: "https://github.com/sairam3824/PDF-Knowledge-Graph-Builder",
+        category: "AI Search & RAG",
+        iconName: "Search",
+        featured: true,
+        tagline: "Evidence-Backed Knowledge Graphs • NL-to-Cypher • Neo4j Visualization",
+    },
+    {
         title: "CacheForge: Cache-Augmented Generation",
         description:
             "Retrieval-free document Q&A system using Cache-Augmented Generation (CAG) as a faster alternative to RAG. Preloads the complete knowledge base into GPT-4o's KV cache, eliminating vector search latency entirely — achieving 50–200ms response times vs RAG's 200–600ms with 50% cost savings on cached tokens.",
