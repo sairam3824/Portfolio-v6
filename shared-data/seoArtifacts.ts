@@ -98,7 +98,6 @@ const createRobotsTxt = (sitemapUrls: readonly string[]) =>
     [
         "User-agent: *",
         "Allow: /",
-        "Disallow: /admin",
         "",
         "# Explicitly allow AI crawlers",
         "User-agent: ClaudeBot",
@@ -136,3 +135,50 @@ export const buildRootRobotsTxt = () =>
     createRobotsTxt([
         `${siteMetadata.siteUrl}/sitemap.xml`,
     ]);
+
+const RSS_MAX_ITEMS = 30;
+
+const toRfc822Date = (value: string) => {
+    const timestamp = Date.parse(value);
+    return new Date(Number.isNaN(timestamp) ? Date.now() : timestamp).toUTCString();
+};
+
+export const buildRootRssXml = () => {
+    const feedPosts = blogPosts
+        .filter((post) => !post.externalLink && !post.isLegalDoc)
+        .slice()
+        .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+        .slice(0, RSS_MAX_ITEMS);
+
+    const items = feedPosts.map((post) => {
+        const url = toAbsoluteUrl(`/writing/${post.id}`);
+        const categories = post.tags
+            .map((tag) => `      <category>${escapeXml(tag)}</category>`)
+            .join("\n");
+
+        return `    <item>
+      <title>${escapeXml(post.title)}</title>
+      <link>${escapeXml(url)}</link>
+      <guid isPermaLink="true">${escapeXml(url)}</guid>
+      <pubDate>${toRfc822Date(post.date)}</pubDate>
+      <description>${escapeXml(post.excerpt)}</description>
+${categories}
+    </item>`;
+    });
+
+    const lastBuildDate = feedPosts.length > 0 ? toRfc822Date(feedPosts[0].date) : new Date().toUTCString();
+
+    return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${escapeXml(siteMetadata.defaultTitle)}</title>
+    <link>${escapeXml(`${siteMetadata.siteUrl}/writing`)}</link>
+    <description>${escapeXml(siteMetadata.defaultDescription)}</description>
+    <language>en-us</language>
+    <lastBuildDate>${lastBuildDate}</lastBuildDate>
+    <atom:link href="${escapeXml(`${siteMetadata.siteUrl}/feed.xml`)}" rel="self" type="application/rss+xml" />
+${items.join("\n")}
+  </channel>
+</rss>
+`;
+};

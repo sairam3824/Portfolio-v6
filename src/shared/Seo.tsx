@@ -28,6 +28,7 @@ const toIsoDate = (value: string): string => {
 };
 
 const getImageMimeType = (imageUrl: string) => {
+    if (imageUrl.includes("/api/og")) return "image/png";
     if (imageUrl.endsWith(".png")) return "image/png";
     if (imageUrl.endsWith(".webp")) return "image/webp";
     if (imageUrl.endsWith(".jpg") || imageUrl.endsWith(".jpeg")) return "image/jpeg";

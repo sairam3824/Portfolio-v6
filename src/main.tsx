@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import { AppErrorBoundary } from "./shared/AppErrorBoundary";
+import { loadCloudflareInsights } from "./lib/cloudflareInsights";
 
 const rootElement = document.getElementById("root");
 
@@ -67,6 +68,8 @@ if (import.meta.env.DEV && typeof window !== "undefined") {
         renderBootError(event.reason);
     });
 }
+
+loadCloudflareInsights();
 
 root.render(
     <StrictMode>

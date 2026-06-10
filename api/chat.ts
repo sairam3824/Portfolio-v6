@@ -16,6 +16,7 @@ type ChatRequestBody = {
 type RequestLike = {
     method?: string;
     body?: ChatRequestBody | string | null;
+    headers?: Record<string, string | string[] | undefined>;
 };
 
 type ResponseLike = {
@@ -27,6 +28,57 @@ type ResponseLike = {
 const MAX_MESSAGE_LENGTH = 1200;
 const MAX_HISTORY_ITEMS = 8;
 const DEFAULT_MODEL = process.env.OPENAI_MODEL || "gpt-4.1-mini";
+
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX_REQUESTS = 8;
+const RATE_LIMIT_MAX_TRACKED_IPS = 5_000;
+
+const buildAllowedOrigins = () => {
+    const origins = new Set(["https://www.saiii.in", "https://saiii.in"]);
+    if (process.env.VERCEL_URL) origins.add(`https://${process.env.VERCEL_URL}`);
+    if (process.env.VERCEL_BRANCH_URL) origins.add(`https://${process.env.VERCEL_BRANCH_URL}`);
+    return origins;
+};
+
+const ALLOWED_ORIGINS = buildAllowedOrigins();
+const IS_PRODUCTION = process.env.VERCEL_ENV === "production";
+
+const headerValue = (req: RequestLike, name: string): string | undefined => {
+    const raw = req.headers?.[name];
+    return Array.isArray(raw) ? raw[0] : raw;
+};
+
+const isAllowedOrigin = (origin: string | undefined): boolean => {
+    if (!origin) return false;
+    if (ALLOWED_ORIGINS.has(origin)) return true;
+    return !IS_PRODUCTION && /^http:\/\/localhost(:\d+)?$/.test(origin);
+};
+
+const clientIp = (req: RequestLike): string => {
+    const forwarded = headerValue(req, "x-forwarded-for");
+    if (forwarded) return forwarded.split(",")[0].trim();
+    return headerValue(req, "x-real-ip") ?? "unknown";
+};
+
+// Best-effort limiter: state lives per warm function instance, so it caps
+// burst abuse rather than guaranteeing a global ceiling. Pair with a spend
+// limit on the OpenAI account.
+type RateBucket = { count: number; resetAt: number };
+const rateBuckets = new Map<string, RateBucket>();
+
+const isRateLimited = (ip: string): boolean => {
+    const now = Date.now();
+    const bucket = rateBuckets.get(ip);
+
+    if (!bucket || bucket.resetAt <= now) {
+        if (rateBuckets.size >= RATE_LIMIT_MAX_TRACKED_IPS) rateBuckets.clear();
+        rateBuckets.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+        return false;
+    }
+
+    bucket.count += 1;
+    return bucket.count > RATE_LIMIT_MAX_REQUESTS;
+};
 
 const normalizeBody = (body: RequestLike["body"]): ChatRequestBody => {
     if (!body) return {};
@@ -73,6 +125,17 @@ const sendJson = (res: ResponseLike, status: number, body: unknown) => {
 export default async function handler(req: RequestLike, res: ResponseLike) {
     if (req.method !== "POST") {
         return sendJson(res, 405, { error: "Method not allowed." });
+    }
+
+    if (!isAllowedOrigin(headerValue(req, "origin"))) {
+        return sendJson(res, 403, { error: "Forbidden." });
+    }
+
+    if (isRateLimited(clientIp(req))) {
+        res.setHeader("Retry-After", String(Math.ceil(RATE_LIMIT_WINDOW_MS / 1000)));
+        return sendJson(res, 429, {
+            error: "You're sending messages too quickly. Please wait a minute and try again.",
+        });
     }
 
     const apiKey = process.env.OPENAI_API_KEY;

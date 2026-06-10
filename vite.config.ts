@@ -2,12 +2,13 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { writeFileSync } from "fs";
-import { buildRootSitemapXml, buildRootRobotsTxt } from "./shared-data/seoArtifacts";
+import { buildRootSitemapXml, buildRootRobotsTxt, buildRootRssXml } from "./shared-data/seoArtifacts";
 
 function seoGeneratorPlugin() {
   const generate = () => {
     writeFileSync("shared-public/sitemap.xml", buildRootSitemapXml());
     writeFileSync("shared-public/robots.txt", buildRootRobotsTxt());
+    writeFileSync("shared-public/feed.xml", buildRootRssXml());
   };
   return {
     name: "portfolio-seo-generator",

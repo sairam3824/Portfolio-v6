@@ -3,17 +3,28 @@ import { ArrowRight } from "lucide-react";
 import Seo from "@/shared/Seo";
 import { PageHeader, contactLinks, profileDetails, ROUTE_PATHS } from "../shared";
 
+const MAX_NAME_LENGTH = 120;
+const MAX_EMAIL_LENGTH = 254;
+const MAX_MESSAGE_LENGTH = 2000;
+
 export default function ContactPage() {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
+    const [honeypot, setHoneypot] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [errorMessage, setErrorMessage] = useState("");
 
     const submit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const name = form.name.trim();
-        const email = form.email.trim();
-        const message = form.message.trim();
+        // Bots fill every field; humans never see this one.
+        if (honeypot) {
+            setStatus("success");
+            return;
+        }
+
+        const name = form.name.trim().slice(0, MAX_NAME_LENGTH);
+        const email = form.email.trim().slice(0, MAX_EMAIL_LENGTH);
+        const message = form.message.trim().slice(0, MAX_MESSAGE_LENGTH);
 
         if (!name && !email && !message) {
             setStatus("error");
@@ -134,9 +145,19 @@ export default function ContactPage() {
                                     <h3>Drop a note without friction.</h3>
                                     <p>All fields are optional. Share as much or as little context as you want.</p>
                                 </div>
+                                <label style={{ position: "absolute", left: "-9999px", height: 0, overflow: "hidden" }} aria-hidden="true">
+                                    <span>Website</span>
+                                    <input
+                                        tabIndex={-1}
+                                        autoComplete="off"
+                                        value={honeypot}
+                                        onChange={(event) => setHoneypot(event.target.value)}
+                                    />
+                                </label>
                                 <label>
                                     <span>Name</span>
                                     <input
+                                        maxLength={MAX_NAME_LENGTH}
                                         value={form.name}
                                         onChange={(event) => setForm((current) => ({ ...current, name: event.target.value }))}
                                     />
@@ -145,6 +166,7 @@ export default function ContactPage() {
                                     <span>Email</span>
                                     <input
                                         type="email"
+                                        maxLength={MAX_EMAIL_LENGTH}
                                         value={form.email}
                                         onChange={(event) => setForm((current) => ({ ...current, email: event.target.value }))}
                                     />
@@ -153,6 +175,7 @@ export default function ContactPage() {
                                     <span>Message</span>
                                     <textarea
                                         rows={6}
+                                        maxLength={MAX_MESSAGE_LENGTH}
                                         value={form.message}
                                         onChange={(event) => setForm((current) => ({ ...current, message: event.target.value }))}
                                     />

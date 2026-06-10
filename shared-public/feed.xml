@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MARURI SAI RAMA LINGA REDDY | GenAI &amp; ML Engineer</title>
+    <link>https://www.saiii.in/writing</link>
+    <description>GenAI &amp; ML Engineer portfolio — production AI projects, technical writing, competitive programming, and professional journey of Sai Ram Maruri.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 May 2026 18:30:00 GMT</lastBuildDate>
+    <atom:link href="https://www.saiii.in/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Evals: How to Actually Measure LLM and Agent Quality in Production (2026 Guide)</title>
+      <link>https://www.saiii.in/writing/ai-evals-llm-evaluation</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/ai-evals-llm-evaluation</guid>
+      <pubDate>Sun, 31 May 2026 18:30:00 GMT</pubDate>
+      <description>Anyone can ship an LLM demo. Shipping one you can trust is an evaluation problem. This is the practical 2026 guide to AI evals — what to measure, how to build offline and online eval pipelines, when LLM-as-judge works (and when it lies), and how to turn &apos;it feels better&apos; into numbers you can defend.</description>
+      <category>AI/ML</category>
+      <category>AI Evals</category>
+      <category>LLM Evaluation</category>
+      <category>LLM-as-Judge</category>
+      <category>Production AI</category>
+      <category>AI Agents</category>
+      <category>Observability</category>
+    </item>
+    <item>
+      <title>Tech Monthly Digest: May 2026 - Opus 4.8, GPT-5.5 Instant, and the Agent Stack Goes Mainstream</title>
+      <link>https://www.saiii.in/writing/tech-monthly-digest-may-2026</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/tech-monthly-digest-may-2026</guid>
+      <pubDate>Sat, 30 May 2026 18:30:00 GMT</pubDate>
+      <description>May 2026 was the month frontier AI stopped feeling like a release schedule and started feeling like an operating system. Anthropic shipped Opus 4.8 just 41 days after 4.7 with Dynamic Workflows orchestrating up to 1,000 subagents. OpenAI made GPT-5.5 Instant the default for every ChatGPT user. Google I/O turned the agent stack into a developer platform with Gemini 3.5 Flash, Antigravity 2.0, and WebMCP. Microsoft Agent 365 went GA. Here&apos;s what actually mattered for builders.</description>
+      <category>AI/ML</category>
+      <category>Agents</category>
+      <category>Monthly Digest</category>
+      <category>Claude Opus 4.8</category>
+      <category>GPT-5.5</category>
+      <category>Gemini 3.5</category>
+      <category>Antigravity</category>
+      <category>WebMCP</category>
+      <category>Enterprise AI</category>
+    </item>
+    <item>
+      <title>Google I/O 2026: The Agentic Gemini Era - Antigravity 2.0, Gemini 3.5 Flash, and the Full Agent Stack</title>
+      <link>https://www.saiii.in/writing/google-io-2026</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/google-io-2026</guid>
+      <pubDate>Sat, 23 May 2026 18:30:00 GMT</pubDate>
+      <description>Google I/O 2026 was not a model launch. It was Google revealing a complete agent stack: Gemini 3.5 Flash beating last quarter&apos;s flagship, Antigravity 2.0 with a real CLI and SDK, Managed Agents as an API primitive, Gemini Spark as a 24/7 personal agent, WebMCP turning the open web into an agent surface, and an Android CLI that lets agents drive Android Studio. Here&apos;s what actually shipped and why it changes how you build.</description>
+      <category>AI/ML</category>
+      <category>Google I/O</category>
+      <category>Gemini</category>
+      <category>Antigravity</category>
+      <category>AI Agents</category>
+      <category>Developer Tools</category>
+      <category>WebMCP</category>
+      <category>Agentic AI</category>
+    </item>
+    <item>
+      <title>GitStory: Turning Any GitHub Profile Into an AI-Generated Career Narrative</title>
+      <link>https://www.saiii.in/writing/gitstory-replit-buildathon</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/gitstory-replit-buildathon</guid>
+      <pubDate>Sat, 02 May 2026 18:30:00 GMT</pubDate>
+      <description>GitStory is a full-stack Replit Buildathon project that transforms a public GitHub profile into a cinematic, AI-generated developer story. It pulls live profile data, uses GPT-5.4 for narrative generation, caches stories in PostgreSQL, and makes each story instantly shareable.</description>
+      <category>Replit</category>
+      <category>Buildathon</category>
+      <category>GPT-5.4</category>
+      <category>GitHub</category>
+      <category>Full-Stack</category>
+      <category>AI Apps</category>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Tech Monthly Digest: April 2026 - Agents Become the Enterprise Operating Layer</title>
+      <link>https://www.saiii.in/writing/tech-monthly-digest-apr-2026</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/tech-monthly-digest-apr-2026</guid>
+      <pubDate>Thu, 30 Apr 2026 18:30:00 GMT</pubDate>
+      <description>April 2026 was the month agents stopped being a developer-side experiment and became enterprise infrastructure. OpenAI pushed Codex across apps, teams, and AWS. Anthropic shipped Opus 4.7, Claude Design, and two massive compute expansions. Google Cloud Next turned agent platforms into the main cloud story. Here&apos;s what actually mattered for builders.</description>
+      <category>AI/ML</category>
+      <category>Agents</category>
+      <category>Monthly Digest</category>
+      <category>Codex</category>
+      <category>Claude</category>
+      <category>Cloud AI</category>
+      <category>Developer Tools</category>
+      <category>Enterprise AI</category>
+    </item>
+    <item>
+      <title>AI × Analytics: Why 20% of Companies Are Capturing 75% of AI&apos;s Economic Value</title>
+      <link>https://www.saiii.in/writing/ai-analytics-multiplier</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/ai-analytics-multiplier</guid>
+      <pubDate>Tue, 14 Apr 2026 18:30:00 GMT</pubDate>
+      <description>Stanford&apos;s 2026 AI Index and PwC&apos;s AI Performance Study reveal a striking truth: the gap between AI winners and losers isn&apos;t about model quality — it&apos;s about analytics. Here&apos;s what the data says and how builders can position themselves at the most powerful intersection in tech.</description>
+      <category>AI/ML</category>
+      <category>Business Analytics</category>
+      <category>Generative AI</category>
+      <category>AI Strategy</category>
+      <category>Stanford AI Index</category>
+      <category>Production AI</category>
+      <category>AI ROI</category>
+    </item>
+    <item>
+      <title>Tech Monthly Digest: March 2026 – The Model Avalanche, Sora&apos;s Death, and Agentic Infrastructure Comes of Age</title>
+      <link>https://www.saiii.in/writing/tech-monthly-digest-mar-2026</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/tech-monthly-digest-mar-2026</guid>
+      <pubDate>Tue, 31 Mar 2026 18:30:00 GMT</pubDate>
+      <description>March 2026 was the month AI stopped being cyclical and became perpetual. Twelve frontier models shipped in a single week. OpenAI killed Sora and acquired Astral. Anthropic leaked a model and its own source code. Meta&apos;s Llama 4 went open source and beat GPT-4o. AWS AgentCore and Google ADK 1.0 made production agents real. Here&apos;s everything that mattered for builders.</description>
+      <category>AI/ML</category>
+      <category>Agents</category>
+      <category>Monthly Digest</category>
+      <category>LLMs</category>
+      <category>Developer Tools</category>
+      <category>Cloud AI</category>
+      <category>Open Source</category>
+      <category>AI Policy</category>
+    </item>
+    <item>
+      <title>Anthropic Shipped 20+ Major Updates in 3 Months - Here&apos;s What Builders Need to Know</title>
+      <link>https://www.saiii.in/writing/anthropic-q1-2026</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/anthropic-q1-2026</guid>
+      <pubDate>Mon, 30 Mar 2026 18:30:00 GMT</pubDate>
+      <description>From Claude Cowork and Opus 4.6 to Computer Use and 1M context windows, Anthropic&apos;s Q1 2026 was a masterclass in shipping. A deep dive into every major release, what it means for builders, and why the gap between AI users and AI builders is widening every week.</description>
+      <category>AI/ML</category>
+      <category>Anthropic</category>
+      <category>Claude Code</category>
+      <category>Claude</category>
+      <category>Agentic AI</category>
+      <category>Developer Tools</category>
+      <category>MCP</category>
+      <category>Production AI</category>
+    </item>
+    <item>
+      <title>A2A Protocol: How Google&apos;s Agent-to-Agent Standard Is Redefining Multi-Agent AI in 2026</title>
+      <link>https://www.saiii.in/writing/a2a-agent-protocol</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/a2a-agent-protocol</guid>
+      <pubDate>Thu, 12 Mar 2026 18:30:00 GMT</pubDate>
+      <description>Google&apos;s Agent-to-Agent (A2A) protocol is quietly becoming the TCP/IP of the agentic era — a universal standard that lets AI agents from different vendors, frameworks, and clouds communicate, negotiate, and collaborate. Here&apos;s what it is, how it works, and why every AI engineer needs to understand it right now.</description>
+      <category>AI Agents</category>
+      <category>A2A</category>
+      <category>Multi-Agent</category>
+      <category>Agentic AI</category>
+      <category>Google</category>
+      <category>MCP</category>
+      <category>Production AI</category>
+      <category>Agent Protocols</category>
+    </item>
+    <item>
+      <title>Prompt Injection: The Silent Exploit Threatening Every AI Application</title>
+      <link>https://www.saiii.in/writing/prompt-injection</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/prompt-injection</guid>
+      <pubDate>Tue, 10 Mar 2026 18:30:00 GMT</pubDate>
+      <description>Prompt injection is the top attack vector for LLM-powered applications — and most developers are still shipping vulnerable code. Learn how attackers hijack AI systems, the real-world breaches that prove the threat is live, and the layered defenses every AI engineer must implement in 2026.</description>
+      <category>AI/ML</category>
+      <category>Cybersecurity</category>
+      <category>LLM Security</category>
+      <category>Prompt Injection</category>
+      <category>AI Safety</category>
+      <category>Production AI</category>
+    </item>
+    <item>
+      <title>Tech Monthly Digest: February 2026 – A2A, Context Engineering, and the Rise of Agentic Everything</title>
+      <link>https://www.saiii.in/writing/tech-monthly-digest-feb-2026</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/tech-monthly-digest-feb-2026</guid>
+      <pubDate>Sat, 28 Feb 2026 18:30:00 GMT</pubDate>
+      <description>February 2026 was the month agentic AI stopped being experimental and started being expected. Google&apos;s A2A protocol redefined how agents communicate, Context Engineering emerged as the must-have production skill, MCP became the de facto standard for tool use, and every major cloud doubled down on inference infrastructure. Here&apos;s everything that mattered for builders this month.</description>
+      <category>AI/ML</category>
+      <category>Agents</category>
+      <category>A2A</category>
+      <category>MCP</category>
+      <category>Context Engineering</category>
+      <category>Developer Tools</category>
+      <category>Monthly Digest</category>
+    </item>
+    <item>
+      <title>Context Engineering: The Skill That Replaced Prompt Engineering for Production AI in 2026</title>
+      <link>https://www.saiii.in/writing/context-engineering</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/context-engineering</guid>
+      <pubDate>Thu, 12 Feb 2026 18:30:00 GMT</pubDate>
+      <description>Prompt engineering got you started. Context engineering gets you to production. Learn why the most critical skill for building reliable AI agents and enterprise LLM applications in 2026 is no longer what you say to the model — it&apos;s what the model knows when it starts thinking.</description>
+      <category>AI/ML</category>
+      <category>Context Engineering</category>
+      <category>Prompt Engineering</category>
+      <category>LLM</category>
+      <category>AI Agents</category>
+      <category>Production AI</category>
+      <category>RAG</category>
+    </item>
+    <item>
+      <title>Tech Monthly Digest: January 2026 – Agents, IDEs, and Cloud AI in Motion</title>
+      <link>https://www.saiii.in/writing/tech-monthly-digest-jan-2026</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/tech-monthly-digest-jan-2026</guid>
+      <pubDate>Sat, 31 Jan 2026 18:30:00 GMT</pubDate>
+      <description>January 2026 pushed AI development from &quot;nice-to-have assistants&quot; to always-on engineering teammates. From GPT-5.1 in production tools to agent-first IDEs and maturing orchestration frameworks, this monthly digest highlights the updates that actually matter for builders.</description>
+      <category>AI/ML</category>
+      <category>Agents</category>
+      <category>Developer Tools</category>
+      <category>Cloud Computing</category>
+      <category>BiWeekly Digest</category>
+    </item>
+    <item>
+      <title>Cursor: The AI-Native IDE Redefining How Developers Ship Software</title>
+      <link>https://www.saiii.in/writing/cursor-ai</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/cursor-ai</guid>
+      <pubDate>Tue, 27 Jan 2026 18:30:00 GMT</pubDate>
+      <description>Cursor is an AI-first IDE that combines full-project understanding, agentic workflows, and powerful model integrations to help developers ship features, refactors, and fixes dramatically faster in 2025–2026.</description>
+      <category>AI/ML</category>
+      <category>Developer Tools</category>
+      <category>IDEs</category>
+      <category>AI Coding</category>
+      <category>Agents</category>
+      <category>Productivity</category>
+    </item>
+    <item>
+      <title>OpenAI Codex: The Cloud-Native AI Coding Agent Reshaping Software Engineering</title>
+      <link>https://www.saiii.in/writing/openai-codex</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/openai-codex</guid>
+      <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
+      <description>OpenAI Codex is a cloud-based AI coding agent that runs in a sandboxed environment, handling tasks like writing features, fixing bugs, and answering codebase questions in parallel, bringing a new paradigm to software development in 2025.</description>
+      <category>AI/ML</category>
+      <category>Developer Tools</category>
+      <category>Coding Assistant</category>
+      <category>Cloud Computing</category>
+      <category>Productivity</category>
+    </item>
+    <item>
+      <title>Claude Code: Anthropic&apos;s AI-Powered CLI That Changes How You Write Software</title>
+      <link>https://www.saiii.in/writing/claude-code</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/claude-code</guid>
+      <pubDate>Wed, 14 Jan 2026 18:30:00 GMT</pubDate>
+      <description>Claude Code is Anthropic&apos;s agentic coding tool that lives in your terminal. It understands your entire codebase, edits files, runs commands, and handles complex multi-step engineering tasks, redefining what developer productivity looks like in 2025.</description>
+      <category>AI/ML</category>
+      <category>Developer Tools</category>
+      <category>CLI</category>
+      <category>Coding Assistant</category>
+      <category>Productivity</category>
+    </item>
+    <item>
+      <title>Biweekly Tech Radar: AI Agents, Foundation Models, and Infra</title>
+      <link>https://www.saiii.in/writing/biweekly-tech-2025-11-23-12-07</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/biweekly-tech-2025-11-23-12-07</guid>
+      <pubDate>Sat, 06 Dec 2025 18:30:00 GMT</pubDate>
+      <description>From GPT-5.1 and Gemini 3 to massive AI infrastructure deals and multimodal agents, late November 2025 was packed with launches that are quietly redefining what &apos;production AI&apos; means. This biweekly digest cuts through the noise and focuses on what matters for builders.</description>
+      <category>AI/ML</category>
+      <category>Foundation Models</category>
+      <category>Agents</category>
+      <category>Cloud</category>
+      <category>Infra</category>
+      <category>Productivity</category>
+    </item>
+    <item>
+      <title>Mastering Modern IDEs in 2025: VS Code, Cursor, Kiro, and Antigravity</title>
+      <link>https://www.saiii.in/writing/modern-ides-2025</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/modern-ides-2025</guid>
+      <pubDate>Tue, 02 Dec 2025 18:30:00 GMT</pubDate>
+      <description>Explore how VS Code, Cursor, Kiro, and Google Antigravity are reshaping the developer experience—from lightweight code editing to fully agentic AI-driven workflows.</description>
+      <category>IDEs</category>
+      <category>VS Code</category>
+      <category>Cursor</category>
+      <category>Kiro</category>
+      <category>Antigravity</category>
+      <category>AI Coding</category>
+      <category>AI</category>
+      <category>Tools</category>
+    </item>
+    <item>
+      <title>Tech BiWeekly Digest: November 11–23, 2025</title>
+      <link>https://www.saiii.in/writing/weekly-novmid</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/weekly-novmid</guid>
+      <pubDate>Sat, 22 Nov 2025 18:30:00 GMT</pubDate>
+      <description>This edition covers key developments in AI and cloud infrastructure, highlighting OpenAI&apos;s GPT-5.1 launch, LangChain&apos;s production advances, Gemini&apos;s new features, and AWS&apos;s expanding AI toolkit.</description>
+      <category>AI/ML</category>
+      <category>OpenAI</category>
+      <category>Cloud Computing</category>
+      <category>BiWeekly Digest</category>
+    </item>
+    <item>
+      <title>From Zero to 3-Star: My 8-Month Journey to 2100+ LeetCode Rating &amp; 1000+ DSA Problems</title>
+      <link>https://www.saiii.in/writing/coding-journey</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/coding-journey</guid>
+      <pubDate>Tue, 18 Nov 2025 18:30:00 GMT</pubDate>
+      <description>How I went from knowing nothing about competitive programming in April 2025 to achieving 3-star on CodeChef, 2100+ rating on LeetCode, and solving 1000+ DSA problems by November 2025. A raw, honest account of the struggles, strategies, and breakthroughs.</description>
+      <category>DSA</category>
+      <category>Competitive Programming</category>
+      <category>LeetCode</category>
+      <category>CodeChef</category>
+      <category>Learning Journey</category>
+      <category>Career Growth</category>
+    </item>
+    <item>
+      <title>LangChain: The Orchestration Layer for Production-Grade AI Applications</title>
+      <link>https://www.saiii.in/writing/langchain</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/langchain</guid>
+      <pubDate>Mon, 17 Nov 2025 18:30:00 GMT</pubDate>
+      <description>LangChain transforms raw LLMs into reliable, multi-tool AI applications by enabling complex workflows, memory management, and seamless integration with vector databases.</description>
+      <category>AI/ML</category>
+      <category>LangChain</category>
+      <category>RAG</category>
+      <category>LLM</category>
+      <category>Vector Databases</category>
+      <category>AI Orchestration</category>
+    </item>
+    <item>
+      <title>Unlocking Automation Power with n8n: The Open-Source Workflow Automation Tool</title>
+      <link>https://www.saiii.in/writing/n8n</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/n8n</guid>
+      <pubDate>Wed, 12 Nov 2025 18:30:00 GMT</pubDate>
+      <description>Discover how n8n&apos;s open-source, flexible automation platform is transforming businesses by enabling powerful workflows without extensive coding. Learn its features, use cases, and how to get started.</description>
+      <category>Automation</category>
+      <category>n8n</category>
+      <category>Workflow Automation</category>
+      <category>Open Source</category>
+      <category>DevOps</category>
+    </item>
+    <item>
+      <title>Tech BiWeekly Digest: Week of November 3, 2025</title>
+      <link>https://www.saiii.in/writing/weekly-nov3</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/weekly-nov3</guid>
+      <pubDate>Sat, 08 Nov 2025 18:30:00 GMT</pubDate>
+      <description>Welcome to your go-to digest for the latest upheavals and breakthroughs in GenAI, developer frameworks, and cloud infrastructure. This edition deciphers fresh updates from OpenAI, LangChain, Gemini, and more.</description>
+      <category>AI/ML</category>
+      <category>OpenAI</category>
+      <category>Cloud Computing</category>
+      <category>BiWeekly Digest</category>
+    </item>
+    <item>
+      <title>Vector Databases: The Foundation of Modern AI Applications</title>
+      <link>https://www.saiii.in/writing/vector-database</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/vector-database</guid>
+      <pubDate>Tue, 04 Nov 2025 18:30:00 GMT</pubDate>
+      <description>The rise of generative AI and large language models has fundamentally transformed how we store and retrieve data. Traditional databases struggle with the demands of modern AI workloads. Enter vector databases—a paradigm shift in data management that&apos;s quietly becoming table stakes for any organization building AI-native applications.</description>
+      <category>Vector Databases</category>
+      <category>AI/ML</category>
+      <category>Embeddings</category>
+      <category>Semantic Search</category>
+      <category>RAG</category>
+      <category>Database Technology</category>
+    </item>
+    <item>
+      <title>Tech BiWeekly Digest: Week of October 20, 2025</title>
+      <link>https://www.saiii.in/writing/weekly-oct20</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/weekly-oct20</guid>
+      <pubDate>Sat, 25 Oct 2025 18:30:00 GMT</pubDate>
+      <description>Welcome to the inaugural edition of Tech BiWeekly Digest—your Sunday morning companion for staying current with the rapidly evolving world of GenAI, cloud computing, and emerging technologies.</description>
+      <category>AI/ML</category>
+      <category>OpenAI</category>
+      <category>Cloud Computing</category>
+      <category>BiWeekly Digest</category>
+    </item>
+    <item>
+      <title>Fine-Tuning Large Language Models: Techniques, Trends, and Best Practices in 2025</title>
+      <link>https://www.saiii.in/writing/fine-tuning-llms</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/fine-tuning-llms</guid>
+      <pubDate>Sun, 19 Oct 2025 18:30:00 GMT</pubDate>
+      <description>Fine-tuning Large Language Models (LLMs) is a powerful way to adapt general-purpose AI models to specialized tasks or domains. This blog explores the latest fine-tuning techniques, their benefits, challenges, and practical steps to optimize LLM performance in 2025.</description>
+      <category>AI/ML</category>
+      <category>LLM</category>
+      <category>Fine-Tuning</category>
+      <category>NLP</category>
+      <category>AI Innovation</category>
+    </item>
+    <item>
+      <title>Retrieval-Augmented Generation: Transforming How LLMs Access Knowledge</title>
+      <link>https://www.saiii.in/writing/rag</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/rag</guid>
+      <pubDate>Tue, 14 Oct 2025 18:30:00 GMT</pubDate>
+      <description>Large Language Models have revolutionized how we interact with AI, but they face a fundamental limitation: their knowledge is frozen at the time of training. RAG emerged as the solution to this challenge, fundamentally changing how we build production AI applications.</description>
+      <category>AI/ML</category>
+      <category>RAG</category>
+      <category>LLM</category>
+      <category>Vector Databases</category>
+      <category>Production AI</category>
+      <category>Knowledge Management</category>
+    </item>
+    <item>
+      <title>LLM Poisoning: The Hidden Threat to AI Trustworthiness</title>
+      <link>https://www.saiii.in/writing/llm-poisoning</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/llm-poisoning</guid>
+      <pubDate>Sun, 12 Oct 2025 18:30:00 GMT</pubDate>
+      <description>LLM poisoning is a rising cybersecurity concern where attackers subtly corrupt the data used to train large language models, causing these AI systems to behave unpredictably or dangerously. Recent research shows that it takes only a small number of poisoned documents to impact even the largest models.</description>
+      <category>AI/ML</category>
+      <category>Cybersecurity</category>
+      <category>LLM Security</category>
+      <category>Data Poisoning</category>
+      <category>AI Safety</category>
+    </item>
+    <item>
+      <title>When AI Dreams: Understanding and Mitigating LLM Hallucinations</title>
+      <link>https://www.saiii.in/writing/llm-hallucination</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/llm-hallucination</guid>
+      <pubDate>Thu, 09 Oct 2025 18:30:00 GMT</pubDate>
+      <description>Explore why large language models hallucinate, real-world examples, and proven strategies to reduce these errors for reliable AI applications.</description>
+      <category>AI/ML</category>
+      <category>LLM</category>
+      <category>Hallucination</category>
+      <category>AI Reliability</category>
+      <category>RAG</category>
+      <category>Prompt Engineering</category>
+    </item>
+    <item>
+      <title>Mastering Python in 2025: The Universal Language for Modern Development</title>
+      <link>https://www.saiii.in/writing/python</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/python</guid>
+      <pubDate>Tue, 07 Oct 2025 18:30:00 GMT</pubDate>
+      <description>Uncover why Python is the number one tool in 2025 for rapid development, automation, and data science. Explore core features, latest advancements, real-world use cases, and actionable best practices to build robust Python solutions.</description>
+      <category>Python</category>
+      <category>Programming</category>
+      <category>Data Science</category>
+      <category>Automation</category>
+      <category>Web Development</category>
+    </item>
+  </channel>
+</rss>

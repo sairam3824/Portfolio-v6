@@ -53,6 +53,7 @@ export default function WritingPostPage() {
             <Seo
                 title={`${post.title} | ${profileDetails.name}`}
                 description={post.excerpt}
+                image={`/api/og?slug=${post.id}`}
                 type="article"
                 pageType="WebPage"
                 canonical={getWritingPath(post.id)}

@@ -93,3 +93,33 @@ create policy "Allow authenticated all on subscribers"
     to authenticated
     using (true)
     with check (true);
+
+-- ============================================================
+-- MIGRATIONS & GUARDRAILS (idempotent — safe to re-run)
+-- ============================================================
+
+-- Columns the contact form sends (older schemas lack these)
+alter table portfolio_messages add column if not exists sender_name  text;
+alter table portfolio_messages add column if not exists sender_email text;
+alter table portfolio_messages add column if not exists source       text;
+
+-- Cap payload sizes so anonymous inserts can't store megabytes of spam
+alter table portfolio_messages drop constraint if exists portfolio_messages_content_length;
+alter table portfolio_messages add constraint portfolio_messages_content_length
+    check (char_length(content) between 1 and 4000);
+
+alter table portfolio_messages drop constraint if exists portfolio_messages_sender_limits;
+alter table portfolio_messages add constraint portfolio_messages_sender_limits
+    check (
+        coalesce(char_length(sender_name), 0)  <= 120
+        and coalesce(char_length(sender_email), 0) <= 254
+        and coalesce(char_length(user_agent), 0)   <= 512
+    );
+
+-- Reject garbage emails at the database boundary
+alter table newsletter_subscribers drop constraint if exists newsletter_subscribers_email_format;
+alter table newsletter_subscribers add constraint newsletter_subscribers_email_format
+    check (
+        char_length(email) <= 254
+        and email ~* '^[^@[:space:]]+@[^@[:space:]]+\.[^@[:space:]]+$'
+    );
