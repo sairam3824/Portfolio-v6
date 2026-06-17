@@ -704,6 +704,17 @@ export const projectsData: ProjectData[] = [
         tagline: "LLM Observability Platform • ClickHouse Analytics • Hallucination Detection",
     },
     {
+        title: "Sentinel: Self-Hostable LLM Gateway",
+        description:
+            "OpenAI-compatible proxy that drops in as a self-hosted middleware layer for LLM requests — point your SDK at a new base_url and route every call through the gateway with no code changes. Implements a multi-stage request pipeline (auth → rate limiting → semantic cache → backend routing → cost logging) with FAISS + sentence-transformers semantic caching (~200× faster retrieval at ~4ms vs ~820ms), Redis token-bucket rate limiting via atomic Lua scripts, ordered fallback routing with retries and exponential backoff, per-request token/USD cost tracking, virtual API keys with scoped limits, PII redaction in logs, and a Next.js admin dashboard for usage visualization — all deployable with one Docker command.",
+        tech: ["Python", "FastAPI", "FAISS", "Sentence-Transformers", "Redis", "SQLAlchemy", "PostgreSQL", "tiktoken", "Next.js 14", "TypeScript", "Docker"],
+        github: "https://github.com/sairam3824/Sentinel-Self-Hostable-LLM-Gateway",
+        category: "Infrastructure",
+        iconName: "Shield",
+        featured: true,
+        tagline: "OpenAI-Compatible LLM Gateway • Semantic Caching • Rate Limiting & Cost Tracking",
+    },
+    {
         title: "Vibe Coder",
         description:
             "Local-first autonomous AI coding agent platform that transforms natural-language tasks into production-ready code. It features a sophisticated multi-agent workflow orchestrated by LangGraph, isolated execution via Git worktrees, and a secure Docker-based validation sandbox. The system handles the entire development lifecycle: repository scanning, symbol extraction with Tree-sitter, automated planning, multi-file editing with self-healing repair loops, and live progress streaming via SSE—complete with diff approvals and commit artifacts.",
@@ -713,6 +724,28 @@ export const projectsData: ProjectData[] = [
         iconName: "Zap",
         featured: true,
         tagline: "Autonomous AI Coding Agent • Docker-Based Validation • Self-Healing Repair Loops",
+    },
+    {
+        title: "LLMScope",
+        description:
+            "Local-first observability platform for LLM-powered applications. A Python SDK wraps OpenAI, Anthropic, Ollama, and custom calls to capture latency, tokens, cost, errors, and metadata — backed by local SQLite storage with export. Features ChromaDB-powered semantic search over captured calls, regex-based PII redaction with allowlisting, model-pricing cost estimation, embedding-based drift detection, OpenTelemetry span exports, and a Next.js dashboard for browsing, comparing, and analyzing requests.",
+        tech: ["Python", "FastAPI", "SQLite", "ChromaDB", "Sentence-Transformers", "OpenTelemetry", "Next.js", "TypeScript"],
+        github: "https://github.com/sairam3824/LLMScope",
+        category: "Infrastructure",
+        iconName: "Activity",
+        featured: true,
+        tagline: "Local-First LLM Observability • Semantic Call Search • PII Redaction & Cost Tracking",
+    },
+    {
+        title: "DocuMind",
+        description:
+            "Schema-driven document extraction tool that converts PDFs and scanned images into structured, validated JSON/CSV. Users upload a document and select or define a Pydantic schema; the system constrains LLM output to that shape, validates results, and runs automated self-repair retries (up to 3 attempts). Features hybrid processing for native PDFs and scanned images with automatic Tesseract OCR fallback, per-field provenance (confidence scores, source text, page numbers, bounding boxes), and support for both OpenAI and local Ollama models.",
+        tech: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "Python", "Pydantic", "PyMuPDF", "pdfplumber", "pytesseract", "OpenAI", "Ollama"],
+        github: "https://github.com/sairam3824/DocuMind",
+        category: "AI Platform",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "Schema-Driven Document Extraction • Validated JSON/CSV • Provenance & Self-Repair",
     },
 
 
@@ -784,6 +817,28 @@ export const projectsData: ProjectData[] = [
         tagline: "Contract-Based LLM Red Teaming • 12 Attack Families • pytest + CI Integration",
     },
     {
+        title: "RAGGuard",
+        description:
+            "Defensive security demonstration that defends RAG systems against indirect prompt injection — malicious instructions planted inside retrieved documents rather than user input. Plants harmful instructions in a poisoned corpus, shows how they hijack a local LLM, then activates a three-layer defense pipeline (spotlighting for data/instruction boundaries, a sanitizer that strips injection syntax, and an LLM-based classifier with quarantine) to drive attack success rate from 100% to 0%. Covers four attack scenarios — instruction override, canary exfiltration, link injection, and format abuse — with an interactive attack/defense visualization, ablation benchmarks, and a fully local stack via Ollama, local embeddings, and FAISS.",
+        tech: ["Python", "FastAPI", "Ollama", "Sentence-Transformers", "FAISS", "Next.js", "TypeScript"],
+        github: "https://github.com/sairam3824/RAGGuard",
+        category: "AI Security",
+        iconName: "Shield",
+        featured: true,
+        tagline: "RAG Indirect Prompt Injection Defense • Spotlighting + Sanitizer + Classifier • 100%→0% Attack Success",
+    },
+    {
+        title: "RedProbe",
+        description:
+            "Defensive evaluation harness that tests LLM robustness against prompt injection and jailbreak attacks. Fires ~55 documented public attack payloads at a system prompt across five categories — direct injection, system prompt extraction, role-play jailbreaking, encoding obfuscation, and delimiter confusion — then scores resistance on a 0–100 robustness metric. Combines deterministic rule-based checks (canary tokens, regex, keywords) with an LLM-as-judge for fuzzy cases, supports before/after scoring to measure prompt hardening, severity-weighted scoring, and a YAML-based customizable payload library. Outputs JSON, Markdown, and a live Textual dashboard against Ollama or OpenAI-compatible endpoints.",
+        tech: ["Python", "Ollama", "Textual", "pytest", "uv", "YAML"],
+        github: "https://github.com/sairam3824/RedProbe",
+        category: "AI Security",
+        iconName: "Shield",
+        featured: true,
+        tagline: "LLM Robustness Harness • ~55 Attack Payloads • Rule-Based + LLM Judge Scoring",
+    },
+    {
         title: "Constitutional AI Self-Critique Loop",
         description:
             "Python library and CLI that wraps any LLM call in a configurable critique-and-revise loop inspired by Constitutional AI. Users define YAML constitutions of principles (with severity levels and examples); the system generates an answer, runs all principle critiques in parallel, and triggers automatic revision rounds on high or repeated medium-severity violations. Features multi-provider support (OpenAI, Anthropic, OpenRouter), full audit trails with token usage and cost accounting, and batch evaluation over JSONL datasets — built for rapid policy iteration before reaching for fine-tuning.",
@@ -826,6 +881,17 @@ export const projectsData: ProjectData[] = [
         iconName: "Brain",
         featured: true,
         tagline: "GPT From Scratch in MLX • Legal Corpus • Attention Heatmaps",
+    },
+    {
+        title: "Tiny MoE from Scratch in MLX",
+        description:
+            "Educational MLX project that implements a decoder-only language model with Mixture-of-Experts (MoE) feed-forward layers entirely from scratch and trains it on TinyStories. Builds a 6-layer causal transformer (256 dim, 4 heads) with MoE blocks in alternating layers — 4 experts using top-2 noisy routing and a Switch-style load-balancing auxiliary loss — alongside a dense baseline for comparison. Ships two model sizes (~8.5M and ~30.6M params), a 4,096-token byte-level BPE tokenizer, checkpoint management, perplexity/throughput evaluation, and a Streamlit app for inspecting token-to-expert routing patterns.",
+        tech: ["Python", "Apple MLX", "Mixture-of-Experts", "BPE Tokenizer", "SafeTensors", "Streamlit"],
+        github: "https://github.com/sairam3824/Tiny-MoE-from-Scratch-in-MLX",
+        category: "Deep Learning",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "MoE Transformer From Scratch in MLX • Top-2 Noisy Routing • Expert Routing Visualizer",
     },
     {
         title: "Streaming Speech-to-Intent Router",
@@ -881,6 +947,28 @@ export const projectsData: ProjectData[] = [
         iconName: "Search",
         featured: true,
         tagline: "Local-First Browser Memory • Hybrid Retrieval • Cited Answers",
+    },
+    {
+        title: "Self-Hosted Re-ranker for RAG",
+        description:
+            "End-to-end local workflow to fine-tune, evaluate, export, and serve a domain-specific cross-encoder re-ranker for RAG pipelines. Generates or mines query/passage triples, trains a compact re-ranker with pairwise MarginMSE, reports NDCG@10 and MRR@10, exports to ONNX, and serves a /rerank API from FastAPI with PyTorch and ONNX scoring backends. Ships LangChain and LlamaIndex integration examples and a click/log mining utility for production RAG logs.",
+        tech: ["Python", "FastAPI", "PyTorch", "ONNX", "Cross-Encoder", "Sentence-Transformers", "LangChain", "LlamaIndex"],
+        github: "https://github.com/sairam3824/Self-Hosted-Re-ranker-for-RAG",
+        category: "AI Search & RAG",
+        iconName: "Search",
+        featured: true,
+        tagline: "Domain Cross-Encoder Re-ranker • MarginMSE Training • ONNX + FastAPI Serving",
+    },
+    {
+        title: "Real-time Indian Sign Language Translator",
+        description:
+            "Research prototype that recognizes isolated Indian Sign Language (ISL) glosses from webcam video. Extracts privacy-friendly MediaPipe hand and pose landmarks, trains a lightweight PyTorch BiLSTM classifier with temporal attention pooling, and runs live predictions in a Streamlit demo with gloss buffering, sentence smoothing, and speech output. Includes a full dataset/preprocess/train/eval CLI pipeline and a SwiftUI/CoreML scaffold for macOS experimentation.",
+        tech: ["Python", "PyTorch", "MediaPipe", "BiLSTM", "Streamlit", "OpenCV", "Core ML", "SwiftUI"],
+        github: "https://github.com/sairam3824/Real-time-Indian-Sign-Language-Translator",
+        category: "Computer Vision",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "ISL Gloss Recognition • MediaPipe Landmarks + BiLSTM • Real-time Streamlit Demo",
     },
 
     // ═══════════════════════════════════════════════════════════════════════════
