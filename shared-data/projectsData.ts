@@ -285,6 +285,28 @@ export const projectsData: ProjectData[] = [
         tagline: "5-Agent PR Review • LangGraph Orchestration • Security Scanning",
     },
     {
+        title: "CodeCouncil",
+        description:
+            "Multi-agent code review CLI for Git diffs and GitHub pull requests. Runs five specialist LLM agents — security, performance, style, tests, and docs — concurrently over a unified diff via asyncio, then merges their schema-validated findings into a single structured review: deduplicated by overlap, ranked by severity, capped per category, and rendered to the terminal, Markdown, JSON, or posted back to a GitHub PR as an inline review. Includes a FastAPI webhook server with HMAC verification for auto-reviewing PRs and three backends (OpenAI, local Ollama, zero-dependency mock).",
+        tech: ["Python", "FastAPI", "OpenAI", "Ollama", "Pydantic", "asyncio", "Rich", "GitHub API"],
+        github: "https://github.com/sairam3824/CodeCouncil",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "5 Concurrent Review Agents • Git Diffs & GitHub PRs • Multi-Backend",
+    },
+    {
+        title: "PromptForge",
+        description:
+            "Automatic prompt optimization for LLM tasks, inspired by DSPy. Declare your task as a Signature with a few labeled examples and PromptForge searches for the prompt that maximizes your metric — combining InstructionSearch (LLM-proposed instruction rewrites, hill-climbed on a validation split) with BootstrapFewShot (mining high-scoring demos as in-context examples). Every candidate is scored on held-out data and logged to a SQLite leaderboard, and all model calls are content-hashed and disk-cached so re-runs are free. Runs on OpenAI or fully local Ollama models.",
+        tech: ["Python", "OpenAI", "Ollama", "SQLite", "Sentence-Transformers", "CLI"],
+        github: "https://github.com/sairam3824/PromptForge",
+        category: "AI Platform",
+        iconName: "Terminal",
+        featured: true,
+        tagline: "Automatic Prompt Optimization • Instruction Search + Few-Shot Bootstrapping • DSPy-Inspired",
+    },
+    {
         title: "A2A Task Marketplace",
         description:
             "One of the first open-source implementations of Google's Agent-to-Agent (A2A) protocol. A marketplace where specialized AI agents discover and collaborate on complex tasks via natural language decomposition. Features 6 agents (code, content, data, research, translation, design), dependency-aware execution, and real-time SSE progress tracking.",
@@ -747,6 +769,28 @@ export const projectsData: ProjectData[] = [
         featured: true,
         tagline: "Schema-Driven Document Extraction • Validated JSON/CSV • Provenance & Self-Repair",
     },
+    {
+        title: "TraceLens",
+        description:
+            "OpenTelemetry-based observability platform for LLM applications that traces model calls, retrievals, and tool invocations into hierarchical span trees — surfacing tokens, cost, latency, errors, and evaluation scores. A Python SDK adds tracing with a one-line @trace decorator and auto-instruments the OpenAI client; a FastAPI collector ingests OTLP/JSON into DuckDB with query and analytics APIs; and a Next.js dashboard renders span waterfall trees and cost/latency charts. Model-agnostic across OpenAI and Ollama, with an offline mock backend for zero-dependency demos and an LLM-as-judge evaluation scoring system.",
+        tech: ["Python", "OpenTelemetry", "FastAPI", "DuckDB", "Next.js", "Tailwind CSS", "Recharts", "ClickHouse"],
+        github: "https://github.com/sairam3824/TraceLens",
+        category: "Infrastructure",
+        iconName: "Activity",
+        featured: true,
+        tagline: "OpenTelemetry LLM Observability • Span Waterfalls • Cost, Latency & Eval Scoring",
+    },
+    {
+        title: "MLOps Churn Pipeline",
+        description:
+            "End-to-end MLOps workflow for telecom customer churn that covers the full lifecycle — data generation, model training, experiment tracking, drift monitoring, API serving, testing, and CI — with zero external infrastructure. A unified predict_one() scoring function is shared across the FastAPI service, CLI, and tests to prevent train/serve skew; PSI-based drift detection flags distribution shifts against simulated live data; and optional MLflow integration adds full experiment tracking with no code changes. Reproducible via fixed seeds and shipped with Docker Compose and a GitHub Actions CI pipeline.",
+        tech: ["Python", "scikit-learn", "FastAPI", "MLflow", "Pandas", "NumPy", "Docker", "GitHub Actions"],
+        github: "https://github.com/sairam3824/MLOps-Churn-Pipeline",
+        category: "Infrastructure",
+        iconName: "Activity",
+        featured: true,
+        tagline: "End-to-End MLOps Lifecycle • PSI Drift Monitoring • MLflow Tracking & CI",
+    },
 
 
     {
@@ -969,6 +1013,50 @@ export const projectsData: ProjectData[] = [
         iconName: "Cpu",
         featured: true,
         tagline: "ISL Gloss Recognition • MediaPipe Landmarks + BiLSTM • Real-time Streamlit Demo",
+    },
+    {
+        title: "Generative Modeling: VAE vs GAN vs Diffusion",
+        description:
+            "Three generative paradigms — a latent-variable VAE, an adversarial GAN, and a DDPM diffusion model — each built from scratch on a tiny NumPy reverse-mode autograd engine (no PyTorch, no TensorFlow) and pitted against the same target: a multi-modal 2-D 8-mode Gaussian ring. All three share the same autograd, Adam optimizer, and MLP, exposing each model's signature failure mode (GAN mode collapse, VAE over-smoothing, diffusion's slower-but-faithful coverage). Sample quality is scored with energy distance, a proper distributional divergence, so 'which looks best' becomes a number. Implements the reparameterization trick, numerically-stable BCE-with-logits, and a linear-β DDPM noise schedule in a few hundred readable lines.",
+        tech: ["Python", "NumPy", "Autograd", "VAE", "GAN", "Diffusion (DDPM)", "Matplotlib"],
+        github: "https://github.com/sairam3824/Generative-Modeling-VAE-vs-GAN-vs-Diffusion",
+        category: "Deep Learning",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "VAE · GAN · Diffusion From Scratch on a NumPy Autograd Engine • Energy-Distance Scored",
+    },
+    {
+        title: "Tonewise: Local-First Music Recommender",
+        description:
+            "A local-first, Spotify-style music recommender for cold-start discovery. Imports your listening history from Spotify Extended Streaming History, YouTube Music (Google Takeout), and Apple Music/iTunes XML into SQLite, then recommends tracks through content-based, collaborative, hybrid, and seed-track workflows in a Streamlit app — with explanations stored alongside each recommendation. Your listening history never leaves your machine; the default path is lightweight, deterministic, and runs without downloading ML models. Evaluates content, collaborative, and hybrid recommenders with Recall@10 and NDCG@10, and opts into heavier local models only on demand.",
+        tech: ["Python", "Streamlit", "SQLite", "Pandas", "Scikit-learn", "Recommender Systems"],
+        github: "https://github.com/sairam3824/Tonewise",
+        category: "Machine Learning",
+        iconName: "Activity",
+        featured: true,
+        tagline: "Local-First Music Recommender • Content + Collaborative + Hybrid • Recall@10 / NDCG@10",
+    },
+    {
+        title: "Transformer Self-Attention + LoRA From Scratch",
+        description:
+            "A dependency-light project that builds single-head self-attention AND the reverse-mode autograd engine it trains on entirely in NumPy — no PyTorch, no TensorFlow — then demonstrates LoRA (Low-Rank Adaptation) fine-tuning against a full fine-tune baseline. Uses a selective-copy (pointer-following) task that provably requires attention for data-dependent routing: position 0 holds a pointer and the label is the token it points to, so a bag-of-words model cannot solve it. LoRA injects zero-initialized low-rank deltas into the frozen Q and V projections to adapt the pretrained base to a shifted routing rule with a fraction of the trainable parameters.",
+        tech: ["Python", "NumPy", "Autograd", "Self-Attention", "LoRA", "Matplotlib"],
+        github: "https://github.com/sairam3824/Transformer-Self-Attention-LoRA-Fine-Tuning-from-scratch",
+        category: "Deep Learning",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "Single-Head Attention + Autograd in Pure NumPy • LoRA vs Full Fine-Tune",
+    },
+    {
+        title: "InferLab: LLM Inference Optimization Lab",
+        description:
+            "A self-contained benchmarking lab that implements and measures six core LLM inference optimizations from scratch — baseline generation, KV-cache, quantization (fp32→fp16→int8), speculative decoding, batching, and sampling knobs — with no external APIs, everything running locally. Built and tuned for Apple Silicon on the MPS backend with clean CPU fallback, every optimization is hand-implemented so you can read exactly how it works, then measured with a YAML-driven runner that emits JSON results and publication-style charts (p50/p95 throughput, perplexity, memory/quality tradeoffs).",
+        tech: ["Python", "PyTorch", "Hugging Face Transformers", "MPS", "GPT-2", "TinyLlama", "Qwen2.5"],
+        github: "https://github.com/sairam3824/InferLab",
+        category: "Infrastructure",
+        iconName: "Activity",
+        featured: true,
+        tagline: "6 LLM Inference Optimizations From Scratch • KV-Cache, Quantization & Speculative Decoding",
     },
 
     // ═══════════════════════════════════════════════════════════════════════════
