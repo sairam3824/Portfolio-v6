@@ -5,8 +5,64 @@
     <link>https://www.saiii.in/writing</link>
     <description>GenAI &amp; ML Engineer portfolio — production AI projects, technical writing, competitive programming, and professional journey of Sai Ram Maruri.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 May 2026 18:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 18:30:00 GMT</lastBuildDate>
     <atom:link href="https://www.saiii.in/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Product Analytics: Building a Stack That Actually Drives Decisions</title>
+      <link>https://www.saiii.in/writing/product-analytics-stack</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/product-analytics-stack</guid>
+      <pubDate>Sun, 21 Jun 2026 18:30:00 GMT</pubDate>
+      <description>Most analytics stacks generate dashboards nobody opens. This is the product-builder&apos;s guide to doing it right in 2026 — a clean event taxonomy, a North Star you can defend, the modern warehouse-to-BI pipeline, the trust problems that quietly kill adoption, and where AI copilots actually help. Built for people who ship products, not just charts.</description>
+      <category>Business Analytics</category>
+      <category>Product Analytics</category>
+      <category>Data Products</category>
+      <category>North Star Metrics</category>
+      <category>Data Engineering</category>
+      <category>Analytics Engineering</category>
+      <category>AI Analytics</category>
+    </item>
+    <item>
+      <title>Agentic RAG: When Retrieval Learns to Think</title>
+      <link>https://www.saiii.in/writing/agentic-rag-2026</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/agentic-rag-2026</guid>
+      <pubDate>Wed, 17 Jun 2026 18:30:00 GMT</pubDate>
+      <description>Classic RAG retrieves once and hopes. Agentic RAG plans, retrieves, reflects, and retrieves again — closing the gap between &apos;found some chunks&apos; and &apos;actually answered the question.&apos; This is the practical 2026 guide to query planning, multi-hop retrieval, re-ranking, tool-using retrievers, and the new failure modes you inherit when retrieval becomes an agent.</description>
+      <category>AI/ML</category>
+      <category>Agentic RAG</category>
+      <category>RAG</category>
+      <category>AI Agents</category>
+      <category>Retrieval</category>
+      <category>Vector Databases</category>
+      <category>Production AI</category>
+    </item>
+    <item>
+      <title>AI Agent Memory: Architectures for Long-Running Agents</title>
+      <link>https://www.saiii.in/writing/ai-agent-memory</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/ai-agent-memory</guid>
+      <pubDate>Thu, 11 Jun 2026 18:30:00 GMT</pubDate>
+      <description>A stateless agent forgets you the moment the context window closes. Real assistants remember — preferences, past decisions, what worked and what failed. This is the 2026 guide to agent memory: working vs long-term, episodic vs semantic vs procedural, the vector and graph stores that back them, and the hard problem nobody talks about — knowing what to forget.</description>
+      <category>AI/ML</category>
+      <category>AI Agents</category>
+      <category>Agent Memory</category>
+      <category>Context Engineering</category>
+      <category>LLM</category>
+      <category>Vector Databases</category>
+      <category>Production AI</category>
+    </item>
+    <item>
+      <title>Small Language Models: Why Smaller Is Winning in Production</title>
+      <link>https://www.saiii.in/writing/small-language-models</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/small-language-models</guid>
+      <pubDate>Sat, 06 Jun 2026 18:30:00 GMT</pubDate>
+      <description>The race for ever-bigger frontier models grabbed the headlines, but the quiet revolution of 2026 is happening at the other end: small, specialized models that run on a laptop, a phone, or the edge — fast, cheap, private, and shockingly capable. Here&apos;s why SLMs are taking over real production workloads, how distillation and quantization make them possible, and when small genuinely beats big.</description>
+      <category>AI/ML</category>
+      <category>Small Language Models</category>
+      <category>Edge AI</category>
+      <category>On-Device AI</category>
+      <category>Model Distillation</category>
+      <category>Quantization</category>
+      <category>Production AI</category>
+    </item>
     <item>
       <title>AI Evals: How to Actually Measure LLM and Agent Quality in Production (2026 Guide)</title>
       <link>https://www.saiii.in/writing/ai-evals-llm-evaluation</link>
@@ -353,56 +409,6 @@
       <category>Fine-Tuning</category>
       <category>NLP</category>
       <category>AI Innovation</category>
-    </item>
-    <item>
-      <title>Retrieval-Augmented Generation: Transforming How LLMs Access Knowledge</title>
-      <link>https://www.saiii.in/writing/rag</link>
-      <guid isPermaLink="true">https://www.saiii.in/writing/rag</guid>
-      <pubDate>Tue, 14 Oct 2025 18:30:00 GMT</pubDate>
-      <description>Large Language Models have revolutionized how we interact with AI, but they face a fundamental limitation: their knowledge is frozen at the time of training. RAG emerged as the solution to this challenge, fundamentally changing how we build production AI applications.</description>
-      <category>AI/ML</category>
-      <category>RAG</category>
-      <category>LLM</category>
-      <category>Vector Databases</category>
-      <category>Production AI</category>
-      <category>Knowledge Management</category>
-    </item>
-    <item>
-      <title>LLM Poisoning: The Hidden Threat to AI Trustworthiness</title>
-      <link>https://www.saiii.in/writing/llm-poisoning</link>
-      <guid isPermaLink="true">https://www.saiii.in/writing/llm-poisoning</guid>
-      <pubDate>Sun, 12 Oct 2025 18:30:00 GMT</pubDate>
-      <description>LLM poisoning is a rising cybersecurity concern where attackers subtly corrupt the data used to train large language models, causing these AI systems to behave unpredictably or dangerously. Recent research shows that it takes only a small number of poisoned documents to impact even the largest models.</description>
-      <category>AI/ML</category>
-      <category>Cybersecurity</category>
-      <category>LLM Security</category>
-      <category>Data Poisoning</category>
-      <category>AI Safety</category>
-    </item>
-    <item>
-      <title>When AI Dreams: Understanding and Mitigating LLM Hallucinations</title>
-      <link>https://www.saiii.in/writing/llm-hallucination</link>
-      <guid isPermaLink="true">https://www.saiii.in/writing/llm-hallucination</guid>
-      <pubDate>Thu, 09 Oct 2025 18:30:00 GMT</pubDate>
-      <description>Explore why large language models hallucinate, real-world examples, and proven strategies to reduce these errors for reliable AI applications.</description>
-      <category>AI/ML</category>
-      <category>LLM</category>
-      <category>Hallucination</category>
-      <category>AI Reliability</category>
-      <category>RAG</category>
-      <category>Prompt Engineering</category>
-    </item>
-    <item>
-      <title>Mastering Python in 2025: The Universal Language for Modern Development</title>
-      <link>https://www.saiii.in/writing/python</link>
-      <guid isPermaLink="true">https://www.saiii.in/writing/python</guid>
-      <pubDate>Tue, 07 Oct 2025 18:30:00 GMT</pubDate>
-      <description>Uncover why Python is the number one tool in 2025 for rapid development, automation, and data science. Explore core features, latest advancements, real-world use cases, and actionable best practices to build robust Python solutions.</description>
-      <category>Python</category>
-      <category>Programming</category>
-      <category>Data Science</category>
-      <category>Automation</category>
-      <category>Web Development</category>
     </item>
   </channel>
 </rss>

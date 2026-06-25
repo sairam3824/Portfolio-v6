@@ -14,6 +14,50 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        id: "product-analytics-stack",
+        title: "Product Analytics: Building a Stack That Actually Drives Decisions",
+        excerpt:
+            "Most analytics stacks generate dashboards nobody opens. This is the product-builder's guide to doing it right in 2026 — a clean event taxonomy, a North Star you can defend, the modern warehouse-to-BI pipeline, the trust problems that quietly kill adoption, and where AI copilots actually help. Built for people who ship products, not just charts.",
+        date: "June 22, 2026",
+        readTime: "16 min read",
+        tags: ["Business Analytics", "Product Analytics", "Data Products", "North Star Metrics", "Data Engineering", "Analytics Engineering", "AI Analytics"],
+        icon: "TrendingUp",
+        iconColor: "blue",
+    },
+    {
+        id: "agentic-rag-2026",
+        title: "Agentic RAG: When Retrieval Learns to Think",
+        excerpt:
+            "Classic RAG retrieves once and hopes. Agentic RAG plans, retrieves, reflects, and retrieves again — closing the gap between 'found some chunks' and 'actually answered the question.' This is the practical 2026 guide to query planning, multi-hop retrieval, re-ranking, tool-using retrievers, and the new failure modes you inherit when retrieval becomes an agent.",
+        date: "June 18, 2026",
+        readTime: "15 min read",
+        tags: ["AI/ML", "Agentic RAG", "RAG", "AI Agents", "Retrieval", "Vector Databases", "Production AI"],
+        icon: "Database",
+        iconColor: "purple",
+    },
+    {
+        id: "ai-agent-memory",
+        title: "AI Agent Memory: Architectures for Long-Running Agents",
+        excerpt:
+            "A stateless agent forgets you the moment the context window closes. Real assistants remember — preferences, past decisions, what worked and what failed. This is the 2026 guide to agent memory: working vs long-term, episodic vs semantic vs procedural, the vector and graph stores that back them, and the hard problem nobody talks about — knowing what to forget.",
+        date: "June 12, 2026",
+        readTime: "15 min read",
+        tags: ["AI/ML", "AI Agents", "Agent Memory", "Context Engineering", "LLM", "Vector Databases", "Production AI"],
+        icon: "BrainCircuit",
+        iconColor: "purple",
+    },
+    {
+        id: "small-language-models",
+        title: "Small Language Models: Why Smaller Is Winning in Production",
+        excerpt:
+            "The race for ever-bigger frontier models grabbed the headlines, but the quiet revolution of 2026 is happening at the other end: small, specialized models that run on a laptop, a phone, or the edge — fast, cheap, private, and shockingly capable. Here's why SLMs are taking over real production workloads, how distillation and quantization make them possible, and when small genuinely beats big.",
+        date: "June 7, 2026",
+        readTime: "14 min read",
+        tags: ["AI/ML", "Small Language Models", "Edge AI", "On-Device AI", "Model Distillation", "Quantization", "Production AI"],
+        icon: "CpuChip",
+        iconColor: "green",
+    },
+    {
         id: "ai-evals-llm-evaluation",
         title:
             "AI Evals: How to Actually Measure LLM and Agent Quality in Production (2026 Guide)",

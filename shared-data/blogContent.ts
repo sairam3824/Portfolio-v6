@@ -47,6 +47,10 @@ const contentLoaders: Record<string, () => Promise<BlogContentModule>> = {
     "context-engineering": () => import('./blog/posts/context-engineering'),
     "ai-analytics-multiplier": () => import('./blog/posts/ai-analytics-multiplier'),
     "ai-evals-llm-evaluation": () => import('./blog/posts/ai-evals-llm-evaluation'),
+    "product-analytics-stack": () => import('./blog/posts/product-analytics-stack'),
+    "agentic-rag-2026": () => import('./blog/posts/agentic-rag-2026'),
+    "ai-agent-memory": () => import('./blog/posts/ai-agent-memory'),
+    "small-language-models": () => import('./blog/posts/small-language-models'),
 };
 
 export async function getBlogContent(id: string): Promise<string | null> {

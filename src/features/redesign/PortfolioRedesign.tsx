@@ -64,7 +64,6 @@ function PortfolioLayout() {
                     <div className="rd-brand-shell">
                         <Link to={ROUTE_PATHS.home} className="rd-brand">
                             <span className="rd-brand-default">{profileDetails.brand}</span>
-                            <span className="rd-brand-hover">AI BUILDER ·</span>
                         </Link>
                     </div>
 

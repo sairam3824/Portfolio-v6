@@ -135,34 +135,6 @@ textarea {
     letter-spacing: -0.02em;
 }
 
-.rd-brand-default,
-.rd-brand-hover {
-    transition: transform 220ms ease, opacity 220ms ease;
-}
-
-.rd-brand-hover {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    opacity: 0;
-    transform: translateY(calc(-50% + 16px));
-    color: var(--rd-accent);
-    font-family: var(--rd-font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.16em;
-    white-space: nowrap;
-}
-
-.rd-brand:hover .rd-brand-default {
-    opacity: 0;
-    transform: translateY(-16px);
-}
-
-.rd-brand:hover .rd-brand-hover {
-    opacity: 1;
-    transform: translateY(-50%);
-}
-
 .rd-nav {
     display: flex;
     align-items: center;

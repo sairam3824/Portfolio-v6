@@ -307,6 +307,28 @@ export const projectsData: ProjectData[] = [
         tagline: "Automatic Prompt Optimization • Instruction Search + Few-Shot Bootstrapping • DSPy-Inspired",
     },
     {
+        title: "Forge",
+        description:
+            "Local, terminal-based coding agent that runs entirely on your machine via Ollama — a \"mini Claude Code\" that understands a repository, plans changes, edits files, runs commands and tests, and iterates autonomously with zero cloud dependency by default. Built on a ReAct tool-use loop where the model reasons step-by-step and calls tools (read/write files, apply patches, run commands, grep, undo) under a strict JSON protocol with defensive parsing and self-correcting error feedback. Uses tree-sitter symbol mapping and semantic retrieval to keep only relevant files in context, shows unified diffs before applying changes, sandboxes commands to the project directory, and offers one-step undo. Ships both a Rich REPL and a Textual TUI with transcript and plan panes; core Ollama communication uses only the standard library, with tree-sitter and embeddings as optional pure-Python-fallback extras.",
+        tech: ["Python", "Ollama", "qwen2.5-coder", "Tree-sitter", "Rich", "Textual", "pytest"],
+        github: "https://github.com/sairam3824/Forge",
+        category: "AI Agent",
+        iconName: "Terminal",
+        featured: true,
+        tagline: "Local-First Terminal Coding Agent • ReAct Tool-Use Loop • Ollama-Powered",
+    },
+    {
+        title: "PromptSqueeze",
+        description:
+            "Python toolkit for compressing long LLM prompts — system prompts, RAG contexts, and code explanations — to cut token usage and cost while preserving the information that matters. Offers three pluggable compression strategies: rule-based (local and fast), an LLMLingua-like model-based token scorer, and abstractive LLM rewriting, all behind a simple Compressor API with configurable compression ratios. Includes drop-in wrapper clients for OpenAI and Anthropic and a `psq` CLI, plus a benchmark framework with bundled datasets and HTML reporting across three tasks — long summarization (Rouge-L), RAG question-answering (exact match), and code explanation (BLEU).",
+        tech: ["Python", "OpenAI", "Anthropic", "Hugging Face Transformers", "CLI"],
+        github: "https://github.com/sairam3824/PromptSqueeze",
+        category: "AI Platform",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "Prompt Compression Toolkit • Rule-Based + LLMLingua + Abstractive • Token & Cost Savings",
+    },
+    {
         title: "A2A Task Marketplace",
         description:
             "One of the first open-source implementations of Google's Agent-to-Agent (A2A) protocol. A marketplace where specialized AI agents discover and collaborate on complex tasks via natural language decomposition. Features 6 agents (code, content, data, research, translation, design), dependency-aware execution, and real-time SSE progress tracking.",
@@ -1057,6 +1079,50 @@ export const projectsData: ProjectData[] = [
         iconName: "Activity",
         featured: true,
         tagline: "6 LLM Inference Optimizations From Scratch • KV-Cache, Quantization & Speculative Decoding",
+    },
+    {
+        title: "LLM RAG Document Q&A",
+        description:
+            "A compact, dependency-light Retrieval-Augmented Generation system that answers questions over a document corpus with zero setup and no API key. Retrieval is fully offline (TF-IDF chunking + cosine similarity), and generation is selected automatically across three pluggable backends — Claude when a key is set, a local Ollama model, or a cited extractive fallback that always produces grounded answers. Ships with a seeded knowledge base, an evaluation harness measuring retrieval hit-rate and answer accuracy over a labelled gold set, and a Streamlit chat UI that surfaces retrieved sources and scores.",
+        tech: ["Python", "TF-IDF", "Anthropic Claude", "Ollama", "Streamlit", "scikit-learn"],
+        github: "https://github.com/sairam3824/LLM-RAG-Document-Q-A",
+        category: "AI Search & RAG",
+        iconName: "Search",
+        featured: true,
+        tagline: "Zero-Setup Offline RAG • Pluggable Claude/Ollama/Extractive Backends • Eval Harness",
+    },
+    {
+        title: "Deep RL for Control",
+        description:
+            "Sequential decision-making with function approximation — the step beyond tabular methods. Two agents learn to navigate a walled GridWorld from reward alone: a value-based DQN (experience replay + target network) and a policy-based REINFORCE policy gradient with a variance-reducing baseline. Everything — the neural nets and a ~150-line reverse-mode autograd engine — is built from scratch in pure NumPy, with no Gym, PyTorch, or TensorFlow. Includes honest evaluation via greedy-rollout returns against a random-policy floor and smoothed learning curves showing DQN converging more smoothly than REINFORCE.",
+        tech: ["Python", "NumPy", "DQN", "REINFORCE", "Autograd", "Matplotlib"],
+        github: "https://github.com/sairam3824/Deep-Reinforcement-Learning-for-Control",
+        category: "Machine Learning",
+        iconName: "Rocket",
+        featured: true,
+        tagline: "DQN vs REINFORCE From Scratch in Pure NumPy • Custom Autograd • Honest Evaluation",
+    },
+    {
+        title: "Multi-Agent LLM Workflow",
+        description:
+            "Collaborative multi-agent system where specialized Claude agents reason over datasets through natural-language queries. An Analyst agent writes and executes pandas code, a Critic agent validates the results, and an Orchestrator manages the control loop with bounded retry logic — when generated code fails, critique feedback automatically triggers self-correcting re-attempts. Ships with a deterministic MockLLM for offline testing and swaps seamlessly between Claude (Anthropic API) and local Ollama models via environment variables.",
+        tech: ["Python", "Anthropic Claude", "Ollama", "pandas", "NumPy", "pytest"],
+        github: "https://github.com/sairam3824/Multi-Agent-LLM-Workflow",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Analyst + Critic + Orchestrator Agents • Self-Correcting Retry Loop • Offline-First",
+    },
+    {
+        title: "Modern Data Stack: Orchestrated Analytics Engineering",
+        description:
+            "End-to-end data pipeline built from scratch in Python and SQLite that mirrors how modern data platforms actually work — without Airflow, dbt, or Great Expectations. Implements the full lifecycle: raw data generation with deliberate quality issues, ingestion into a SQLite warehouse, informational quality profiling, dbt-style staging transformations, contract testing that fails the pipeline on violations, and aggregated analytics marts. An explicit DAG orchestrator handles dependency resolution via topological sorting with skip-on-failure logic, and every run emits execution lineage diagrams and a JSON run report.",
+        tech: ["Python", "SQLite", "pandas", "NumPy", "Matplotlib"],
+        github: "https://github.com/sairam3824/Modern-Data-Stack-Orchestrated-Analytics-Engineering",
+        category: "Infrastructure",
+        iconName: "Activity",
+        featured: true,
+        tagline: "DAG Orchestration • Data Quality Gates & Contract Testing • dbt-Style Staging Marts",
     },
 
     // ═══════════════════════════════════════════════════════════════════════════
