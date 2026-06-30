@@ -1124,6 +1124,61 @@ export const projectsData: ProjectData[] = [
         featured: true,
         tagline: "DAG Orchestration • Data Quality Gates & Contract Testing • dbt-Style Staging Marts",
     },
+    {
+        title: "Sequential / Session-Based Recommender",
+        description:
+            "A compact, from-scratch demonstration that order matters in recommendation. Three next-item recommenders — a popularity baseline, a first-order Markov model, and a SASRec-style single-head self-attention model — are trained and compared on synthetic random-walk session data where the signal lives entirely in the sequence of items, not their global popularity. The self-attention model and its reverse-mode autograd engine are implemented entirely in NumPy with no PyTorch or TensorFlow, making every gradient explicit. Evaluated with a temporal next-item split on Hit@10 / NDCG@10, the attention model (0.988 Hit@10) nearly matches the Markov oracle (1.000) and far outperforms the order-blind popularity baseline (0.373).",
+        tech: ["Python", "NumPy", "Self-Attention", "Autograd", "SASRec", "Matplotlib"],
+        github: "https://github.com/sairam3824/Sequential-Session-Based-Recommender",
+        category: "Machine Learning",
+        iconName: "Activity",
+        featured: true,
+        tagline: "SASRec-Style Self-Attention in Pure NumPy • Temporal Hit@10 / NDCG@10 • Order Matters",
+    },
+    {
+        title: "NanoVDB: Vector Database From Scratch",
+        description:
+            "A small but real vector database built from scratch in Python — a hand-written HNSW proximity-graph index (no FAISS or hnswlib powering search), crash-safe persistence via a write-ahead log plus append-only binary segments, rich metadata filtering, and hybrid search combining BM25 with Reciprocal Rank Fusion. Ships with a FastAPI server, a browser viewer, and a synchronous Python client SDK. Writes are WAL-first so the database survives a crash at any point, with soft deletes purged on compaction. FAISS appears only as a benchmark baseline: NanoVDB tracks its recall@10 across ef sweeps, with the latency gap being Python vs C++. All 6 build phases complete with 42/42 tests passing.",
+        tech: ["Python", "NumPy", "FastAPI", "HNSW", "BM25", "Pydantic"],
+        github: "https://github.com/sairam3824/NanoVDB",
+        category: "Infrastructure",
+        iconName: "Database",
+        featured: true,
+        tagline: "From-Scratch HNSW + WAL Persistence • Hybrid BM25 + RRF Search • Benchmarked vs FAISS",
+    },
+    {
+        title: "Finance VAULT",
+        description:
+            "AI-powered personal finance dashboard that connects bank accounts via Plaid and turns raw transactions into a unified financial cockpit. Syncs accounts, transactions, and investment holdings through the Plaid Link flow, persists them in a crash-safe SQLite store (WAL mode + idempotent upserts), and computes net worth, asset/liability breakdowns, spending trends, and category analysis. Features OpenAI-powered spending recaps with a deterministic fallback, pure-SQL anomaly detection for unusual category spend, searchable/paginated transactions, and investment allocation views — all rendered in a dark fintech UI with full loading, empty, and error states.",
+        tech: ["React 18", "Vite", "Tailwind CSS", "Node.js", "Express", "better-sqlite3", "Plaid", "OpenAI", "Recharts"],
+        github: "https://github.com/sairam3824/Finance-VAULT",
+        category: "AI Platform",
+        iconName: "Activity",
+        featured: true,
+        tagline: "AI Personal Finance Cockpit • Plaid Integration • Spending Insights & Anomaly Detection",
+    },
+    {
+        title: "Federated Learning Simulator",
+        description:
+            "Local simulation environment for federated learning experiments. Trains virtual clients on distributed data shards, aggregates their updates with pluggable server strategies, and tracks convergence — all reproducibly from YAML experiment specs. Supports MNIST, FashionMNIST, and AG News with IID, Dirichlet non-IID, and label-quantity-skew partitioning; SmallCNN and SmallTextClassifier models; FedAvg, FedProx, and FedAdam aggregation; optional differential-privacy exploration via clipped updates and noise injection; configurable client dropout/sampling; and per-client accuracy, loss, and communication-cost metrics. Runs from a CLI or an interactive Streamlit dashboard with automatic GPU/Apple Silicon device detection and timestamped artifacts.",
+        tech: ["Python", "PyTorch", "Flower", "Streamlit", "NumPy", "YAML"],
+        github: "https://github.com/sairam3824/Federated-Learning-Simulator",
+        category: "Machine Learning",
+        iconName: "Cpu",
+        featured: true,
+        tagline: "Federated Learning Sandbox • FedAvg/FedProx/FedAdam • Non-IID Partitioning & DP Exploration",
+    },
+    {
+        title: "Diffusion-Free Text-to-Image",
+        description:
+            "Class-conditioned PixelCNN++ that generates emoji-style images autoregressively — pixel by pixel, with no diffusion model involved. Downloads OpenMoji assets, preprocesses them into 32×32 RGB images with augmentation, and trains a masked-convolution PixelCNN++ with gated residual blocks, learned label-embedding conditioning, and RGB likelihood modeling via discretized mixture-of-logistics. Ships a complete pipeline — data download, training, evaluation (NLL/BPD and optional FID-32), and sampling — plus an interactive Streamlit demo that visualizes row-by-row generation, with automatic CUDA/MPS/CPU device selection.",
+        tech: ["Python", "PyTorch", "PixelCNN++", "Streamlit", "NumPy"],
+        github: "https://github.com/sairam3824/Diffusion-Free-Text-to-Image",
+        category: "Deep Learning",
+        iconName: "Brain",
+        featured: true,
+        tagline: "Autoregressive PixelCNN++ • Diffusion-Free Image Generation • Mixture-of-Logistics Likelihood",
+    },
 
     // ═══════════════════════════════════════════════════════════════════════════
     // SUPPORTING WORK — Tools, experiments, and earlier projects
