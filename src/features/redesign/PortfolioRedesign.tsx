@@ -46,7 +46,6 @@ const EducationPage = lazy(() => import("./pages/EducationPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
 const TermsPage = lazy(() => import("./pages/TermsPage"));
-const ResumeRedirectPage = lazy(() => import("./pages/ResumeRedirectPage"));
 
 function PortfolioLayout() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -220,7 +219,6 @@ function PortfolioRedesign() {
                         <Route path={ROUTE_PATHS.terms} element={<TermsPage />} />
                         <Route path="*" element={<NotFoundPage />} />
                     </Route>
-                    <Route path={ROUTE_PATHS.resume} element={<ResumeRedirectPage />} />
                     <Route path={ROUTE_PATHS.legacyWriting} element={<Navigate to={ROUTE_PATHS.writing} replace />} />
                     <Route path={`${ROUTE_PATHS.legacyWriting}/:id`} element={<LegacyWritingPostRedirect />} />
                     <Route path={getPluralWritingPath()} element={<Navigate to={ROUTE_PATHS.writing} replace />} />

@@ -19,7 +19,9 @@ const ROOT_STATIC_ROUTES: readonly Omit<SitemapEntry, "lastmod">[] = [
     { path: "/skills", changefreq: "monthly", priority: 0.7 },
     { path: "/education", changefreq: "monthly", priority: 0.7 },
     { path: "/coding-profiles", changefreq: "weekly", priority: 0.8 },
-    { path: "/resume", changefreq: "monthly", priority: 0.8 },
+    // /resume intentionally omitted: it is a redirect to the résumé PDF (see vercel.json),
+    // not an indexable HTML page. Listing a redirect/noindex URL in the sitemap triggers
+    // GSC "Excluded by noindex tag" / "Page with redirect".
     { path: "/writing", changefreq: "weekly", priority: 0.8 },
     { path: "/certifications", changefreq: "monthly", priority: 0.7 },
     { path: "/contact", changefreq: "monthly", priority: 0.6 },
