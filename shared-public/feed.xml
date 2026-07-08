@@ -3,10 +3,26 @@
   <channel>
     <title>MARURI SAI RAMA LINGA REDDY | GenAI &amp; ML Engineer</title>
     <link>https://www.saiii.in/writing</link>
-    <description>GenAI &amp; ML Engineer portfolio — production AI projects, technical writing, competitive programming, and professional journey of Sai Ram Maruri.</description>
+    <description>GenAI &amp; ML Engineer and Business Analytics postgrad — turning data into business decisions. Production AI projects, BI dashboards, technical writing, and competitive programming by Sai Ram Maruri.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jun 2026 18:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 18:30:00 GMT</lastBuildDate>
     <atom:link href="https://www.saiii.in/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tech Monthly Digest: June 2026 - GPT-5.6, Anthropic&apos;s Mythos, and the Business of Agents</title>
+      <link>https://www.saiii.in/writing/tech-monthly-digest-jun-2026</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/tech-monthly-digest-jun-2026</guid>
+      <pubDate>Mon, 29 Jun 2026 18:30:00 GMT</pubDate>
+      <description>June 2026 was the month the agent story split cleanly into two tracks: the technology kept compounding, and the business finally caught up to it. OpenAI shipped GPT-5.6 with a model card and a Codex-native release. Anthropic pushed its Mythos preview wider and took Claude Code&apos;s Dynamic Workflows to GA. WebMCP jumped past Chrome. And underneath it all, the money moved — record funding, enterprise seat expansions, and the first real agent-governance regulation. Here&apos;s what mattered for builders and for the people who fund them.</description>
+      <category>AI/ML</category>
+      <category>Agents</category>
+      <category>Monthly Digest</category>
+      <category>GPT-5.6</category>
+      <category>Anthropic Mythos</category>
+      <category>WebMCP</category>
+      <category>Enterprise AI</category>
+      <category>AI Funding</category>
+      <category>AI Governance</category>
+    </item>
     <item>
       <title>Product Analytics: Building a Stack That Actually Drives Decisions</title>
       <link>https://www.saiii.in/writing/product-analytics-stack</link>
@@ -397,18 +413,6 @@
       <category>OpenAI</category>
       <category>Cloud Computing</category>
       <category>BiWeekly Digest</category>
-    </item>
-    <item>
-      <title>Fine-Tuning Large Language Models: Techniques, Trends, and Best Practices in 2025</title>
-      <link>https://www.saiii.in/writing/fine-tuning-llms</link>
-      <guid isPermaLink="true">https://www.saiii.in/writing/fine-tuning-llms</guid>
-      <pubDate>Sun, 19 Oct 2025 18:30:00 GMT</pubDate>
-      <description>Fine-tuning Large Language Models (LLMs) is a powerful way to adapt general-purpose AI models to specialized tasks or domains. This blog explores the latest fine-tuning techniques, their benefits, challenges, and practical steps to optimize LLM performance in 2025.</description>
-      <category>AI/ML</category>
-      <category>LLM</category>
-      <category>Fine-Tuning</category>
-      <category>NLP</category>
-      <category>AI Innovation</category>
     </item>
   </channel>
 </rss>
