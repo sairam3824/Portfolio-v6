@@ -14,6 +14,17 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        id: "tech-monthly-digest-jun-2026",
+        title: "Tech Monthly Digest: June 2026 - GPT-5.6, Anthropic's Mythos, and the Business of Agents",
+        excerpt:
+            "June 2026 was the month the agent story split cleanly into two tracks: the technology kept compounding, and the business finally caught up to it. OpenAI shipped GPT-5.6 with a model card and a Codex-native release. Anthropic pushed its Mythos preview wider and took Claude Code's Dynamic Workflows to GA. WebMCP jumped past Chrome. And underneath it all, the money moved — record funding, enterprise seat expansions, and the first real agent-governance regulation. Here's what mattered for builders and for the people who fund them.",
+        date: "June 30, 2026",
+        readTime: "18 min read",
+        tags: ["AI/ML", "Agents", "Monthly Digest", "GPT-5.6", "Anthropic Mythos", "WebMCP", "Enterprise AI", "AI Funding", "AI Governance"],
+        icon: "Globe",
+        iconColor: "purple",
+    },
+    {
         id: "product-analytics-stack",
         title: "Product Analytics: Building a Stack That Actually Drives Decisions",
         excerpt:
