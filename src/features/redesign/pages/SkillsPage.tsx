@@ -6,9 +6,9 @@ export default function SkillsPage() {
         <>
             <Seo
                 title={`Skills | ${profileDetails.name}`}
-                description="A broad technical stack across GenAI, cloud, full-stack engineering, vector search, and delivery systems."
+                description="A broad stack across business analytics, BI, GenAI, cloud, full-stack engineering, vector search, and delivery systems."
                 pageType="CollectionPage"
-                keywords={["Python", "React", "AWS", "LangChain", "RAG", "Machine Learning", "GenAI", "TypeScript", "skills"]}
+                keywords={["Business Analytics", "Power BI", "SQL", "Python", "Machine Learning", "GenAI", "RAG", "AWS", "skills"]}
                 breadcrumbs={[{ name: "Home", url: ROUTE_PATHS.home }, { name: "Skills", url: ROUTE_PATHS.skills }]}
             />
             <main className="rd-page rd-page-pad">

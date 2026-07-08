@@ -7,6 +7,7 @@ import {
     Cpu,
     Github,
     Globe,
+    GraduationCap,
     Target,
 } from "lucide-react";
 import Seo from "@/shared/Seo";
@@ -16,6 +17,7 @@ import {
     WritingListItem,
     certifications,
     codingProfilesData,
+    featuredEducation,
     featuredProjects,
     nonLegalBlogPosts,
     profileDetails,
@@ -68,6 +70,43 @@ export default function HomePage() {
                                 <p className="rd-stat-label">{stat.label}</p>
                             </article>
                         ))}
+                    </div>
+                </section>
+
+                <section className="rd-section">
+                    <div className="rd-section-header">
+                        <SectionLabel>Education</SectionLabel>
+                        <Link className="rd-inline-link" to={ROUTE_PATHS.education}>
+                            Full timeline <ArrowRight size={14} />
+                        </Link>
+                    </div>
+                    <div className="rd-card-grid">
+                        {featuredEducation.map((entry) => {
+                            const colorMap: Record<string, string> = {
+                                blue: "#2563eb",
+                                indigo: "#4f46e5",
+                                emerald: "#059669",
+                            };
+                            const accent = colorMap[entry.color ?? ""] ?? "#4f46e5";
+                            return (
+                                <article key={entry.org} className="rd-card" style={{ display: "flex", flexDirection: "column" }}>
+                                    <div className="rd-card-meta">
+                                        <span className="rd-chip">{entry.mode ?? entry.type}</span>
+                                        <span className="rd-meta-text">{entry.date}</span>
+                                    </div>
+                                    <h3 style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                                        <GraduationCap size={16} style={{ color: accent, flexShrink: 0 }} />
+                                        {entry.major ?? entry.title}
+                                    </h3>
+                                    <p>
+                                        <strong style={{ color: accent }}>{entry.shortOrg ?? entry.org}</strong>
+                                        {" · "}
+                                        {entry.title}
+                                    </p>
+                                    <p className="rd-meta-text" style={{ marginTop: "auto", paddingTop: "12px" }}>{entry.grade}</p>
+                                </article>
+                            );
+                        })}
                     </div>
                 </section>
 

@@ -15,6 +15,26 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
     {
+        category: "Business Analytics & BI",
+        iconName: "BarChart3",
+        color: "amber",
+        description: "Turning data into dashboards and decisions stakeholders can act on.",
+        skills: [
+            { name: "Power BI", level: "Advanced", url: "https://powerbi.microsoft.com/", company: "Microsoft" },
+            { name: "Tableau", level: "Intermediate", url: "https://www.tableau.com/", company: "Salesforce" },
+            { name: "SQL", level: "Advanced", url: "https://www.postgresql.org/docs/", company: "SQL" },
+            { name: "Advanced Excel", level: "Advanced", url: "https://www.microsoft.com/microsoft-365/excel", company: "Microsoft" },
+            { name: "DAX", level: "Intermediate", url: "https://learn.microsoft.com/dax/", company: "Microsoft" },
+            { name: "Statistical Inference", level: "Advanced", url: "#", company: "Technique" },
+            { name: "A/B Testing", level: "Advanced", url: "#", company: "Technique" },
+            { name: "Time-Series Forecasting", level: "Advanced", url: "#", company: "Technique" },
+            { name: "Predictive Modeling", level: "Advanced", url: "#", company: "Technique" },
+            { name: "Customer Segmentation", level: "Advanced", url: "#", company: "Technique" },
+            { name: "Churn & Cohort Analysis", level: "Advanced", url: "#", company: "Technique" },
+            { name: "Data Storytelling", level: "Advanced", url: "#", company: "Technique" },
+        ],
+    },
+    {
         category: "GenAI & LLMs",
         iconName: "Brain",
         color: "indigo",

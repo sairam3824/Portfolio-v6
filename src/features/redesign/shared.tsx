@@ -27,6 +27,7 @@ import { ROUTE_PATHS, getWritingPath } from "@/data/siteRoutes";
 import { blogPosts } from "@/features/blog/blogData";
 import { certifications } from "@/features/certifications/certificationsData";
 import { codingProfilesData } from "@/features/coding-profiles/codingProfilesData";
+import { educationData } from "@/data/educationData";
 import { projectsData } from "@/features/projects/projectsData";
 import { skillCategories } from "@/features/skills/skillsData";
 
@@ -38,7 +39,7 @@ export type ProjectEntry = (typeof projectsData)[number];
 export const routerBasename =
     import.meta.env.BASE_URL === "/" ? "/" : import.meta.env.BASE_URL.replace(/\/$/, "");
 
-export const titleLines = ["Build Intelligence", "that Ships."];
+export const titleLines = ["Turn Data into", "Business Decisions."];
 
 export const navigationItems = [
     { to: ROUTE_PATHS.projects, label: "Work" },
@@ -50,20 +51,20 @@ export const navigationItems = [
 
 export const serviceCards = [
     {
+        title: "Business Analytics & BI",
+        desc: "Power BI, SQL, and Excel modelling that turn raw data into dashboards and decisions stakeholders can act on.",
+    },
+    {
+        title: "Applied ML & Decision Science",
+        desc: "Churn, forecasting, segmentation, and A/B testing — predictive models framed around the business decision they drive.",
+    },
+    {
         title: "Agentic AI Products",
-        desc: "Multi-agent systems, retrieval pipelines, and LLM-first workflows shaped by the portfolio's production AI projects.",
+        desc: "Multi-agent systems, RAG pipelines, and LLM-first workflows shaped by the portfolio's production AI projects.",
     },
     {
-        title: "AI SaaS Interfaces",
-        desc: "Full-stack experiences that make complex AI systems feel fast, clear, and usable on the frontend.",
-    },
-    {
-        title: "Cloud Deployment",
-        desc: "Shipping prototypes into reliable environments across Vercel, Docker, Supabase, and modern cloud tooling.",
-    },
-    {
-        title: "Applied ML Systems",
-        desc: "From deep learning experiments to search, ranking, and evaluation loops that support real product decisions.",
+        title: "Cloud-Native AI Systems",
+        desc: "Shipping AI/ML pipelines into secure, cost-efficient environments across AWS, Vercel, and Docker.",
     },
 ] as const;
 
@@ -72,6 +73,7 @@ export const nonLegalBlogPosts = [...blogPosts]
     .sort((left, right) => Date.parse(right.date) - Date.parse(left.date));
 
 export const featuredProjects = projectsData.filter((project) => project.featured);
+export const featuredEducation = educationData.filter((entry) => entry.featured);
 export const featuredProfiles = codingProfilesData.filter((profile) => profile.featured).length
     ? codingProfilesData.filter((profile) => profile.featured)
     : codingProfilesData.slice(0, 4);
@@ -102,7 +104,7 @@ export const contactLinks = [
 ] as const;
 
 export const liveIslandItems = [
-    "Building AI-powered SaaS",
+    "Turning data into decisions",
     `${featuredProjects.length}+ featured projects`,
     `${nonLegalBlogPosts.length}+ essays published`,
     `${skillCategories.length} skill domains`,

@@ -12,9 +12,9 @@ export default function AboutPage() {
         <>
             <Seo
                 title={`About | ${profileDetails.name}`}
-                description="Profile, focus areas, education, and current direction for MARURI SAI RAMA LINGA REDDY."
+                description="Profile, focus areas, education, and current direction for MARURI SAI RAMA LINGA REDDY — GenAI & ML engineer pursuing an MBA in Business Analytics (BITS Pilani) and MSc in Data Science (IIIT Hyderabad)."
                 pageType="AboutPage"
-                keywords={["About Sairam Maruri", "GenAI Engineer India", "ML Engineer", "AI developer", "VIT-AP"]}
+                keywords={["About Sairam Maruri", "Business Analyst", "Data Analyst", "GenAI Engineer India", "BITS Pilani Business Analytics", "IIIT Hyderabad Data Science", "VIT-AP"]}
                 breadcrumbs={[{ name: "Home", url: ROUTE_PATHS.home }, { name: "About", url: ROUTE_PATHS.about }]}
             />
             <main className="rd-page rd-page-pad">
@@ -61,7 +61,7 @@ export default function AboutPage() {
                             {educationData.map((entry) => (
                                 <article key={`${entry.org}-${entry.date}`} className="rd-surface-card">
                                     <p className="rd-entry-meta">
-                                        {entry.type} · {entry.date}
+                                        {entry.type}{entry.mode ? ` (${entry.mode})` : ""} · {entry.date}
                                     </p>
                                     <h3>{entry.title}</h3>
                                     <p className="rd-entry-title">

@@ -107,7 +107,7 @@ export default function ContactPage() {
                 title={`Contact | ${profileDetails.name}`}
                 description="Direct ways to reach MARURI SAI RAMA LINGA REDDY for collaboration, roles, or interesting builds."
                 pageType="ContactPage"
-                keywords={["contact Sairam Maruri", "hire AI Engineer", "hire ML Engineer", "GenAI Engineer India", "collaboration"]}
+                keywords={["contact Sairam Maruri", "hire Business Analyst", "hire Data Analyst", "hire AI ML Engineer", "GenAI Engineer India", "collaboration"]}
                 breadcrumbs={[{ name: "Home", url: ROUTE_PATHS.home }, { name: "Contact", url: ROUTE_PATHS.contact }]}
             />
             <main className="rd-page rd-page-pad">
@@ -119,7 +119,7 @@ export default function ContactPage() {
                 <div className="rd-two-column">
                     <section>
                         <p className="rd-long-copy">
-                            Reach out for AI products, agent workflows, full-stack engineering, writing collaborations, or interesting systems work.
+                            Reach out for analyst roles, AI products, agent workflows, BI dashboards, writing collaborations, or interesting systems work.
                         </p>
                         <div className="rd-contact-list">
                             {contactLinks.map((item) => (
