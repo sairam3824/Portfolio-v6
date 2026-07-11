@@ -7,7 +7,7 @@ export const profileDetails = {
     jobTitle: "GenAI & ML Engineer · Business Analytics",
     role: "GenAI & ML Engineer bridging AI systems and business analytics — turning data into decisions, and decisions into business impact.",
     summary:
-        "Engineers build models. Analysts read dashboards. The value leaks in between — that gap is where I've decided to spend my career. I'm a Computer Science graduate (VIT-AP '26) and GenAI & ML engineer, now pursuing an MBA in Business Analytics at BITS Pilani and an MSc in Data Science at IIIT Hyderabad in parallel — fluent on both sides of the table where models meet business impact.",
+        "Engineers build models. Analysts read dashboards. The value leaks in between — that gap is where I've decided to spend my career. I'm a Computer Science graduate (VIT-AP '26) and GenAI & ML engineer, now pursuing an MBA in Business Analytics at BITS Pilani and an MS in Data Science at IIIT Hyderabad in parallel — fluent on both sides of the table where models meet business impact.",
     location: "",
     basedIn: "India",
     email: "sairam.maruri@gmail.com",
@@ -18,7 +18,7 @@ export const profileDetails = {
     seekingRoles: ["Business Analyst", "Data Analyst", "Product Analyst", "AI/ML Engineer"],
     currentFocus: [
         "MBA in Business Analytics @ BITS Pilani",
-        "MSc in Data Science @ IIIT Hyderabad",
+        "MS in Data Science @ IIIT Hyderabad",
         "Turning models into decisions — Power BI, SQL, Python",
         "Building agentic AI systems, RAG pipelines & LLM eval harnesses",
     ],

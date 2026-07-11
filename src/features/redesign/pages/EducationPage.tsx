@@ -7,9 +7,9 @@ export default function EducationPage() {
         <>
             <Seo
                 title={`Education | ${profileDetails.name}`}
-                description="Academic background — MBA in Business Analytics (BITS Pilani), MSc in Data Science (IIIT Hyderabad), and B.Tech in Computer Science (VIT-AP)."
+                description="Academic background — MBA in Business Analytics (BITS Pilani), MS in Data Science (IIIT Hyderabad), and B.Tech in Computer Science (VIT-AP)."
                 pageType="CollectionPage"
-                keywords={["BITS Pilani Business Analytics", "IIIT Hyderabad Data Science", "MBA", "MSc Data Science", "VIT-AP University", "Computer Science", "education", "Sairam Maruri"]}
+                keywords={["BITS Pilani Business Analytics", "IIIT Hyderabad Data Science", "MBA", "MS Data Science", "VIT-AP University", "Computer Science", "education", "Sairam Maruri"]}
                 breadcrumbs={[{ name: "Home", url: ROUTE_PATHS.home }, { name: "Education", url: ROUTE_PATHS.education }]}
             />
             <main className="rd-page rd-page-pad">

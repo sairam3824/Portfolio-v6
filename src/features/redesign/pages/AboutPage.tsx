@@ -12,7 +12,7 @@ export default function AboutPage() {
         <>
             <Seo
                 title={`About | ${profileDetails.name}`}
-                description="Profile, focus areas, education, and current direction for MARURI SAI RAMA LINGA REDDY — GenAI & ML engineer pursuing an MBA in Business Analytics (BITS Pilani) and MSc in Data Science (IIIT Hyderabad)."
+                description="Profile, focus areas, education, and current direction for MARURI SAI RAMA LINGA REDDY — GenAI & ML engineer pursuing an MBA in Business Analytics (BITS Pilani) and MS in Data Science (IIIT Hyderabad)."
                 pageType="AboutPage"
                 keywords={["About Sairam Maruri", "Business Analyst", "Data Analyst", "GenAI Engineer India", "BITS Pilani Business Analytics", "IIIT Hyderabad Data Science", "VIT-AP"]}
                 breadcrumbs={[{ name: "Home", url: ROUTE_PATHS.home }, { name: "About", url: ROUTE_PATHS.about }]}
