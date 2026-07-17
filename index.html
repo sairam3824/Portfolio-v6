@@ -15,6 +15,7 @@
     <meta name="author" content="MARURI SAI RAMA LINGA REDDY" />
     <meta name="format-detection" content="telephone=no, address=no, email=no" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
     <meta name="language" content="English" />
     <meta name="geo.region" content="IN" />
     <meta name="geo.country" content="India" />
@@ -131,6 +132,11 @@
     <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
+    <style>
+      /* Inline critical CSS: prevents CLS by reserving layout space before React hydrates */
+      body { margin: 0; background: #f7f6f2; }
+      #root { min-height: 100vh; }
+    </style>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

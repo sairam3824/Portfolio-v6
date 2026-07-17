@@ -216,7 +216,7 @@ export function LiveStatusIsland({ className = "" }: { className?: string }) {
                     timeZone: "Asia/Kolkata",
                 }).format(new Date()),
             );
-        }, 1000);
+        }, 60_000); // Only HH:MM is displayed — no need to tick every second
 
         return () => window.clearInterval(intervalId);
     }, []);
