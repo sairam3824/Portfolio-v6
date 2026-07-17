@@ -4,7 +4,7 @@
   "framework": "vite",
   "redirects": [
     { "source": "/:path(.*)", "has": [{ "type": "host", "value": "saiii.in" }], "destination": "https://www.saiii.in/:path", "permanent": true },
-    { "source": "/resume", "destination": "/Sai_Ram_Maruri_Resume_2025.pdf", "permanent": false },
+    { "source": "/resume", "destination": "/sai_resume.pdf", "permanent": false },
     { "source": "/writings", "destination": "/writing", "permanent": true },
     { "source": "/writings/:slug", "destination": "/writing/:slug", "permanent": true },
     { "source": "/blogs", "destination": "/writing", "permanent": true },

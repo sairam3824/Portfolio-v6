@@ -12,7 +12,7 @@ export const profileDetails = {
     basedIn: "India",
     email: "sairam.maruri@gmail.com",
     phone: "+91 7893865644",
-    resumeHref: "/Sai_Ram_Maruri_Resume_2025.pdf",
+    resumeHref: "/sai_resume.pdf",
     availability: "Open to 2026 roles & internships",
     motto: "Learn always. Build always.",
     seekingRoles: ["Business Analyst", "Data Analyst", "Product Analyst", "AI/ML Engineer"],
