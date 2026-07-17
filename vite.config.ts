@@ -1,6 +1,6 @@
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
-import tsconfigPaths from "vite-tsconfig-paths";
+import tailwindcss from "@tailwindcss/vite";
 import { readFileSync, writeFileSync } from "fs";
 import { resolve } from "path";
 import { buildRootSitemapXml, buildRootRobotsTxt, buildRootRssXml } from "./shared-data/seoArtifacts";
@@ -99,8 +99,11 @@ function preloadInjectionPlugin(): Plugin {
 }
 
 export default defineConfig({
-  plugins: [react(), tsconfigPaths(), seoGeneratorPlugin(), preloadInjectionPlugin()],
+  plugins: [react(), tailwindcss(), seoGeneratorPlugin(), preloadInjectionPlugin()],
   publicDir: "shared-public",
+  resolve: {
+    tsconfigPaths: true,
+  },
   server: {
     port: 3000,
   },
@@ -112,9 +115,22 @@ export default defineConfig({
     modulePreload: { polyfill: false },
     rollupOptions: {
       output: {
-        manualChunks: {
-          "vendor-react": ["react", "react-dom", "react-router-dom"],
-          "vendor-ui": ["lucide-react", "react-helmet-async"],
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (
+              id.includes("/react/") ||
+              id.includes("/react-dom/") ||
+              id.includes("/react-router/") ||
+              id.includes("/react-router-dom/") ||
+              id.includes("/@remix-run/")
+            ) {
+              return "vendor-react";
+            }
+            if (id.includes("/lucide-react/") || id.includes("/react-helmet-async/")) {
+              return "vendor-ui";
+            }
+            return "vendor-other";
+          }
         },
       },
     },

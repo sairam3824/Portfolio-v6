@@ -15,11 +15,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
-    "types": ["vite/client"],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "api", "shared-data", "middleware.ts", "vite.config.ts", "tailwind.config.ts"]
+  "include": ["src", "api", "shared-data", "middleware.ts", "vite.config.ts"]
 }
