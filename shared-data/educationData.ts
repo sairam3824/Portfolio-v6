@@ -18,7 +18,7 @@ export const educationData: EducationEntry[] = [
     {
         title: "Master of Business Administration",
         major: "Business Analytics",
-        org: "Birla Institute of Technology and Science, Pilani",
+        org: "Birla Institute of Technology and Science",
         shortOrg: "BITS Pilani",
         campus: "Pilani",
         date: "2026 - 2028",
@@ -39,7 +39,7 @@ export const educationData: EducationEntry[] = [
     {
         title: "Master of Science",
         major: "Data Science",
-        org: "International Institute of Information Technology, Hyderabad",
+        org: "International Institute of Information Technology",
         shortOrg: "IIIT Hyderabad",
         campus: "Hyderabad",
         date: "2026 - 2028",
