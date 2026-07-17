@@ -5,11 +5,11 @@ import {
     ArrowUpRight,
     Code,
     Cpu,
-    Github,
     Globe,
     GraduationCap,
     Target,
 } from "lucide-react";
+import { Github } from "@/shared/BrandIcons";
 import Seo from "@/shared/Seo";
 import {
     Counter,

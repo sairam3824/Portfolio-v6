@@ -7,11 +7,9 @@ import {
     Code2,
     Cpu,
     Database,
-    Github,
     Globe,
     KeyRound,
     Leaf,
-    Linkedin,
     Mail,
     Mic,
     Phone,
@@ -21,6 +19,7 @@ import {
     Terminal,
     Zap,
 } from "lucide-react";
+import { Github, Linkedin } from "@/shared/BrandIcons";
 import Seo from "@/shared/Seo";
 import { profileDetails, siteMetadata } from "@/data/siteMetadata";
 import { ROUTE_PATHS, getWritingPath } from "@/data/siteRoutes";

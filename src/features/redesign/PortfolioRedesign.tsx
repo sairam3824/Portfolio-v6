@@ -14,13 +14,12 @@ import {
 import {
     ArrowUpRight,
     ExternalLink,
-    Github,
-    Linkedin,
     Mail,
     Menu,
     Phone,
     X,
 } from "lucide-react";
+import { Github, Linkedin } from "@/shared/BrandIcons";
 import {
     DeferredChatWidget,
     NotFoundPage,

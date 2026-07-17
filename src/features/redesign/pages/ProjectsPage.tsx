@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ArrowUpRight, Github, Rocket, Search } from "lucide-react";
+import { ArrowUpRight, Rocket, Search } from "lucide-react";
+import { Github } from "@/shared/BrandIcons";
 import Seo from "@/shared/Seo";
 import {
     PageHeader,
