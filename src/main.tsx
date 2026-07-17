@@ -5,6 +5,20 @@ import "./index.css";
 import { AppErrorBoundary } from "./shared/AppErrorBoundary";
 import { loadCloudflareInsights } from "./lib/cloudflareInsights";
 
+// Performance Optimization: Preconnect to Supabase dynamically
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+if (supabaseUrl && typeof document !== "undefined") {
+    try {
+        const link = document.createElement("link");
+        link.rel = "preconnect";
+        link.href = supabaseUrl;
+        link.crossOrigin = "anonymous";
+        document.head.appendChild(link);
+    } catch (e) {
+        console.error("Failed to inject preconnect hint:", e);
+    }
+}
+
 const rootElement = document.getElementById("root");
 
 if (!rootElement) {
