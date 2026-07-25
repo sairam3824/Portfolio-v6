@@ -84,3 +84,28 @@ export const siteMetadata = {
         profileDetails.socials.codeforces,
     ],
 } as const;
+
+export const getPersonSchema = (siteUrl: string = siteMetadata.siteUrl) => ({
+    "@type": "Person",
+    "@id": `${siteUrl}/#person`,
+    "name": profileDetails.name,
+    "alternateName": profileDetails.alternateName,
+    "identifier": "sairammaruri",
+    "url": `${siteUrl}/`,
+    "image": `${siteUrl}/apple-touch-icon.png`,
+    "email": profileDetails.email,
+    "jobTitle": profileDetails.jobTitle,
+    "description": profileDetails.summary,
+    "worksFor": {
+        "@type": "Organization",
+        "name": "Self-Employed",
+    },
+    "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": siteMetadata.alumniOf.name,
+        "url": siteMetadata.alumniOf.url,
+    },
+    "knowsAbout": siteMetadata.knowsAbout,
+    "sameAs": siteMetadata.sameAs,
+});
+

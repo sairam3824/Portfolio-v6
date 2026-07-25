@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
-import { profileDetails, siteMetadata } from "@/data/siteMetadata";
+import { profileDetails, siteMetadata, getPersonSchema } from "@/data/siteMetadata";
 
 const SITE_URL = siteMetadata.siteUrl;
 const SITE_PATH_PREFIX =
@@ -133,11 +133,9 @@ const Seo = ({
             "@id": `${SITE_URL}/#person`
         },
         "inLanguage": "en-US",
-        // ProfilePage requires mainEntity referencing the Person
+        // ProfilePage requires mainEntity referencing the Person entity
         ...(pageType === "ProfilePage" ? {
-            "mainEntity": {
-                "@id": `${SITE_URL}/#person`
-            },
+            "mainEntity": getPersonSchema(SITE_URL),
             "dateCreated": "2024-01-01T00:00:00+05:30",
             "dateModified": new Date().toISOString(),
         } : {}),

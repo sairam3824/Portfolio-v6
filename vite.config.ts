@@ -5,7 +5,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { dirname, resolve } from "path";
 import { buildRootSitemapXml, buildRootRobotsTxt, buildRootRssXml } from "./shared-data/seoArtifacts";
 import { getAllRouteSeo, type RouteSeoEntry } from "./shared-data/prerenderData";
-import { profileDetails, siteMetadata } from "./shared-data/siteMetadata";
+import { profileDetails, siteMetadata, getPersonSchema } from "./shared-data/siteMetadata";
 
 function seoGeneratorPlugin() {
   const generate = () => {
@@ -209,7 +209,7 @@ function buildMetaTags(entry: RouteSeoEntry): string {
     }
 
     if (entry.pageType === "ProfilePage") {
-        schema["mainEntity"] = { "@id": `${siteUrl}/#person` };
+        schema["mainEntity"] = getPersonSchema(siteUrl);
         schema["dateCreated"] = "2024-01-01T00:00:00+05:30";
         schema["dateModified"] = new Date().toISOString();
     }

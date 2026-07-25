@@ -1,1 +1,1 @@
-export { profileDetails, siteMetadata } from "../../shared-data/siteMetadata";
+export { profileDetails, siteMetadata, getPersonSchema } from "../../shared-data/siteMetadata";
