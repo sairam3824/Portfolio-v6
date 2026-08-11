@@ -1180,6 +1180,41 @@ export const projectsData: ProjectData[] = [
         tagline: "Autoregressive PixelCNN++ • Diffusion-Free Image Generation • Mixture-of-Logistics Likelihood",
     },
 
+    {
+        title: "ShelfProof",
+        description:
+            "Experiment bench measuring which product-listing edits actually change what an AI shopping assistant recommends. Runs a controlled causal experiment — a fixed set of competitors, one subject SKU, six one-change-at-a-time listing variants, and balanced-position repeated trials — against an LLM shopping agent, then reports win rates with Wilson score intervals and lift with Newcombe's difference-of-proportions intervals so a real effect can be told apart from sampling noise.",
+        tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Anthropic Claude", "Recharts"],
+        github: "https://github.com/sairam3824/shelfproof",
+        category: "AI Platform",
+        iconName: "Activity",
+        featured: true,
+        tagline: "Causal A/B Testing for LLM Shopping Recommendations • Wilson & Newcombe Intervals",
+    },
+    {
+        title: "Ledger: Private Expense Tracker",
+        description:
+            "Phone-first expense tracker for three shared accounts with live balances, budgets, and transfers behind a single login. Every entry is money out, in, or a transfer between accounts; OpenAI auto-categorizes spend with a keyword-matching fallback, budgets support whole-month and per-category caps with per-day remaining, and a category-split view shows where the month's money went — installable as a home-screen PWA, with nothing sensitive reaching the browser.",
+        tech: ["Next.js 16", "React 19", "TypeScript", "Supabase", "OpenAI", "Tailwind CSS", "Vercel"],
+        github: "https://github.com/sairam3824/expense-tracker",
+        link: "https://expense-tracker-jet-seven.vercel.app",
+        category: "Web Development",
+        iconName: "Activity",
+        featured: true,
+        tagline: "Phone-First Multi-Account Ledger • OpenAI Auto-Categorization • scrypt-Hashed Auth",
+    },
+    {
+        title: "Slack News Bot",
+        description:
+            "Multi-agent news and opportunity digest system for BITS Pilani Business Analytics & MBA students. Seven specialist agents scan RSS feeds and use Gemini with Google Search grounding to cover macro economy, markets, internships, analytics roles, competitions, and campus events — a Morning Digest agent then aggregates, deduplicates, and ranks everything into one brief, posted to dedicated Slack channels every morning via a scheduled GitHub Actions workflow.",
+        tech: ["Python", "Google Gemini", "Slack Webhooks", "RSS", "GitHub Actions"],
+        github: "https://github.com/sairam3824/slack-news-bot",
+        category: "AI Agent",
+        iconName: "Zap",
+        featured: true,
+        tagline: "7-Agent RSS + Gemini Digest • Slack Automation • Daily GitHub Actions Cron",
+    },
+
     // ═══════════════════════════════════════════════════════════════════════════
     // SUPPORTING WORK — Tools, experiments, and earlier projects
     // ═══════════════════════════════════════════════════════════════════════════
