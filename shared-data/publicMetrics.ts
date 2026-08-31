@@ -1,5 +1,10 @@
 import { projectsData } from "./projectsData";
+import { skillCategories } from "./skillsData";
 import { profileDetails } from "./siteMetadata";
+
+const totalSkills = new Set(
+    skillCategories.flatMap((category) => category.skills.map((skill) => skill.name)),
+).size;
 
 export type PublicMetric = {
     label: string;
@@ -39,7 +44,7 @@ export const publicMetrics: readonly PublicMetric[] = [
     },
     {
         label: "Skills",
-        value: "79+",
+        value: `${totalSkills}+`,
         sub: "Mastered",
         href: "/skills",
     },

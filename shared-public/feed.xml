@@ -5,8 +5,25 @@
     <link>https://www.saiii.in/writing</link>
     <description>GenAI &amp; ML Engineer and Business Analytics postgrad — turning data into business decisions. Production AI projects, BI dashboards, technical writing, and competitive programming by Sai Ram Maruri.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jun 2026 18:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:30:00 GMT</lastBuildDate>
     <atom:link href="https://www.saiii.in/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tech Monthly Digest: August 2026 - Anthropic Turns a Profit, the AI Act Goes Live, and Agents Reach the Physical World</title>
+      <link>https://www.saiii.in/writing/tech-monthly-digest-aug-2026</link>
+      <guid isPermaLink="true">https://www.saiii.in/writing/tech-monthly-digest-aug-2026</guid>
+      <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
+      <description>August 2026 was the month the AI business stopped being a projection. Anthropic posted more than $11.5B in quarterly revenue and the first operating profit in frontier AI. The EU AI Act became fully enforceable on August 2, with real fines attached. Salesforce made its CRM a plugin inside Claude. Google shipped Managed Agents and Antigravity into public preview. And Anthropic&apos;s Model Hardware Standard pointed agents at microscopes and robotic arms. Here&apos;s what mattered for builders — and for the people who have to justify the spend.</description>
+      <category>AI/ML</category>
+      <category>Agents</category>
+      <category>Monthly Digest</category>
+      <category>Anthropic</category>
+      <category>EU AI Act</category>
+      <category>Claudeforce</category>
+      <category>GPT-5.6</category>
+      <category>Enterprise AI</category>
+      <category>AI Governance</category>
+      <category>Business Analytics</category>
+    </item>
     <item>
       <title>Tech Monthly Digest: June 2026 - GPT-5.6, Anthropic&apos;s Mythos, and the Business of Agents</title>
       <link>https://www.saiii.in/writing/tech-monthly-digest-jun-2026</link>
@@ -402,17 +419,6 @@
       <category>Semantic Search</category>
       <category>RAG</category>
       <category>Database Technology</category>
-    </item>
-    <item>
-      <title>Tech BiWeekly Digest: Week of October 20, 2025</title>
-      <link>https://www.saiii.in/writing/weekly-oct20</link>
-      <guid isPermaLink="true">https://www.saiii.in/writing/weekly-oct20</guid>
-      <pubDate>Sat, 25 Oct 2025 18:30:00 GMT</pubDate>
-      <description>Welcome to the inaugural edition of Tech BiWeekly Digest—your Sunday morning companion for staying current with the rapidly evolving world of GenAI, cloud computing, and emerging technologies.</description>
-      <category>AI/ML</category>
-      <category>OpenAI</category>
-      <category>Cloud Computing</category>
-      <category>BiWeekly Digest</category>
     </item>
   </channel>
 </rss>

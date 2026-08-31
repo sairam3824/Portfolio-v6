@@ -14,6 +14,17 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        id: "tech-monthly-digest-aug-2026",
+        title: "Tech Monthly Digest: August 2026 - Anthropic Turns a Profit, the AI Act Goes Live, and Agents Reach the Physical World",
+        excerpt:
+            "August 2026 was the month the AI business stopped being a projection. Anthropic posted more than $11.5B in quarterly revenue and the first operating profit in frontier AI. The EU AI Act became fully enforceable on August 2, with real fines attached. Salesforce made its CRM a plugin inside Claude. Google shipped Managed Agents and Antigravity into public preview. And Anthropic's Model Hardware Standard pointed agents at microscopes and robotic arms. Here's what mattered for builders — and for the people who have to justify the spend.",
+        date: "August 31, 2026",
+        readTime: "18 min read",
+        tags: ["AI/ML", "Agents", "Monthly Digest", "Anthropic", "EU AI Act", "Claudeforce", "GPT-5.6", "Enterprise AI", "AI Governance", "Business Analytics"],
+        icon: "Globe",
+        iconColor: "purple",
+    },
+    {
         id: "tech-monthly-digest-jun-2026",
         title: "Tech Monthly Digest: June 2026 - GPT-5.6, Anthropic's Mythos, and the Business of Agents",
         excerpt:
