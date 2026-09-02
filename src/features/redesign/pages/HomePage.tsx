@@ -240,9 +240,9 @@ export default function HomePage() {
                             <p className="rd-surface-label">Right Now</p>
                             <div className="rd-status-list">
                                 {profileDetails.currentFocus.map((item) => (
-                                    <div key={item}>
-                                        <p className="rd-status-key">FOCUS</p>
-                                        <p className="rd-status-value">{item}</p>
+                                    <div key={item.key}>
+                                        <p className="rd-status-key">{item.key}</p>
+                                        <p className="rd-status-value">{item.value}</p>
                                     </div>
                                 ))}
                             </div>

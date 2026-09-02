@@ -25,9 +25,11 @@ export default function AboutPage() {
                         <div className="rd-stack-block">
                             <p className="rd-surface-label">Current Focus</p>
                             {profileDetails.currentFocus.map((item) => (
-                                <div key={item} className="rd-line-item">
+                                <div key={item.key} className="rd-line-item">
                                     <span className="rd-line-dot" />
-                                    <span>{item}</span>
+                                    <span>
+                                        <strong>{item.key}</strong> — {item.value}
+                                    </span>
                                 </div>
                             ))}
                         </div>

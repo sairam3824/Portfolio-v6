@@ -52,7 +52,7 @@ export const buildPortfolioAssistantSystemPrompt = () => {
 - LinkedIn: ${profileDetails.socials.linkedin}
 
 ## Current Focus
-${formatBullets(profileDetails.currentFocus)}
+${formatBullets(profileDetails.currentFocus.map((item) => `${item.key} — ${item.value}`))}
 
 ## Research Interests
 ${formatBullets(profileDetails.researchInterests)}

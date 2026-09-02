@@ -17,10 +17,10 @@ export const profileDetails = {
     motto: "Learn always. Build always.",
     seekingRoles: ["Business Analyst", "Data Analyst", "Product Analyst", "AI/ML Engineer"],
     currentFocus: [
-        "MBA in Business Analytics @ BITS Pilani",
-        "MS in Data Science @ IIIT Hyderabad",
-        "Turning models into decisions — Power BI, SQL, Python",
-        "Building agentic AI systems, RAG pipelines & LLM eval harnesses",
+        { key: "MBA", value: "Business Analytics @ BITS Pilani" },
+        { key: "MS", value: "Data Science @ IIIT Hyderabad" },
+        { key: "Applying", value: "Turning models into decisions — Power BI, SQL, Python, R" },
+        { key: "Building", value: "Agentic AI systems, RAG pipelines & LLM eval harnesses" },
     ],
     researchInterests: [
         "Scaling laws",
