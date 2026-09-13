@@ -221,19 +221,6 @@ export default function HomePage() {
                                     </a>
                                 </div>
                             </div>
-
-                            <div style={{ marginTop: "6px", padding: "9px 10px", background: "rgba(255,255,255,0.03)", borderRadius: "8px", border: "1px solid rgba(255,255,255,0.07)" }}>
-                                <div style={{ display: "flex", alignItems: "center", gap: "5px", marginBottom: "4px" }}>
-                                    <span style={{ width: "5px", height: "5px", borderRadius: "50%", border: "1.5px solid currentColor", opacity: 0.45, flexShrink: 0, display: "inline-block" }} />
-                                    <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", opacity: 0.4 }}>Targeting Journal</span>
-                                </div>
-                                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px" }}>
-                                    <p style={{ fontSize: "0.78rem", fontWeight: 600, lineHeight: 1.3, margin: 0 }}>Multi-Modal RAG Engine</p>
-                                    <a href="https://github.com/sairam3824/multi-modal-engine" target="_blank" rel="noreferrer" className="rd-inline-link" style={{ fontSize: "0.7rem", whiteSpace: "nowrap", flexShrink: 0 }}>
-                                        <Github size={11} style={{ marginRight: "3px" }} /> GitHub <ArrowUpRight size={10} />
-                                    </a>
-                                </div>
-                            </div>
                         </article>
 
                         <article className="rd-surface-card">
