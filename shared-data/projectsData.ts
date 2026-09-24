@@ -1214,6 +1214,39 @@ export const projectsData: ProjectData[] = [
         featured: true,
         tagline: "7-Agent RSS + Gemini Digest • Slack Automation • Daily GitHub Actions Cron",
     },
+    {
+        title: "E-Commerce Review Risk Prediction",
+        description:
+            "Predicts customer dissatisfaction across 96K e-commerce orders through leakage-safe feature engineering over 9 linked relational tables, out-of-time validation, and bootstrapped effect sizes — distilled into a ranked operational memo of the drivers that most move review risk, with model calibration and SHAP-based explanations backing every recommendation.",
+        tech: ["Python", "LightGBM", "SHAP", "statsmodels", "Pandas", "Scikit-learn"],
+        github: "https://github.com/sairam3824/ecommerce-review-risk",
+        category: "Machine Learning",
+        iconName: "Activity",
+        featured: true,
+        tagline: "96K-Order Causal Risk Model • Leakage-Safe Features • SHAP-Explained Operational Memo",
+    },
+    {
+        title: "Forecast: Play-Money Prediction Markets",
+        description:
+            "Full-stack forecasting platform where users trade binary YES/NO contracts on future events using virtual credits. An LMSR automated market maker continuously quotes both sides, so the market price is itself the crowd's probability estimate — built as an educational demonstration of correctly-engineered market-based forecasting, with no deposits, withdrawals, or real-money paths anywhere in the codebase.",
+        tech: ["Next.js 16", "TypeScript", "Tailwind CSS 4", "Supabase", "PostgreSQL", "Vercel"],
+        github: "https://github.com/sairam3824/polymarket-B2B",
+        category: "Web Development",
+        iconName: "Activity",
+        featured: true,
+        tagline: "LMSR Market Maker • Play-Money YES/NO Contracts • Crowd-Sourced Probability Pricing",
+    },
+    {
+        title: "AcademiSync: Interview Scheduling Engine",
+        description:
+            "Turns a spreadsheet of candidates, faculty, and availability into a conflict-free interview schedule, then manages the evaluation that follows. A constraint-satisfaction engine handles free-slot calculation, panel assignment, and conflict detection, while a Next.js dashboard exposes the full pipeline — upload, scheduling, manual override, evaluation, and analytics — to five distinct user roles, backed by 103 passing backend tests.",
+        tech: ["FastAPI", "Pydantic v2", "SQLAlchemy 2", "Next.js 16", "React 19", "TypeScript", "TanStack Query"],
+        github: "https://github.com/sairam3824/Scheduler",
+        category: "Enterprise Software",
+        iconName: "Terminal",
+        featured: true,
+        tagline: "Constraint-Based Interview Scheduling • 5 User Roles • 103 Backend Tests",
+    },
 
     // ═══════════════════════════════════════════════════════════════════════════
     // SUPPORTING WORK — Tools, experiments, and earlier projects
