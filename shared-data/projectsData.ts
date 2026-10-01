@@ -1247,6 +1247,17 @@ export const projectsData: ProjectData[] = [
         featured: true,
         tagline: "Constraint-Based Interview Scheduling • 5 User Roles • 103 Backend Tests",
     },
+    {
+        title: "Elo Q4 Playbook: Payment Network Analytics",
+        description:
+            "End-to-end analysis of a payment network's transaction data, built to answer a Board-level question: what kind of network are we, and where should Q4 promotions point? Recovers true Reais values from a normalised field, segments cardholders, models authorisation risk (an anonymised flag carries 4.25× the decline odds), and scores 23 merchant subsectors on Novelty and Coverage indices into a quantitative Q4 targeting map — delivered as a knitted R Markdown report and a standalone interactive dashboard.",
+        tech: ["R", "R Markdown", "ggplot2", "k-means", "Logistic Regression", "HTML"],
+        github: "https://github.com/sairam3824/elo-q4-playbook",
+        category: "Machine Learning",
+        iconName: "Activity",
+        featured: true,
+        tagline: "Payment Network Analytics • Q4 Promotions Targeting Map • Interactive Executive Dashboard",
+    },
 
     // ═══════════════════════════════════════════════════════════════════════════
     // SUPPORTING WORK — Tools, experiments, and earlier projects
