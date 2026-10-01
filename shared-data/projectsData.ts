@@ -1248,6 +1248,18 @@ export const projectsData: ProjectData[] = [
         tagline: "Constraint-Based Interview Scheduling • 5 User Roles • 103 Backend Tests",
     },
     {
+        title: "Testter: Real-Time Number Sharing",
+        description:
+            "Minimal two-user app where a Sender enters a number and a Viewer sees it update instantly, with no page refresh. Supabase Realtime pushes Postgres changes to the viewer, while writes go only through a role-checked API route using the server-only service key — the browser holds a read-only anon key enforced by Row Level Security, so even devtools can't write the number. Auth is a signed httpOnly HMAC session cookie with Edge middleware gating each role's dashboard.",
+        tech: ["Next.js 16", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS", "Vercel"],
+        github: "https://github.com/sairam3824/testter",
+        link: "https://testter-murex.vercel.app",
+        category: "Web Development",
+        iconName: "Zap",
+        featured: true,
+        tagline: "Supabase Realtime Sync • Role-Gated Edge Middleware • RLS Read-Only Client",
+    },
+    {
         title: "Elo Q4 Playbook: Payment Network Analytics",
         description:
             "End-to-end analysis of a payment network's transaction data, built to answer a Board-level question: what kind of network are we, and where should Q4 promotions point? Recovers true Reais values from a normalised field, segments cardholders, models authorisation risk (an anonymised flag carries 4.25× the decline odds), and scores 23 merchant subsectors on Novelty and Coverage indices into a quantitative Q4 targeting map — delivered as a knitted R Markdown report and a standalone interactive dashboard.",
