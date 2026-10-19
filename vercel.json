@@ -10,9 +10,6 @@
     { "source": "/blogs", "destination": "/writing", "permanent": true },
     { "source": "/blogs/:slug", "destination": "/writing/:slug", "permanent": true }
   ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ],
   "headers": [
     {
       "source": "/assets/(.*)",

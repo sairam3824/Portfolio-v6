@@ -281,7 +281,20 @@ function prerenderPlugin(): Plugin {
                 generated++;
             }
 
-            console.log(`\n  🔍 Pre-rendered ${generated} route(s) with per-page SEO metadata.`);
+            // Vercel serves dist/404.html with a real 404 status for any path that has no
+            // pre-rendered file, so crawlers never see unknown URLs as 200 + homepage HTML.
+            const notFoundHtml = shellHtml.replace(
+                "</head>",
+                [
+                    "",
+                    `    <title>Not Found | ${escapeHtml(profileDetails.name)}</title>`,
+                    `    <meta name="robots" content="noindex, nofollow" />`,
+                    `  </head>`,
+                ].join("\n"),
+            );
+            writeFileSync(resolve(distDir, "404.html"), notFoundHtml);
+
+            console.log(`\n  🔍 Pre-rendered ${generated} route(s) with per-page SEO metadata (+404.html).`);
         },
     };
 }
