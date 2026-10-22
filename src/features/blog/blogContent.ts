@@ -1,1 +1,1 @@
-export { getBlogContent } from '../../../shared-data/blogContent';
+export { getBlogContent, getCachedBlogContent } from '../../../shared-data/blogContent';

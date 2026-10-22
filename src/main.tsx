@@ -1,9 +1,11 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import { AppErrorBoundary } from "./shared/AppErrorBoundary";
 import { loadCloudflareInsights } from "./lib/cloudflareInsights";
+import { getBlogContent } from "./features/blog/blogContent";
+import { ROUTE_PATHS } from "./data/siteRoutes";
 
 // Performance Optimization: Preconnect to Supabase dynamically
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
@@ -25,7 +27,8 @@ if (!rootElement) {
     throw new Error("Version3 root element '#root' was not found.");
 }
 
-const root = createRoot(rootElement);
+// Pages are prerendered at build time (vite.config.ts); hydrate when markup is present.
+const isPrerendered = rootElement.hasChildNodes();
 
 const formatBootError = (error: unknown) => {
     if (error instanceof Error) {
@@ -51,7 +54,7 @@ const formatBootError = (error: unknown) => {
 const renderBootError = (error: unknown) => {
     const details = formatBootError(error);
 
-    root.render(
+    createRoot(rootElement).render(
         <div className="min-h-screen bg-[#f7f4ee] px-6 py-10 text-[#17140f] sm:px-10">
             <div className="mx-auto max-w-3xl rounded-[2rem] border border-[#e3ded2] bg-white p-6 shadow-[0_24px_80px_rgba(36,32,20,0.08)] sm:p-8">
                 <p className="text-[0.78rem] font-semibold uppercase tracking-[0.24em] text-[#8b8578]">
@@ -85,10 +88,24 @@ if (import.meta.env.DEV && typeof window !== "undefined") {
 
 loadCloudflareInsights();
 
-root.render(
+const app = (
     <StrictMode>
         <AppErrorBoundary>
             <App />
         </AppErrorBoundary>
-    </StrictMode>,
+    </StrictMode>
 );
+
+const writingPrefix = `${ROUTE_PATHS.writing}/`;
+const { pathname } = window.location;
+
+if (!isPrerendered) {
+    createRoot(rootElement).render(app);
+} else if (pathname.startsWith(writingPrefix)) {
+    // Load the article before hydrating so the client tree matches the prerendered HTML.
+    void getBlogContent(pathname.slice(writingPrefix.length).replace(/\/+$/, ""))
+        .catch(() => null)
+        .then(() => hydrateRoot(rootElement, app));
+} else {
+    hydrateRoot(rootElement, app);
+}

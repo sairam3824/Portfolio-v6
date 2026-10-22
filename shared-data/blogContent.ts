@@ -55,7 +55,16 @@ const contentLoaders: Record<string, () => Promise<BlogContentModule>> = {
     "small-language-models": () => import('./blog/posts/small-language-models'),
 };
 
+const contentCache = new Map<string, string | null>();
+
+/** Returns already-loaded content synchronously (used for prerendering and hydration). */
+export function getCachedBlogContent(id: string): string | null | undefined {
+    return contentCache.get(id);
+}
+
 export async function getBlogContent(id: string): Promise<string | null> {
+    if (contentCache.has(id)) return contentCache.get(id) ?? null;
+
     const loader = contentLoaders[id];
     if (!loader) return null;
 
@@ -64,5 +73,7 @@ export async function getBlogContent(id: string): Promise<string | null> {
         (v) => v && typeof v === 'object' && 'content' in v
     ) as { content: string } | undefined;
 
-    return post?.content ?? null;
+    const content = post?.content ?? null;
+    contentCache.set(id, content);
+    return content;
 }

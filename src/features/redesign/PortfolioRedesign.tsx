@@ -198,31 +198,37 @@ function PluralWritingPostRedirect() {
     return <Navigate to={getWritingPath(id)} replace />;
 }
 
+export function PortfolioRoutes() {
+    return (
+        <Routes>
+            <Route element={<PortfolioLayout />}>
+                <Route path={ROUTE_PATHS.home} element={<HomePage />} />
+                <Route path={ROUTE_PATHS.projects} element={<ProjectsPage />} />
+                <Route path={ROUTE_PATHS.about} element={<AboutPage />} />
+                <Route path={ROUTE_PATHS.skills} element={<SkillsPage />} />
+                <Route path={ROUTE_PATHS.writing} element={<WritingPage />} />
+                <Route path={`${ROUTE_PATHS.writing}/:id`} element={<WritingPostPage />} />
+                <Route path={ROUTE_PATHS.certifications} element={<CertificationsPage />} />
+                <Route path={ROUTE_PATHS.codingProfiles} element={<CodingProfilesPage />} />
+                <Route path={ROUTE_PATHS.education} element={<EducationPage />} />
+                <Route path={ROUTE_PATHS.contact} element={<ContactPage />} />
+                <Route path={ROUTE_PATHS.privacy} element={<PrivacyPage />} />
+                <Route path={ROUTE_PATHS.terms} element={<TermsPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+            </Route>
+            <Route path={ROUTE_PATHS.legacyWriting} element={<Navigate to={ROUTE_PATHS.writing} replace />} />
+            <Route path={`${ROUTE_PATHS.legacyWriting}/:id`} element={<LegacyWritingPostRedirect />} />
+            <Route path={getPluralWritingPath()} element={<Navigate to={ROUTE_PATHS.writing} replace />} />
+            <Route path={`${getPluralWritingPath()}/:id`} element={<PluralWritingPostRedirect />} />
+        </Routes>
+    );
+}
+
 function PortfolioRedesign() {
     return (
         <HelmetProvider>
             <Router basename={routerBasename}>
-                <Routes>
-                    <Route element={<PortfolioLayout />}>
-                        <Route path={ROUTE_PATHS.home} element={<HomePage />} />
-                        <Route path={ROUTE_PATHS.projects} element={<ProjectsPage />} />
-                        <Route path={ROUTE_PATHS.about} element={<AboutPage />} />
-                        <Route path={ROUTE_PATHS.skills} element={<SkillsPage />} />
-                        <Route path={ROUTE_PATHS.writing} element={<WritingPage />} />
-                        <Route path={`${ROUTE_PATHS.writing}/:id`} element={<WritingPostPage />} />
-                        <Route path={ROUTE_PATHS.certifications} element={<CertificationsPage />} />
-                        <Route path={ROUTE_PATHS.codingProfiles} element={<CodingProfilesPage />} />
-                        <Route path={ROUTE_PATHS.education} element={<EducationPage />} />
-                        <Route path={ROUTE_PATHS.contact} element={<ContactPage />} />
-                        <Route path={ROUTE_PATHS.privacy} element={<PrivacyPage />} />
-                        <Route path={ROUTE_PATHS.terms} element={<TermsPage />} />
-                        <Route path="*" element={<NotFoundPage />} />
-                    </Route>
-                    <Route path={ROUTE_PATHS.legacyWriting} element={<Navigate to={ROUTE_PATHS.writing} replace />} />
-                    <Route path={`${ROUTE_PATHS.legacyWriting}/:id`} element={<LegacyWritingPostRedirect />} />
-                    <Route path={getPluralWritingPath()} element={<Navigate to={ROUTE_PATHS.writing} replace />} />
-                    <Route path={`${getPluralWritingPath()}/:id`} element={<PluralWritingPostRedirect />} />
-                </Routes>
+                <PortfolioRoutes />
             </Router>
         </HelmetProvider>
     );

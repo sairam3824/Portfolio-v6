@@ -234,7 +234,8 @@ export function LiveStatusIsland({ className = "" }: { className?: string }) {
             <span className="rd-island-copy">
                 <span>{liveIslandItems[activeIndex]}</span>
                 <span className="rd-island-separator">·</span>
-                <span>{time}</span>
+                {/* Prerendered at build time, so the clock text always differs on hydration. */}
+                <span suppressHydrationWarning>{time}</span>
             </span>
         </div>
     );

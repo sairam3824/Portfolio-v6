@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowUpRight, ChevronLeft } from "lucide-react";
 import Seo from "@/shared/Seo";
-import { getBlogContent } from "@/features/blog/blogContent";
+import { getBlogContent, getCachedBlogContent } from "@/features/blog/blogContent";
 import {
     NotFoundPage,
     formatReadableDate,
@@ -15,8 +15,11 @@ import {
 export default function WritingPostPage() {
     const { id } = useParams<{ id: string }>();
     const post = nonLegalBlogPosts.find((entry) => entry.id === id);
-    const [content, setContent] = useState<string | null>(null);
-    const [status, setStatus] = useState<"idle" | "loading" | "loaded" | "error">("idle");
+    const cachedContent = post ? getCachedBlogContent(post.id) : undefined;
+    const [content, setContent] = useState<string | null>(cachedContent ?? null);
+    const [status, setStatus] = useState<"idle" | "loading" | "loaded" | "error">(
+        cachedContent !== undefined ? "loaded" : "idle",
+    );
     const processedContent = useMemo(
         () => content?.replace(/<img /g, '<img loading="lazy" decoding="async" ') ?? null,
         [content],
@@ -24,6 +27,11 @@ export default function WritingPostPage() {
 
     useEffect(() => {
         if (!post) return;
+        if (getCachedBlogContent(post.id) !== undefined) {
+            setContent(getCachedBlogContent(post.id) ?? null);
+            setStatus("loaded");
+            return;
+        }
 
         let cancelled = false;
         setStatus("loading");

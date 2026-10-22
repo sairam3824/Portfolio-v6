@@ -1,4 +1,4 @@
-import { defineConfig, type Plugin } from "vite";
+import { createServer, defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
@@ -224,7 +224,7 @@ function prerenderPlugin(): Plugin {
         name: "portfolio-prerender-seo",
         enforce: "post",
         apply: "build",
-        closeBundle() {
+        async closeBundle() {
             const distDir = resolve(__dirname, "dist");
             const baseHtmlPath = resolve(distDir, "index.html");
 
@@ -256,14 +256,31 @@ function prerenderPlugin(): Plugin {
             const routes = getAllRouteSeo();
             let generated = 0;
 
+            // Render each route's React tree to static markup so crawlers get the
+            // page content itself, not just metadata around an empty #root.
+            const ssrServer = await createServer({
+                configFile: false,
+                logLevel: "error",
+                appType: "custom",
+                server: { middlewareMode: true, hmr: false, ws: false },
+                plugins: [react()],
+                resolve: { tsconfigPaths: true },
+            });
+            const { render } = (await ssrServer.ssrLoadModule("/src/entry-server.tsx")) as {
+                render: (url: string) => Promise<string>;
+            };
+
             for (const entry of routes) {
                 const metaBlock = buildMetaTags(entry);
+                const appHtml = await render(entry.path);
 
                 // Insert the per-route meta tags right before </head>
-                const routeHtml = shellHtml.replace(
-                    "</head>",
-                    `\n    <!-- Prerender: per-route SEO metadata -->\n${metaBlock}\n  </head>`,
-                );
+                const routeHtml = shellHtml
+                    .replace(
+                        "</head>",
+                        `\n    <!-- Prerender: per-route SEO metadata -->\n${metaBlock}\n  </head>`,
+                    )
+                    .replace('<div id="root"></div>', () => `<div id="root">${appHtml}</div>`);
 
                 // Determine output path: "/" → dist/index.html, "/about" → dist/about/index.html
                 let outPath: string;
@@ -293,8 +310,9 @@ function prerenderPlugin(): Plugin {
                 ].join("\n"),
             );
             writeFileSync(resolve(distDir, "404.html"), notFoundHtml);
+            await ssrServer.close();
 
-            console.log(`\n  🔍 Pre-rendered ${generated} route(s) with per-page SEO metadata (+404.html).`);
+            console.log(`\n  🔍 Pre-rendered ${generated} route(s) with page content and SEO metadata (+404.html).`);
         },
     };
 }
