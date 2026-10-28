@@ -174,7 +174,7 @@ export const mlAlgorithms = {
     <li>Generative Adversarial Networks (GANs)</li>
   </ul>
   <p class="text-blue-600 font-medium mt-2">
-  See full blog post at <a href="/dl-algorithms" class="underline hover:text-blue-800">dl-algorithms</a>
+  See full blog post at <a href="/writing/dl-algorithms" class="underline hover:text-blue-800">dl-algorithms</a>
   </p>
   
   <h5 class="text-lg font-semibold text-gray-900 mb-2 mt-6">Python Example: MLP Classifier</h5>
