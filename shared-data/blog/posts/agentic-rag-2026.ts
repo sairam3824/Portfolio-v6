@@ -95,7 +95,7 @@ Vector similarity is a coarse first filter. A <strong>re-ranker</strong> — typ
 
 <h4 class="text-xl font-semibold text-gray-900 mb-4 mt-8">4. Tool-Using Retrievers (Beyond the Vector Store)</h4>
 <p class="mb-4 text-gray-700">
-The most powerful agentic RAG systems treat the vector store as just one source. The agent can route a query to whichever tool fits: a SQL database for precise structured facts, a web or API call for fresh information, a graph database for relationships, or the vector store for unstructured prose. <strong>Routing</strong> — deciding <em>where</em> to look — is itself a learned decision. This is also where RAG and the Model Context Protocol converge: tools exposed over a standard interface that the agent can discover and call.
+The most powerful agentic RAG systems treat the vector store as just one source. The agent can route a query to whichever tool fits: a SQL database for precise structured facts, a web or API call for fresh information, a graph database for relationships, or the vector store for unstructured prose. <strong>Routing</strong> — deciding <em>where</em> to look — is itself a learned decision. This is also where RAG and the Model Context Protocol converge: tools exposed over a standard interface that the agent can discover and call. The same retrieval machinery also backs long-term agent memory, where the corpus is the agent's own history rather than your documents. That pattern is covered in <a href="/writing/ai-agent-memory" class="underline hover:text-blue-800">AI Agent Memory: Architectures for Long-Running Agents</a>.
 </p>
 
 <div class="mb-6 overflow-x-auto">

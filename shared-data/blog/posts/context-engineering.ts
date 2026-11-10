@@ -128,7 +128,7 @@ Rather than using a static prompt template, dynamic context assembly builds the 
 
 <h5 class="text-lg font-semibold text-gray-900 mb-3 mt-6">3. Memory Management</h5>
 <p class="mb-4 text-gray-700">
-Effective agents need both <strong>short-term memory</strong> (current conversation context) and <strong>long-term memory</strong> (facts, preferences, and state persisted across sessions). Techniques include:
+Effective agents need both <strong>short-term memory</strong> (current conversation context) and <strong>long-term memory</strong> (facts, preferences, and state persisted across sessions). For a deeper look at episodic, semantic, and procedural memory and how to decide what an agent should forget, see <a href="/writing/ai-agent-memory" class="underline hover:text-blue-800">AI Agent Memory: Architectures for Long-Running Agents</a>. Techniques include:
 </p>
 <ul class="mb-6 text-gray-700 list-disc list-inside space-y-2">
   <li><strong>Conversation Summarization:</strong> Compressing older turns into summaries to fit within token limits while preserving key information.</li>

@@ -10,7 +10,28 @@ import {
     nonLegalBlogPosts,
     profileDetails,
     ROUTE_PATHS,
+    WritingListItem,
+    type WritingEntry,
 } from "../shared";
+
+// Tags too broad to signal topical similarity on their own.
+const GENERIC_TAGS = new Set(["AI/ML", "LLM", "Production AI"]);
+const RELATED_COUNT = 3;
+
+function getRelatedPosts(post: WritingEntry): WritingEntry[] {
+    const tags = new Set(post.tags.filter((tag) => !GENERIC_TAGS.has(tag)));
+    return nonLegalBlogPosts
+        .filter((entry) => entry.id !== post.id && !entry.externalLink)
+        .map((entry) => ({
+            entry,
+            score: entry.tags.filter((tag) => tags.has(tag)).length,
+            time: Date.parse(entry.date) || 0,
+        }))
+        .filter(({ score }) => score > 0)
+        .sort((a, b) => b.score - a.score || b.time - a.time)
+        .slice(0, RELATED_COUNT)
+        .map(({ entry }) => entry);
+}
 
 export default function WritingPostPage() {
     const { id } = useParams<{ id: string }>();
@@ -24,6 +45,7 @@ export default function WritingPostPage() {
         () => content?.replace(/<img /g, '<img loading="lazy" decoding="async" ') ?? null,
         [content],
     );
+    const relatedPosts = useMemo(() => (post ? getRelatedPosts(post) : []), [post]);
 
     useEffect(() => {
         if (!post) return;
@@ -108,6 +130,19 @@ export default function WritingPostPage() {
                     ) : null}
                     {processedContent ? (
                         <div className="blog-content rd-article-content" dangerouslySetInnerHTML={{ __html: processedContent }} />
+                    ) : null}
+
+                    {relatedPosts.length > 0 ? (
+                        <section className="rd-related" aria-labelledby="rd-related-heading">
+                            <h2 id="rd-related-heading" className="rd-section-label">
+                                Related writing
+                            </h2>
+                            <div className="rd-writing-list rd-related-list">
+                                {relatedPosts.map((entry) => (
+                                    <WritingListItem key={entry.id} post={entry} />
+                                ))}
+                            </div>
+                        </section>
                     ) : null}
                 </article>
             </main>
